@@ -5,10 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Destroying all users..."
+    User.destroy_all
+    puts "Destroying all Camps..."
+    Camp.destroy_all
+    puts "Destroying all Assignments..."
+    Assignmet.destroy_all
+
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
 date = Faker::Date.between(from: '2022-01-23', to: '2023-01-25')
 email = ['savi@me.com', 'keita@me.com', 'yulia@me.com', 'ayhem@me.com']
 training = ["None", "1 Day", "3 Days"]
+roles = ["Camp Director", "Station Leader", "Crew Leader"]
 
 camps = [
   {
@@ -173,7 +181,7 @@ camps = [
   },
 
   {
-    description: "It was a fire in Quezon City, Philippines literally just down the street from our partners the Philippine Children's Ministry Network.  The fire affected 100 families with 140 children and OpSAFE trained volunteers are already responding to bring hugs, help and hope to the children.  Please pray for these volunteers and the children they are serving. " ,
+        description: "It was a fire in Quezon City, Philippines literally just down the street from our partners the Philippine Children's Ministry Network.  The fire affected 100 families with 140 children and OpSAFE trained volunteers are already responding to bring hugs, help and hope to the children.  Please pray for these volunteers and the children they are serving. " ,
     images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/313286194_10160875257947518_3560365381643599798_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=aq5Rr6uTwQ8AX-8c5dm&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfBJv0J-vjQ1oeVr_zoyrj5i1g6oRqo5K_HkMphxExkvjw&oe=637F6CDD",
     comments: "You should have excperions of working with kids",
     camp_name: "Camps in Philippine",
@@ -369,6 +377,9 @@ Camp.create!(
   required_roles: "Camp Director; Station Leader: Game, Story telling, Songs, Snacks, Crafts; Crew Leader"
 )
 end
+
+puts "... created #{Camp.count} camp."
+
 role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
 Camp.all.each do |camp|
   User.all.each do |user|
@@ -383,3 +394,68 @@ Camp.all.each do |camp|
     )
   end
 end
+puts "... created #{Assignment.count} Assignment."
+
+
+
+
+User.create!(
+  email: "savi@me.com",
+  password: "123456",
+  first_name: "Savithri",
+  last_name: "Wewala",
+  location: "Japan, Tokyo",
+  admin_status: true,
+  description: "Hello, my name is Savithri",
+  img_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
+)
+
+User.create!(
+  email: "keita@me.com",
+  password: "123456",
+  first_name: "Keita",
+  last_name: "Wilson",
+  location: "Japan, Tokyo",
+  admin_status: true,
+  description: "Hi everyone I'm Keita.",
+  img_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
+)
+
+User.create!(
+  email: "ayhem@me.com",
+  password: "123456",
+  first_name: "Ayhem",
+  last_name: "Chelly",
+  location: "Japan, Tokyo",
+  admin_status: true,
+  description: "Hi there! my name is Ayhem.",
+  img_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954065/heegtqhasvkercvbbzi4.jpg"
+)
+
+User.create!(
+  email: "yulia@me.com",
+  password: "123456",
+  first_name: "Yulia",
+  last_name: "Naumenko",
+  location: "Japan, Tokyo",
+  admin_status: true,
+  description: "Hi, nice to see you here) My name is Yulia.",
+  img_url: "https://avatars.githubusercontent.com/u/114731843?v=4"
+)
+
+10.times do User.create!(
+  first_name: Faker::Name.unique.name.first_name,
+  last_name: Faker::Name.unique.name.last_name,
+  email: Faker::Internet.email,
+  location: location.sample,
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
+  language: Faker::Nation.language,
+  past_roles: roles.sample,
+  admin_status: false,
+  training: training.sample,
+  certifications: Faker::Job.title,
+  avatar_pic: Faker::Avatar.image(slug: "my-own-slug", size: "50x50", format: "jpg").sample
+)
+end
+
+puts "... created #{User.count} Users."
