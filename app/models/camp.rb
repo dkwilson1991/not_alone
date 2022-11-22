@@ -1,6 +1,6 @@
 class Camp < ApplicationRecord
-  belongs_to :user
   has_many :assignments
+  belongs_to :user
   has_many_attached :photos
 
   validates :address, presence: true
