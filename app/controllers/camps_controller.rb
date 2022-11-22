@@ -1,41 +1,37 @@
 class CampsController < ApplicationController
-  def index
-    @camps = Camp.all
-  end
-
   def show
     @camp = Camp.find(params[:id])
+    authorize @camp
   end
-
-  def new
-    @camp = Camp.new
+  def index
+    @camps = policy_scope(Camp)
   end
-
-  def create
-    @camp = Camp.new(params[:camp])
-    if @camp.save
-      redirect_to @camp, :notice => "Successfully created camp."
-    else
-      render :action => 'new'
-    end
-  end
-
   def edit
     @camp = Camp.find(params[:id])
+    authorize @camp
   end
-
+  def create
+    @camp = Camp.new(camp_params)
+    @camp.user = current_user
+    authorize @camp
+  end
   def update
-    @camp = Camp.find(params[:id])
-    if @camp.update_attributes(params[:camp])
-      redirect_to @camp, :notice  => "Successfully updated camp."
-    else
-      render :action => 'edit'
-    end
+    authorize @camp
   end
-
-  def destroy
-    @camp = Camp.find(params[:id])
-    @camp.destroy
-    redirect_to camps_url, :notice => "Successfully destroyed camp."
+  private
+  def camp_params
+    params.require(:camp).permit(:camp_name)
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
