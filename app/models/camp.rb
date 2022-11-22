@@ -2,7 +2,6 @@ class Camp < ApplicationRecord
   has_many :assignments, dependent: :destroy
   belongs_to :user
   has_many_attached :photos
-
   validates :address, presence: true
   validates :start_date, presence: true
   validates :end_date, presence: true
@@ -11,4 +10,5 @@ class Camp < ApplicationRecord
   validates :camp_name, presence: true
   validates :required_roles, presence: true
   validates :description, presence: true
+
 end
