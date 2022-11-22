@@ -1,8 +1,14 @@
 <h1></h1>
 <div class="container" id="index-cards">
   <div class="carts" id="cart-camps">
-    <%= render 'assignments/camp', assignments: @assignments %>
     <div class="carts" id="cart-camps">
+      <%= render 'assignments/camp', assignments: @assignments %>
     </div>
   </div>
-  <%= render 'camps/form', camp: @camp %>
+  <div>
+    <%= link_to "Create Camp", camps_path %>
+  </div>
+  <div class="container" id='calendar'>
+    <%= render 'camps/form', camp: @camp %>
+  </div>
+  <%= render 'assignments/calendar' %>

@@ -1,8 +1,10 @@
 class AssignmentsController < ApplicationController
   def index
-    @assignments = Assignment.all
     @assignments = policy_scope(Assignment)
     @camp = Camp.new
+  end
+
+  def show
   end
 
   def create

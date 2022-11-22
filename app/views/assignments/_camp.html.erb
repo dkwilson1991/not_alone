@@ -1,13 +1,13 @@
 <% assignments.each do |assignment| %>
-  <div class="date">
+  <div class="date" style="background-image: url('<%= assignment.camp.images %>);">
     <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
   </div>
   <div class="description">
     <h2><%= assignment.camp.camp_name %></h2>
-    <p><%= assignment.camp.description %></p>
+    <p><%= assignment.camp.description.truncate(100) %></p>
     <p><%= assignment.camp.required_number_volunteers %></p>
   </div>
   <div class="other-info">
+    <h2><%= assignment.camp.address %></h2>
   </div>
-</div>
 <% end %>
