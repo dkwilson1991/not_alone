@@ -1,6 +1,6 @@
 class Assignment < ApplicationRecord
-  belongs_to :user
-  belongs_to :camp
+  belongs_to :user, dependent: :destroy
+  belongs_to :camp, dependent: :destroy
   enum status: { pending: "pending", confirm: "confirm", decline: "decline"}, _default: :pending
 
   def pending?
