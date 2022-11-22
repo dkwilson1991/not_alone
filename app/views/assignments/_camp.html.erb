@@ -1,0 +1,12 @@
+<% assignments.each do |assignment| %>
+  <div class="date">
+    <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
+  </div>
+  <div class="description">
+    <h2><%= assignment.camps.camp_name %></h2>
+    <p><%= assignment.camps.description %></p>
+  </div>
+  <div class="other-info">
+  </div>
+</div>
+<% end %>
