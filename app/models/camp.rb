@@ -9,5 +9,5 @@ class Camp < ApplicationRecord
   validates :required_number_volunteers, presence: true
   validates :director_email, presence: true
   validates :camp_name, presence: true
-  validates :required_roles
+  validates :required_roles, presence: true
 end
