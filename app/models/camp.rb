@@ -1,6 +1,6 @@
 class Camp < ApplicationRecord
-  belongs_to :user
   has_many :assignments
+  belongs_to :user
   has_many_attached :photos
 
   validates :address, presence: true
@@ -9,5 +9,5 @@ class Camp < ApplicationRecord
   validates :required_number_volunteers, presence: true
   validates :director_email, presence: true
   validates :camp_name, presence: true
-  validates :required_roles
+  validates :required_roles, presence: true
 end

@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Destroying all users..."
-    User.destroy_all
-    puts "Destroying all Camps..."
-    Camp.destroy_all
-    puts "Destroying all Assignments..."
-    Assignmet.destroy_all
+User.destroy_all
+puts "Destroying all Camps..."
+Camp.destroy_all
+puts "Destroying all Assignments..."
+Assignment.destroy_all
 
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
-date = Faker::Date.between(from: '2022-01-23', to: '2023-01-25')
+date = Faker::Date.in_date_period
 email = ['savi@me.com', 'keita@me.com', 'yulia@me.com', 'ayhem@me.com']
 training = ["None", "1 Day", "3 Days"]
 roles = ["Camp Director", "Station Leader", "Crew Leader"]
@@ -306,7 +306,7 @@ camps = [
     Praise God for the lives of these volunteers who shared their time and talents that facilitated the successful implementation:
     Thank you also to the support of the leadership of IBC thru Pastor Ninfa Espina - Senior Pastor and Mrs. Gyceria Paglumotan - Chairperson of the BOT.
     This initiative is in partnership with the Alliance of Children's Ministries in Negros (ACMN) thru its Post Disaster Response Project in Ilog and Kabankalan. Funding support comes from the Philippine Children's Ministries Network, Inc., Viva, Global Care Kinderhilfswerk, and Aktion Deutschland Hilft.",
-    images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/218960379_4079597528761428_6312920815306183617_n.png?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=VRt-1fmzpagAX9ojucr&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDla-Zq47LXYWITLd8NOV43hdhEMVUXUF49XXHtGqCZhA&oe=63804C64"
+    images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/218960379_4079597528761428_6312920815306183617_n.png?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=VRt-1fmzpagAX9ojucr&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDla-Zq47LXYWITLd8NOV43hdhEMVUXUF49XXHtGqCZhA&oe=63804C64",
     comments: "none",
     camp_name: "Alliance of Children's Ministries in Negros",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -362,39 +362,7 @@ camps = [
     Thank you for praying and encouraging me during this time of research."
   }
 ]
-camps.each do |camp|
-Camp.create!(
-  description: camp.description,
-  images: camp.images,
-  comments: camp.comments,
-  camp_name: camp.camp_name,
-  newsfeed_post: camp.newsfeed_post,
-  address: location.sample,
-  required_number_volunteers: random(15..30),
-  start_date: date,
-  end_date: date + 7,
-  director_email: email.sample,
-  required_roles: "Camp Director; Station Leader: Game, Story telling, Songs, Snacks, Crafts; Crew Leader"
-)
-end
 
-puts "... created #{Camp.count} camp."
-
-role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
-Camp.all.each do |camp|
-  User.all.each do |user|
-    Assignment.create!(
-      final_volunteer_count: random(15..30),
-      roles: role.sample,
-      start_date: camp.start_date,
-      end_date: camp.end_date,
-      status: "confirm",
-      user_id: user.id,
-      camp_id: camp.id
-    )
-  end
-end
-puts "... created #{Assignment.count} Assignment."
 
 
 
@@ -459,3 +427,38 @@ User.create!(
 end
 
 puts "... created #{User.count} Users."
+camps.each do |camp|
+  Camp.create!(
+    description: camp.description,
+    images: camp.images,
+    comments: camp.comments,
+    camp_name: camp.camp_name,
+    newsfeed_post: camp.newsfeed_post,
+    address: location.sample,
+    required_number_volunteers: random(15..30),
+    start_date: date,
+    end_date: date + 7,
+    director_email: email.sample,
+    required_roles: "Camp Director; Station Leader: Game, Story telling, Songs, Snacks, Crafts; Crew Leader"
+  )
+end
+
+  puts "... created #{Camp.count} camp."
+
+  role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
+
+  Camp.all.each do |camp|
+    User.all.each do |user|
+      Assignment.create!(
+        final_volunteer_count: random(15..30),
+        roles: role.sample,
+        start_date: camp.start_date,
+        end_date: camp.end_date,
+        status: "confirm",
+        user_id: user,
+        camp_id: camp
+      )
+    end
+  end
+
+  puts "... created #{Assignment.count} Assignment."
