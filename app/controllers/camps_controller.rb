@@ -17,15 +17,21 @@ class CampsController < ApplicationController
     @camp = Camp.new(camp_params)
     @camp.user = current_user
     authorize @camp
+    if @camp.save
+      redirect_to camp_path(@camp)
+    else
+      render :new
+    end
   end
 
   def update
+    @camp = Camp.find(params[:id])
     authorize @camp
   end
 
   private
 
   def camp_params
-    params.require(:camp).permit(:camp_name)
+    params.require(:camp).permit(:camp_name, :address, :start_date,:end_date, :required_number_volunteers,:required_roles,:description,:director_email,:comments,:newsfeed_post,photos:[])
   end
 end
