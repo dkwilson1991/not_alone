@@ -1,5 +1,10 @@
 <h1>new camp</h1>
 <%= simple_form_for @camp do |f| %>
   <%= f.input :camp_name %>
+  <%= f.input :address %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :required_roles %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.button :submit, "submit" %>
 <% end %>
