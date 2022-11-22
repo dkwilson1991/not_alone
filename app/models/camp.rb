@@ -1,5 +1,5 @@
 class Camp < ApplicationRecord
-  has_many :assignments
+  has_many :assignments, dependent: :destroy
   belongs_to :user
   has_many_attached :photos
 
@@ -10,4 +10,5 @@ class Camp < ApplicationRecord
   validates :director_email, presence: true
   validates :camp_name, presence: true
   validates :required_roles, presence: true
+  validates :description, presence: true
 end
