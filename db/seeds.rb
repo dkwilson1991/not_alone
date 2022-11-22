@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
 
 puts "Destroying all users..."
 User.destroy_all
@@ -23,8 +24,10 @@ User.create!(
   first_name: "Savithri",
   last_name: "Wewala",
   location: "Japan, Tokyo",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
+  training: "3 Days",
   admin_status: true,
-  img_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
 )
 
 User.create!(
@@ -33,8 +36,10 @@ User.create!(
   first_name: "Keita",
   last_name: "Wilson",
   location: "Japan, Tokyo",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
+  training: "3 Days",
   admin_status: true,
-  img_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
 )
 
 User.create!(
@@ -43,8 +48,10 @@ User.create!(
   first_name: "Ayhem",
   last_name: "Chelly",
   location: "Japan, Tokyo",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
+  training: "3 Days",
   admin_status: true,
-  img_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954065/heegtqhasvkercvbbzi4.jpg"
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954065/heegtqhasvkercvbbzi4.jpg"
 )
 
 User.create!(
@@ -53,14 +60,17 @@ User.create!(
   first_name: "Yulia",
   last_name: "Naumenko",
   location: "Japan, Tokyo",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
+  training: "3 Days",
   admin_status: true,
-  img_url: "https://avatars.githubusercontent.com/u/114731843?v=4"
+  avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
 )
 
 10.times do User.create!(
-  first_name: Faker::Name.unique.name.first_name,
-  last_name: Faker::Name.unique.name.last_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
+  password: "123456",
   location: location.sample,
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   language: Faker::Nation.language,
@@ -68,8 +78,9 @@ User.create!(
   admin_status: false,
   training: training.sample,
   certifications: Faker::Job.title,
-  avatar_pic: Faker::Avatar.image(slug: "my-own-slug", size: "50x50", format: "jpg").sample
+  avatar_pic: URI.open("https://thispersondoesnotexist.com/image")
 )
+  user.photo.attach(io: file, filename: user.png, content_type: image/png)
 end
 
 puts "... created #{User.count} Users."
