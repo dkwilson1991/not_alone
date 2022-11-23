@@ -1,35 +1,91 @@
-.card-product {
-  overflow: hidden;
-  height: 166px;
-  background: #86bec3;
-  box-shadow: 0 0 33px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  margin-top: 22px;
-  margin-bottom: 22px;
-  width: 700px;
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  box-sizing: border-box;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+h3 {
+  margin: 10px 0;
 }
 
-.card-product h2 {
-  font-size: 16px;
+h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.card-container {
+  background-color: #ffffff;
+  box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.75);
+  color: #000000;
+  padding-top: 3px;
+  position: relative;
+  width: 278px;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  margin-left: 21px;
+}
+
+.card-container .pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
   font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.card-container .round {
+  border: 1px solid #03bfcb;
+  border-radius: 66%;
+  padding: 0px;
+}
+
+button.primary {
+  background-color: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 25px;
+}
+
+.skills ul {
+  list-style-type: none;
   margin: 0;
+  padding: 1;
 }
 
-.card-product p {
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 2px;
+  display: inline-block;
   font-size: 12px;
-  line-height: 1.4;
-  opacity: 0.7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
 }
