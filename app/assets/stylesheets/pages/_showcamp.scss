@@ -1,0 +1,117 @@
+.camp-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: #82dbd8;
+}
+
+.camp-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 30rem;
+  width: auto;
+}
+
+.card-category {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-overlay i {
+  color: #82dbd8;
+  opacity: 90%;
+}
+
+.text-overlay {
+    margin: 0;
+    text-align: start;
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    color: white;
+    font-weight: bold;
+    opacity: 80%;
+    text-shadow: -1px 2px 2px rgba(0,0,0,0.3);
+    font-size: 2.5rem;
+}
+
+.card-category h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.camp-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.camp-card .camp-card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.camp-card-infos .camp-card-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+
+.container .camp-card .content {
+  position : relative;
+  top : -256px;
+  color : #111;
+
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.25s ease-in-out;
+
+  height: 16rem;
+}
+
+.container .camp-card:hover .content {
+  margin-top : 30px;
+  visibility : visible;
+  opacity : 0.95;
+  transition-delay: 0.2s;
+}
+
+.camp-inner-text {
+  max-width: 70%;
+
+  p {
+    margin-left: 0.6rem;
+    margin-top: 0.6rem;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+}
+
+.camp-card-completed {
+  color: white;
+  padding-right: 0.8rem;
+  padding-top:0.8rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  text-align: right;
+  text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+
+}
+
+.camp-card-not-completed {
+  color: grey;
+  padding-right: 0.8rem;
+  padding-top:0.8rem;
+  margin-right: 1rem;
+  text-align: right;
+  font-size: 1rem;
+  text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+}

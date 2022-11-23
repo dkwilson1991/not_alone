@@ -1,5 +1,27 @@
-<div class="container">
-  <div class="row">
-    <%= render "camps/form" %>
+<div class="camp-container container">
+  <div class="camp-card">
+    <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/> %>
+    <div class="card-category" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg)">
+      <div class="row">
+        <div class="col-8">
+          <h1 class="text-overlay"><i class="fa-sharp fa-solid fa-campground"></i> <%= @camp.camp_name %></h1>
+          <h2 class="text-overlay"><i class="fa-solid fa-location-dot"></i> <%= @camp.address %></h2>
+          <h2 class="text-overlay"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date %> ~ <%= @camp.end_date %></h2>
+        </div>
+        <div class="col-4">
+          <% if @camp.required_number_volunteers <= @camp.required_number_volunteers %>
+            <h2 class="camp-card-completed"><%= @camp.required_number_volunteers %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user volunteer-icon"></i></h2>
+          <% else %>
+            <h2 class="camp-card-not-completed"><%= @camp.required_number_volunteers %><i class="fa-solid fa-user volunteer-icon"></i></h2>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="camp-card content">
+      <div class="camp-inner-text">
+        <p><i class="fa-solid fa-envelope"></i> <%= @camp.director_email %></p>
+        <p><i class="fa-solid fa-file-lines"></i> <%= @camp.description.truncate(500) %></p>
+      </div>
+    </div>
   </div>
 </div>
