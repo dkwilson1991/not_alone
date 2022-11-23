@@ -10,5 +10,4 @@ class Camp < ApplicationRecord
   validates :camp_name, presence: true
   validates :required_roles, presence: true
   validates :description, presence: true
-
 end
