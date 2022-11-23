@@ -9,12 +9,13 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 20vh;
 	margin: 0;
 }
 
 .course {
 	background-color: #fff;
+  text-shadow: 0.5px 0.5px 0px #3BACB6;
 	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1%);
 	display: flex;
@@ -57,6 +58,13 @@
 	position: relative;
 	width: 100%;
 }
+.course-info p {
+	padding: 30px;
+}
+
+.course-info h6 {
+	width: 50%;
+}
 
 .progress-container {
 	position: absolute;
@@ -92,6 +100,7 @@
 
 .btn {
 	background-color: #B3E8E5;
+  text-shadow: 0.5px 0.5px 0px #3bacb6;
 	border: 0;
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);

@@ -1,14 +1,14 @@
 <h1></h1>
-<div class="container" id="index-cards">
-  <div class="carts" id="cart-camps">
-    <div class="carts" id="cart-camps">
-      <%= render 'assignments/camp', assignments: @assignments %>
-    </div>
-  </div>
-  <div>
-    <%= link_to "Create Camp", camps_path %>
+<div class="d-flex flex-wrap mx-5 px-5">
+  <div id="card-camps-one">
+    <%= render 'assignments/camp', assignments: @assignments %>
   </div>
   <div class="container" id='calendar'>
-    <%= render 'camps/form', camp: @camp %>
+    <%= month_calendar do |date| %>
+      <%= date.day %>
+    <% end %>
   </div>
-  <%= render 'assignments/calendar' %>
+  <div class="create-camp">
+    <%= link_to "Create Camp", camps_path, class: "btn" %>
+  </div>
+</div>

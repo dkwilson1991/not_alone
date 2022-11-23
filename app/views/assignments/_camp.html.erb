@@ -1,13 +1,22 @@
 <% assignments.each do |assignment| %>
-  <div class="date" style="background-image: url('<%= assignment.camp.images %>);">
-    <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
-  </div>
-  <div class="description">
-    <h2><%= assignment.camp.camp_name %></h2>
-    <p><%= assignment.camp.description.truncate(100) %></p>
-    <p><%= assignment.camp.required_number_volunteers %></p>
-  </div>
-  <div class="other-info">
-    <h2><%= assignment.camp.address %></h2>
+  <div class="courses-container">
+    <div class="course">
+      <div class="course-preview">
+        <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
+        <p><%= assignment.camp.address %></p>
+        <a href="#">View all volunteers </a>
+      </div>
+      <div class="course-info">
+        <div class="progress-container">
+          <div class="progress"></div>
+          <span class="progress-text">
+            <%=assignment.final_volunteer_count%>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
+          </span>
+        </div>
+        <h6><%= assignment.camp.camp_name %></h6>
+        <p><%= assignment.camp.description.truncate(100) %></p>
+        <button class="btn">Continue</button>
+      </div>
+    </div>
   </div>
 <% end %>
