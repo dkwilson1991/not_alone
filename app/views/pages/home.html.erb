@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-conatiner">
+  <%= render "banner" %>
+  <div class="container d-flex justify-content-between">
+    <div class="newsfeed">
+      <h2>Newsfeed</h2>
+    </div>
+    <div class="upcoming-camps">
+      <h3>Upcoming</h3>
+        <% @camps.each do |camp| %>
+          <div>
+            <p><%= camp.camp_name.capitalize %> (<%= camp.address %>)</p>
+            <small><p><strong><%= camp.start_date%> - <%= camp.end_date%></strong> </p></small>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

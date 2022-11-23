@@ -1,0 +1,32 @@
+
+#index-cards {
+  display: flex;
+}
+
+.create-camp .btn {
+  position: fixed;
+  top: 91%;
+  right: 5%;
+  background-color: #B3E8E5;
+  text-shadow: 0.5px 0.5px 0px #3bacb6;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+  height: 48px;
+	// position: absolute;
+	letter-spacing: 1px;
+}
+
+#calendar {
+  width: 25%;
+}
+
+.create-ass-form {
+  position: fixed;
+  top: 10vh;
+  right: 0;
+
+}

@@ -9,16 +9,12 @@ require "open-uri"
 
 puts "Destroying all users..."
 User.destroy_all
-p User.count
 puts "Destroying all Assignments..."
 Assignment.destroy_all
-p Assignment.count
 puts "Destroying all Camps..."
 Camp.destroy_all
-p Camp.count
 
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
-date = Faker::Date.in_date_period
 email = ['savi@me.com', 'keita@me.com', 'yulia@me.com', 'ayhem@me.com']
 training = ["None", "1 Day", "3 Days"]
 roles = ["Camp Director", "Station Leader", "Crew Leader"]
@@ -31,7 +27,7 @@ camps = [
     OperationSAFE to program zajęć dla dzieci 6-12 lat, który pomaga prowadzić dzieci do emocjonalnego uzdrowienia, rozwijając u nich odporność na traumatyczne przeżycia oraz ucząc znaleźć ukojenie w sytuacji chaosu.",
     images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/311478875_646734176984296_7991225747355725212_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=IwnGdVHgmM4AX8tIAv7&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDGYyZ09XQz8MCbDydUOwxGWCnoXt1a00PF-9yXSIlu1Q&oe=63808582",
     comments: "none",
-    camp_name: "OpSAFE camps in Poland",
+    camp_name: "OpSAFE camp in Poland",
     newsfeed_post: 'Miło jest wspomnieć szkolenie OpSAFE w Mińsku Mazowieckim. Tak duża grupa była dla nas nie lada wyzwaniem!
     Dużo było spisanych kartek, dużo dyskusji, trochę łez wzruszenia, ale dużo też uśmiechu i wdzięczności.
     Dziękujemy Inna Karpenko za zaproszenie i pomoc w organizacji. Bardzo dziękujemy Svetlana Popovych i Sofii za nakarmienie 100 osób oraz opiekę nad dziećmi 🙂 I serdecznie dziękujemy OM w Polsce za realizację takich spotkań jak to!
@@ -43,7 +39,7 @@ camps = [
     description: "During war in Ukraine we need volunteers to help kinds.",
     images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293354658_10160681233332518_8084655627895499452_n.jpg?stp=cp6_dst-jpg_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=8KsmmZwhtLQAX9LtPmu&_nc_ht=scontent-nrt1-1.xx&oh=00_AfBIV888Cc4_re6E7jroQ32FDkiXyLLT0B6sk10QXzip2Q&oe=6380A2A1",
     comments: "none",
-    camp_name: "OpSAFE camps in Ukraine",
+    camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
     Of the 108 children who exhibited mild PTSS, 80 showed significant improvement in their symptoms, and 25 did not primarily because their initial symptoms were very mild leaving not much room for improvement. 3 of these children showed a slight regression.
     By the end of the camps, none of the children were flagged as being exceptionally at risk in comparison with their peers. Continued support from friends and community should see continued progress in children's resilience to trauma.
@@ -54,7 +50,7 @@ camps = [
     description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
     images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/315590583_139977992135778_7807916700988978741_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=zX9ADdDCA0AAX-zc_5d&_nc_ht=scontent-nrt1-1.xx&oh=00_AfAYangxdA-FDkPyAnPnkRusoVlwK2rpQu12DqDV_Vsp2Q&oe=638076BC",
     comments: "none",
-    camp_name: "OpSAFE camps in Ukraine",
+    camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "今週はウクライナにおいて10個のプログラムキャンプが行われます。
     ここに養育者の方やボランティアの方から送られてきたレポートを分かち合います。
     ある養育者の方から
@@ -75,7 +71,7 @@ camps = [
     description: "It was a fire in Quezon City, Philippines literally just down the street from our partners the Philippine Children's Ministry Network.  The fire affected 100 families with 140 children and OpSAFE trained volunteers are already responding to bring hugs, help and hope to the children.  Please pray for these volunteers and the children they are serving. " ,
     images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/313286194_10160875257947518_3560365381643599798_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=aq5Rr6uTwQ8AX-8c5dm&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfBJv0J-vjQ1oeVr_zoyrj5i1g6oRqo5K_HkMphxExkvjw&oe=637F6CDD",
     comments: "You should have excperions of working with kids",
-    camp_name: "Camps in Philippine",
+    camp_name: "Camp in Philippine",
     newsfeed_post: "An Opsafe camp reaches  to 51 children affected by the fire in Pajo St., Project 2, QC. Church of Praise lead the team of station leaders from  PCMN staff. The crew leaders and volunteers' food were supplied by Pajo Outreach Church. The venue was lent by Community Bible Church. It took the unity of 3 churches and PCMN to respond to the psycho-social trauma debriefing camp for these children. Praise God for the unity of believers!"
   },
   {
@@ -145,7 +141,7 @@ camps = [
     OperationSAFE to program zajęć dla dzieci 6-12 lat, który pomaga prowadzić dzieci do emocjonalnego uzdrowienia, rozwijając u nich odporność na traumatyczne przeżycia oraz ucząc znaleźć ukojenie w sytuacji chaosu.",
     images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/311478875_646734176984296_7991225747355725212_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=IwnGdVHgmM4AX8tIAv7&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDGYyZ09XQz8MCbDydUOwxGWCnoXt1a00PF-9yXSIlu1Q&oe=63808582",
     comments: "none",
-    camp_name: "OpSAFE camps in Poland",
+    camp_name: "OpSAFE camp in Poland",
     newsfeed_post: 'Miło jest wspomnieć szkolenie OpSAFE w Mińsku Mazowieckim. Tak duża grupa była dla nas nie lada wyzwaniem!
     Dużo było spisanych kartek, dużo dyskusji, trochę łez wzruszenia, ale dużo też uśmiechu i wdzięczności.
     Dziękujemy Inna Karpenko za zaproszenie i pomoc w organizacji. Bardzo dziękujemy Svetlana Popovych i Sofii za nakarmienie 100 osób oraz opiekę nad dziećmi 🙂 I serdecznie dziękujemy OM w Polsce za realizację takich spotkań jak to!
@@ -157,7 +153,7 @@ camps = [
     description: "During war in Ukraine we need volunteers to help kinds.",
     images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293354658_10160681233332518_8084655627895499452_n.jpg?stp=cp6_dst-jpg_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=8KsmmZwhtLQAX9LtPmu&_nc_ht=scontent-nrt1-1.xx&oh=00_AfBIV888Cc4_re6E7jroQ32FDkiXyLLT0B6sk10QXzip2Q&oe=6380A2A1",
     comments: "none",
-    camp_name: "OpSAFE camps in Ukraine",
+    camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
     Of the 108 children who exhibited mild PTSS, 80 showed significant improvement in their symptoms, and 25 did not primarily because their initial symptoms were very mild leaving not much room for improvement. 3 of these children showed a slight regression.
     By the end of the camps, none of the children were flagged as being exceptionally at risk in comparison with their peers. Continued support from friends and community should see continued progress in children's resilience to trauma.
@@ -168,7 +164,7 @@ camps = [
     description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
     images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/315590583_139977992135778_7807916700988978741_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=zX9ADdDCA0AAX-zc_5d&_nc_ht=scontent-nrt1-1.xx&oh=00_AfAYangxdA-FDkPyAnPnkRusoVlwK2rpQu12DqDV_Vsp2Q&oe=638076BC",
     comments: "none",
-    camp_name: "OpSAFE camps in Ukraine",
+    camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "今週はウクライナにおいて10個のプログラムキャンプが行われます。
     ここに養育者の方やボランティアの方から送られてきたレポートを分かち合います。
     ある養育者の方から
@@ -327,6 +323,7 @@ end
 
 puts "... created #{User.count} Users."
 camps.each do |camp|
+  date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
   Camp.create!(
     user: User.where(admin_status: true).sample,
     description: camp[:description],
@@ -343,22 +340,22 @@ camps.each do |camp|
   )
 end
 
-puts "... created #{Camp.count} camp."
+puts "... created #{Camp.count} Camps"
 
 role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
 
-  Camp.all.each do |camp|
-    User.all.each do |user|
-      Assignment.create!(
-        final_volunteer_count: rand(15..30),
-        roles: role.sample,
-        start_date: camp.start_date,
-        end_date: camp.end_date,
-        status: "confirm",
-        user: user,
-        camp: camp
-      )
-    end
+Camp.all.each do |camp|
+  User.all.each do |user|
+    Assignment.create!(
+      final_volunteer_count: rand(15..30),
+      roles: role.sample,
+      start_date: camp.start_date,
+      end_date: camp.end_date,
+      status: "confirm",
+      user: user,
+      camp: camp
+    )
   end
+end
 
-  puts "... created #{Assignment.count} Assignment."
+puts "... created #{Assignment.count} Assignments"
