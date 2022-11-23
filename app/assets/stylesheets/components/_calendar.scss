@@ -4,7 +4,6 @@
   // justify-content: center;
   // align-items: center;
   height: 100vh;
-  position: fixed;
   top: 25vh;
   right:  15vh;
   align-items: center;
@@ -23,7 +22,17 @@
 .simple-calendar .day .wday-1 .past .prev-month {
   background-color: #fff;
 }
+.calendar-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-heading, .calendar-heading span{
+  padding: 5px;
+}
+
 .simple-calendar {
+  margin-top: 15%;
+  margin-left: 5%;
   table {
     min-height: 36vh;
   }
@@ -36,10 +45,10 @@
   width: 300px;
   background-color: #fff;
   box-sizing: border-box;
-  box-shadow: 0 5px 50px rgba(#000, 0.5);
+  box-shadow: 0 5px 5px rgba(#009688, 0.5);
   border-radius: 8px;
   overflow: hidden;
-  background-color: rgba(#009688,0.5);
+  background-color: rgba(#B3E7E4,0.9);
 }
 .simple-calendar a {
 text-decoration: none;
