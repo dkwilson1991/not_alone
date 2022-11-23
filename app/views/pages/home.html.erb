@@ -6,7 +6,12 @@
     </div>
     <div class="upcoming-camps">
       <h3>Upcoming</h3>
-
+        <% @camps.each do |camp| %>
+          <div>
+            <p><%= camp.camp_name.capitalize %> (<%= camp.address %>)</p>
+            <small><p><strong><%= camp.start_date%> - <%= camp.end_date%></strong> </p></small>
+          </div>
+        <% end %>
     </div>
   </div>
 </div>
