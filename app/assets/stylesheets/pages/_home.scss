@@ -1,1 +1,22 @@
-// Specific CSS for your home-page
+.newsfeed {
+  text-align: center;
+  flex-grow: 1;
+
+    h2 {
+      font-size: 36px;
+    }
+}
+
+.upcoming-camps {
+  height: 200px;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1%);
+  padding: 8px;
+  position: sticky;
+  top: 4vh;
+
+    h3 {
+      text-align: center;
+    }
+}
