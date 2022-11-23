@@ -20,7 +20,9 @@ class CampsController < ApplicationController
     if @camp.save
       redirect_to camp_path(@camp)
     else
-      render :new
+      raise
+      @assignments = policy_scope(Assignment)
+      render "assignments/index", status: :unprocessable_entity
     end
   end
 

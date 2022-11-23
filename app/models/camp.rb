@@ -6,8 +6,19 @@ class Camp < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :required_number_volunteers, presence: true
-  validates :director_email, presence: true
+  # validates :director_email, presence: true
   validates :camp_name, presence: true
-  validates :required_roles, presence: true
+  # validates :required_roles, presence: true
   validates :description, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+  after_create :invite_volunteers
+
+  def invite_volunteers
+    @users = User.all
+    @users.each do |user|
+    UserMailer.with(user: user, camp: self).invitation.deliver_now
+    end
+  end
 end

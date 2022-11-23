@@ -1,0 +1,7 @@
+<p>Hi <%= @user.first_name %> <%= @user.last_name %>,</p>
+<p>We will have new camp at <%=@camp.address%></p>
+<p>Starts at <%=@camp.start_date%></p>
+<p>Will end at <%=@camp.end_date%></p>
+<%= link_to "More details", camp_url(@camp) %>
+<p>Best regards,</p>
+<p>Not alone team</p>
