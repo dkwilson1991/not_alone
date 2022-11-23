@@ -1,20 +1,24 @@
 #calendar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   height: 100vh;
+  position: fixed;
+  top: 25vh;
+  right:  15vh;
+  align-items: center;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: inherit;
-    filter: blur(10px);
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background: inherit;
+  //   filter: blur(10px);
+  // }
 }
 .simple-calendar .day .wday-1 .past .prev-month {
   background-color: #fff;
@@ -45,8 +49,12 @@ color: #009688;
 
 .simple-calendar .day {
   height: 36px;
-}
 
+}
+.simple-calendar .prev-month, .simple-calendar .next-month {
+  background-color: #82DBD8;
+  border-radius: 5%;
+}
 
 .simple-calendar tr{
 
@@ -62,6 +70,6 @@ color: #009688;
     min-height: 15vh;
   }
   .today {
-    background-color: #ffffff;
+    background-color: rgba(#ffffff, 0.5);
   }
 }
