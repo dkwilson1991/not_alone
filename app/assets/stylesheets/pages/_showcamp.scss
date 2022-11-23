@@ -1,11 +1,19 @@
+.camp-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: #82dbd8;
+}
+
 .camp-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 30rem;
+  width: auto;
 }
 
 .camp-card > img {
-  height: 20rem;
+  height: 30rem;
   width: 100%;
   object-fit: cover;
 }
@@ -22,7 +30,6 @@
   margin: 0;
 }
 
-
 .camp-card .camp-card-infos {
   padding: 16px;
   display: flex;
@@ -36,4 +43,50 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.camp-card-completed {
+  color: #82dbd8;
+  margin-right: 1rem;
+  text-align: right;
+  text-align: end;
+}
+
+.camp-card-not-completed {
+  color: grey;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.container .camp-card .content {
+  position : relative;
+  top : -160px;
+  color : #111;
+
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.25s ease-in-out;
+
+  height: 10rem;
+}
+
+.container .camp-card:hover .content {
+  margin-top : 30px;
+  visibility : visible;
+  opacity : 0.95;
+  transition-delay: 0.2s;
+}
+
+.camp-inner-text {
+  h2 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    align-items: flex-start;
+  }
+
+  p {
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    align-items: flex-start;
+  }
 }

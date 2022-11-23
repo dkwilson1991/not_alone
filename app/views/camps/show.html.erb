@@ -1,14 +1,18 @@
-<div class="container mt-2">
-  <div class="row">
-    <div class="camp-card">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="camp-card-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="camp-card-pricing">£99.99</h2>
+<div class="camp-container container">
+  <h1><%= @camp.camp_name %></h1>
+  <div class="camp-card">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+    <div class="camp-card content">
+      <div class="camp-inner-text">
+        <h2><%= @camp.camp_name %></h2>
+        <p><%= @camp.address %></p>
+        <p><%= @camp.start_date %> ~ <%= @camp.end_date %></p>
       </div>
+      <% if @camp.required_number_volunteers <= @camp.required_number_volunteers %>
+        <h2 class="camp-card-completed"><%= @camp.required_number_volunteers %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user volunteer-icon"></i></h2>
+      <% else %>
+        <h2 class="camp-card-not-completed"><%= @camp.required_number_volunteers %><i class="fa-solid fa-user volunteer-icon"></i> Volunteers Joined</h2>
+      <% end %>
     </div>
   </div>
 </div>
