@@ -20,7 +20,6 @@ class CampsController < ApplicationController
     if @camp.save
       redirect_to camp_path(@camp)
     else
-      raise
       @assignments = policy_scope(Assignment)
       render "assignments/index", status: :unprocessable_entity
     end
@@ -34,6 +33,6 @@ class CampsController < ApplicationController
   private
 
   def camp_params
-    params.require(:camp).permit(:camp_name, :address, :start_date,:end_date, :required_number_volunteers,:required_roles,:description,:director_email,:comments,:newsfeed_post,photos:[])
+    params.require(:camp).permit(:camp_name, :address, :start_date, :end_date, :required_number_volunteers, :required_roles, :description, :director_email, :comments, :newsfeed_post, tag_list: [], photos:[])
   end
 end
