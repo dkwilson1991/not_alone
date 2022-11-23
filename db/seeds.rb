@@ -9,16 +9,12 @@ require "open-uri"
 
 puts "Destroying all users..."
 User.destroy_all
-p User.count
 puts "Destroying all Assignments..."
 Assignment.destroy_all
-p Assignment.count
 puts "Destroying all Camps..."
 Camp.destroy_all
-p Camp.count
 
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
-date = Faker::Date.in_date_period
 email = ['savi@me.com', 'keita@me.com', 'yulia@me.com', 'ayhem@me.com']
 training = ["None", "1 Day", "3 Days"]
 roles = ["Camp Director", "Station Leader", "Crew Leader"]
@@ -327,6 +323,7 @@ end
 
 puts "... created #{User.count} Users."
 camps.each do |camp|
+  date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
   Camp.create!(
     user: User.where(admin_status: true).sample,
     description: camp[:description],
@@ -343,22 +340,22 @@ camps.each do |camp|
   )
 end
 
-puts "... created #{Camp.count} camp."
+puts "... created #{Camp.count} Camps"
 
 role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
 
-  Camp.all.each do |camp|
-    User.all.each do |user|
-      Assignment.create!(
-        final_volunteer_count: rand(15..30),
-        roles: role.sample,
-        start_date: camp.start_date,
-        end_date: camp.end_date,
-        status: "confirm",
-        user: user,
-        camp: camp
-      )
-    end
+Camp.all.each do |camp|
+  User.all.each do |user|
+    Assignment.create!(
+      final_volunteer_count: rand(15..30),
+      roles: role.sample,
+      start_date: camp.start_date,
+      end_date: camp.end_date,
+      status: "confirm",
+      user: user,
+      camp: camp
+    )
   end
+end
 
-  puts "... created #{Assignment.count} Assignment."
+puts "... created #{Assignment.count} Assignments"
