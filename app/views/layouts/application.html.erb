@@ -10,12 +10,13 @@
   </head>
   <body>
     <%= render "shared/flashes" %>
-    <%= render "shared/navbar" %>
     <div class="d-flex flex-column justify-content-between h-100">
       <div class="content">
-        <%= yield %>
+        <%= render "shared/navbar" %>
       </div>
-      <%= render "shared/footer" %>
     </div>
-  </body>
+    <%= yield %>
+    <%= render "shared/footer" %>
+  </div>
+</body>
 </html>
