@@ -82,3 +82,13 @@ color: #009688;
     background-color: rgba(#ffffff, 0.5);
   }
 }
+.simple-calendar td{
+  text-align: center;
+  border-radius: 5%;
+  box-shadow: 0 0 5px rgba(#009688, 0.5);
+
+  &:hover{
+  font-size: 20px;
+  cursor: pointer;
+}
+}
