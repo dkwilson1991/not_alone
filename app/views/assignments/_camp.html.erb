@@ -1,7 +1,7 @@
 <% assignments.each do |assignment| %>
   <div class="courses-container">
     <div class="course">
-      <div class="course-preview">
+      <div class="course-preview" style="background-image: url(<%= assignment.camp.photos.attached? ? cl_image_path(assignment.camp.photos.first.key) : assignment.camp.images%>);">
         <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
         <p><%= assignment.camp.address %></p>
         <a href="#">View all volunteers </a>
