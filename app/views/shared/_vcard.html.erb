@@ -1,6 +1,6 @@
 <div class="volunteer-card">
-  <div class="round m-2" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" />
-    <div class="collapse" id="collapseExample">
+  <div class="round m-2" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapse-<%= user.id %>" role="button" aria-expanded="false" aria-controls="collapseExample" />
+    <div class="collapse" id="collapse-<%= user.id %>">
       <div class="card card-body">
         <p>Name: <%= user.first_name %> <%= user.last_name %></p>
         <p>Country: <%= user.location %></p>
