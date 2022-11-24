@@ -1,24 +1,82 @@
-.banner {
+$bckImg: asset-url("bannerpic.jpeg");
+//Px to em
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return $pixels / $context * 1em;
+}
+
+.top-banner {
+  background-image: $bckImg;
+  color: #fff;
   background-size: cover;
-  background-position: 0% 70%;
-  padding: 150px 0;
-  height: 50vh;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url("whale-mural.jpeg");
+  background-position: 100% 15%;
+  background-repeat: no-repeat;
+  padding-top: em(250);
+}
+.top-banner--text {
+  color: inherit;
+  padding: em(30) em(37) em(40) em(37);
+  background: rgba($strong, 0.7);
+  h1 {
+    line-height: 1.1;
+    color: inherit;
+    font-weight: normal;
+    font-size: 3rem;
+  }
+  p {
+    margin: 0;
+  }
+}
+@media screen and (min-width: em(800)) {
+  .top-banner {
+    display:  flex;
+    height: 500px;
+    align-items:  center;
+    padding-top: 0;
+     background-image:linear-gradient(75deg, rgba($strong, 0.7) 50%, rgba(#fff, 0) 50%), $bckImg;
+  }
+  .top-banner--text {
+    background-color: transparent;
+    max-width: 40%;
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+      margin-bottom: 1rem;
+      margin-left: 0;
+    }
+  }
+
+}
+@media screen and (min-width: em(1200) ){
+  .top-banner--text {
+    max-width: calc(400/1188 * 100%); //50%
+    padding-left:  em(100);
+    padding-right: em(50);
+  }
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 48px;
-  font-weight: bold;
-  padding-top: 50px;
-  font-family: $body-font;
-}
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
+// .banner {
+//   background-size: cover;
+//   background-position: 0% 70%;
+//   padding: 150px 0;
+//   height: 50vh;
+//   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url("whale-mural.jpeg");
+// }
+
+// .banner h1 {
+//   margin: 0;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   font-size: 48px;
+//   font-weight: bold;
+//   padding-top: 50px;
+//   font-family: $body-font;
+// }
+
+// .banner p {
+//   font-size: 20px;
+//   color: white;
+//   opacity: .7;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
