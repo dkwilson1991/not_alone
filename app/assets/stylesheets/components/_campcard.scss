@@ -1,3 +1,8 @@
+body {
+  font: 1em/1.618 Inter, sans-serif;
+  background: url(https://images.unsplash.com/photo-1528460033278-a6ba57020470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80)
+    center / cover no-repeat fixed;
+}
 * {
   box-sizing: border-box;
 }
@@ -12,7 +17,7 @@
   margin-right: 20px;
 }
 
-.course {
+.coursa {
   background-color: #fff;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border-radius: 10px;
@@ -24,26 +29,26 @@
   width: 700px;
 }
 
-.course h6 {
+.coursa h6 {
   opacity: 0.6;
   margin: 0;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.course h2 {
+.coursa h2 {
   letter-spacing: 1px;
   margin: 10px 0;
 }
 
-.course-preview {
+.preview {
   background-color: #b3e8e5;
   color: #fff;
-  padding: 30px;
+  padding: 100px;
   max-width: 250px;
 }
 
-.course-preview a {
+.preview a {
   color: #fff;
   display: inline-block;
   font-size: 12px;
@@ -52,23 +57,24 @@
   text-decoration: none;
 }
 
-.course-info {
+.coursa-info {
   padding: 30px;
   position: relative;
   width: 100%;
 }
-.course-info p {
-  padding: 30px;
+.coursa-info p {
+  padding: 5px;
+  margin-left: -11px;
 }
 
-.course-info h6 {
+.coursa-info h6 {
   width: 50%;
 }
 
-.progress-container {
+.progressc {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 8px;
+  right: 5px;
   text-align: right;
   width: 150px;
 }
@@ -97,8 +103,8 @@
   letter-spacing: 1px;
 }
 
-.course-info .btn {
-  background-color: #b3e8e5;
+.coursa-info .btn {
+  background-color: #3b7875;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
   border-radius: 50px;
@@ -107,7 +113,7 @@
   font-size: 16px;
   padding: 12px 25px;
   position: absolute;
-  bottom: 30px;
+  bottom: 6px;
   right: 30px;
   letter-spacing: 1px;
 }
