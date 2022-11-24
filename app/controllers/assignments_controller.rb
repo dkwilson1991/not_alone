@@ -16,12 +16,21 @@ class AssignmentsController < ApplicationController
   end
 
   def create
+    @camp = Camp.find(params[:camp_id])
     @assignment = Assignment.new(assignment_params)
     @assignment.user = current_user
+    @assignment.camp = @camp
     authorize @assignment
+    @assignment.save
+    flash[:notice] = "Application submitted"
+    redirect_to camp_path(@camp)
   end
 
   def update
     authorize @assignment
+  end
+
+  def assignment_params
+    params.require(:assignment).permit(:status, :roles)
   end
 end

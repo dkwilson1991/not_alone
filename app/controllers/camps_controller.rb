@@ -3,10 +3,20 @@ class CampsController < ApplicationController
     @camp = Camp.find(params[:id])
     @assignments = policy_scope(Assignment)
     authorize @camp
+    @assignment = Assignment.new
+    @previous_assignment = @camp.assignments.find_by(user: current_user)
   end
 
   def index
     @camps = policy_scope(Camp)
+
+    @markers = @camps.geocoded.map do |camp|
+      {
+        lat: camp.latitude,
+        lng: camp.longitude,
+        popup_html: render_to_string(partial: 'camps/map_popup', locals: { camp: camp })
+      }
+    end
   end
 
   def edit

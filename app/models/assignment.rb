@@ -7,9 +7,6 @@ class Assignment < ApplicationRecord
     status == "pending"
   end
 
-  validates :final_volunteer_count, presence: true
-  validates :roles, presence: true
-  validates :start_date, presence: true
-  validates :end_date, presence: true
   validates :status, presence: true
+  validates :camp, uniqueness: { scope: :user }
 end
