@@ -18,7 +18,7 @@
             </div>
             <div class="flex-item">
               <p class="card-p"><i class="fa-solid fa-location-dot"></i> <%= @camp.address %></p>
-              <p class="card-p"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date %> ~ <%= @camp.end_date %></p>
+              <p class="card-p"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date %> - <%= @camp.end_date %></p>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
     <div class="flex flex--row flex--alignCenter">
       <div class="border-top">
         <div class="d-flex justify-content-between p-4 ms-4 me-4">
-          <p> Camp Information</p>
+          <p class="card-p"> Camp Information</p>
           <button class="btn cta-button">Apply</button>
         </div>
       </div>
@@ -47,10 +47,39 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col cards-space">
-      <%= render "shared/vcard" %>
+  <div class="camp-container container">
+    <div class="cards-space row">
+      <div class="col-12 cards-space">
+        <% @camp.assignments.each do |assignment| %>
+          <div class="avatar">
+            <%= render "shared/vcard", user: assignment.user %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="assignment-status">
+      <% @assignments.each do |assignment| %>
+        <% if assignment.pending? %>
+          <%= simple_form_for assignment do |f| %>
+            <%= f.input :status, input_html: { value: 'apply'} %>
+            <%= f.submit 'Apply', class: 'btn btn-info apply' %>
+          <% end %>
+          <%= simple_form_for assignment do |f| %>
+            <%= f.input :status, input_html: { value: 'decline'} %>
+            <%= f.submit 'Decline', class: 'btn btn-light decline' %>
+          <% end %>
+        <% else %>
+          <% if assignment.status == "apply" %>
+            <p class="status green"><%= assignment.status %>ed</p>
+          <% elsif assignment.status == "decline" %>
+            <p class="status red"><%= assignment.status %>d</p>
+          <% else %>
+            <p class="status"><%= assignment.status %></p>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
   </div>
+</div>
 </div>
 </div>

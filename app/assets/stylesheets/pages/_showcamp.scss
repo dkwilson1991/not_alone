@@ -6,6 +6,23 @@
   background-position: center;
 }
 
+.camp-card-completed {
+  margin-bottom: 0;
+  color: #B3E8E5;
+}
+
+.camp-card-not-completed {
+  margin-bottom: 0;
+}
+
+.show-h1 {
+  margin-bottom: 0;
+}
+
+.card-p {
+  margin-bottom: 0;
+}
+
 .show-h1 {
   font-weight: bolder;
 }
@@ -24,4 +41,13 @@
 
 .camp-information {
   background-color: #F6F7F8;
+}
+
+.cards-space {
+  .avatar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    max-width: 100%;
+  }
 }
