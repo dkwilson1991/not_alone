@@ -3,5 +3,9 @@
   <div class="newsfeed-card-infos">
     <h2><%= camp.camp_name.capitalize %></h2>
     <p><%= camp.newsfeed_post.truncate(150) %></p>
+     <small>
+        <p class="lower-left-date"><%= camp.start_date.strftime('%b %d, %Y')%> - <%= camp.end_date.strftime('%b %d, %Y')%></p>
+        <p class="lower-right-location"><%= camp.address %></p>
+    </small>
   </div>
 </div>
