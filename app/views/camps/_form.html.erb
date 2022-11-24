@@ -16,7 +16,7 @@
         <%= f.input :tag_list, label: "Required Roles", as: :check_boxes, collection: ["Camp Director","Station Leader", "Crew Leader"], item_wrapper_class: 'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
       </div>
       <div class="form-row check-box">
-        <%= f.input :required_roles, label: "If Chosen Station Leader", as: :check_boxes, collection: ["Story telling","Songs", "Snacks", "Crafts", "Games"], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
+        <%= f.input :tag_list, label: "If Chosen Station Leader", as: :check_boxes, collection: ["Story telling","Songs", "Snacks", "Crafts", "Games"], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
       </div>
       <div class="form-row description">
         <%= f.input :description, as: :text, label: false, placeholder: "Add description"%>

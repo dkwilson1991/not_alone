@@ -16,6 +16,7 @@ class CampsController < ApplicationController
   def create
     @camp = Camp.new(camp_params)
     @camp.user = current_user
+    raise
     authorize @camp
     if @camp.save
       redirect_to camp_path(@camp)
