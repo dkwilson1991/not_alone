@@ -1,17 +1,21 @@
-<div class="home-conatiner">
+<div class="home-conatiner bg-light">
   <%= render "banner" %>
-  <div class="container d-flex justify-content-between">
-    <div class="newsfeed">
+  <div class="container d-flex">
+    <div class="newsfeed me-5">
       <h2>Newsfeed</h2>
-    </div>
-    <div class="upcoming-camps">
-      <h3>Upcoming</h3>
-        <% @camps.each do |camp| %>
-          <div>
-            <p><%= camp.camp_name.capitalize %> (<%= camp.address %>)</p>
-            <small><p><strong><%= camp.start_date%> - <%= camp.end_date%></strong> </p></small>
-          </div>
+      <p class='mb-4'>Explore previous camp success stories...</p>
+        <% @past_camps.each do |camp| %>
+          <%= link_to camp_path(camp), class:"text-decoration-none" do %>
+            <%= render "newsfeed_post", camp: camp %>
+          <% end %>
         <% end %>
+    </div>
+    <div class="upcoming-camps bg-white mt-5 ms-3">
+      <h3>Upcoming Camps</h3>
+        <% @future_camps.each do |camp| %>
+          <%= render "upcoming_camps", camp: camp %>
+        <% end %>
+        <%= link_to 'See More', camps_path, class:'btn btn-secondary float-end btn-sm' %>
     </div>
   </div>
 </div>
