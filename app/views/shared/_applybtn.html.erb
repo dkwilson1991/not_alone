@@ -1,0 +1,23 @@
+<div class="assignment-status">
+  <% @assignments.each do |assignment| %>
+    <% if assignment.pending? %>
+      <%= simple_form_for assignment do |f| %>
+        <%= f.input :status, input_html: { value: 'apply'} %>
+        <%= f.submit 'Apply', class: 'btn btn-info apply' %>
+      <% end %>
+      <%= simple_form_for assignment do |f| %>
+        <%= f.input :status, input_html: { value: 'decline'} %>
+        <%= f.submit 'Decline', class: 'btn btn-light decline' %>
+      <% end %>
+    <% else %>
+      <% if assignment.status == "apply" %>
+        <p class="status green"><%= assignment.status %>ed</p>
+      <% elsif assignment.status == "decline" %>
+        <p class="status red"><%= assignment.status %>d</p>
+      <% else %>
+        <p class="status"><%= assignment.status %></p>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+c

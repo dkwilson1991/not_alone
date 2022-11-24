@@ -3,6 +3,8 @@ class CampsController < ApplicationController
     @camp = Camp.find(params[:id])
     @assignments = policy_scope(Assignment)
     authorize @camp
+    @assignment = Assignment.new
+    @previous_assignment = @camp.assignments.find_by(user: current_user)
   end
 
   def index
@@ -25,7 +27,6 @@ class CampsController < ApplicationController
   def create
     @camp = Camp.new(camp_params)
     @camp.user = current_user
-    raise
     authorize @camp
     if @camp.save
       redirect_to camp_path(@camp)
