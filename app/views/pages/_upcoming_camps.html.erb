@@ -1,0 +1,9 @@
+<div class="my-3">
+  <%= link_to camp_path(camp), class:'text-decoration-none' do %>
+    <p class="m-1"> <strong><%= camp.camp_name.capitalize %></strong></p>
+  <% end %>
+  <small>
+    <p class="m-1"><i class="fa-regular fa-calendar"></i> <%= camp.start_date.strftime('%b %d, %Y')%> - <%= camp.end_date.strftime('%b %d, %Y')%> </p>
+    <p class="m-1"><i class="fa-solid fa-location-dot"></i>  <%= camp.address %></p>
+  </small>
+</div>

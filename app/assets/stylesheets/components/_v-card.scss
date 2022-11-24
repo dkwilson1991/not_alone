@@ -1,35 +1,83 @@
-.card-product {
-  overflow: hidden;
-  height: 166px;
-  background: #86bec3;
-  box-shadow: 0 0 33px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  margin-top: 22px;
-  margin-bottom: 22px;
-  width: 700px;
+.volunteer-card * {
+  box-sizing: border-box;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.volunteer-card h3 {
+  margin: 10px 0;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.volunteer-card h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: 0.7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.volunteer-card p {
+  font-size: 14px;
+  line-height: 21px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.volunteer-card {
+  background-color: #ffffff;
+  border-color: 2rem solid #82dbd8;
+  box-shadow: 0px 2px 16px -10px rgba(0, 0, 0, 0.75);
+  color: #000000;
+  padding-top: 3px;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.volunteer-card .round {
+  border: 1px solid #03bfcb;
+  border-radius: 66%;
+  padding: 0px;
+  margin-top: 1rem;
+}
+
+.volunteer-card button.primary {
+  background-color: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
