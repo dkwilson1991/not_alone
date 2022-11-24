@@ -16,11 +16,13 @@ class CampsController < ApplicationController
   def create
     @camp = Camp.new(camp_params)
     @camp.user = current_user
+    raise
     authorize @camp
     if @camp.save
       redirect_to camp_path(@camp)
     else
-      render :new
+      @assignments = policy_scope(Assignment)
+      render "assignments/index", status: :unprocessable_entity
     end
   end
 
@@ -32,6 +34,6 @@ class CampsController < ApplicationController
   private
 
   def camp_params
-    params.require(:camp).permit(:camp_name, :address, :start_date,:end_date, :required_number_volunteers,:required_roles,:description,:director_email,:comments,:newsfeed_post,photos:[])
+    params.require(:camp).permit(:camp_name, :address, :start_date, :end_date, :required_number_volunteers, :required_roles, :description, :director_email, :comments, :newsfeed_post, tag_list: [], photos:[])
   end
 end
