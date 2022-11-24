@@ -1,12 +1,13 @@
-<div class="card-container volunteer-card">
-  <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-  <h2>John Doe</h2>
-  <h6>Location : Kyoto,Japan</h6>
-  <p>Speciality : Psychologist<br/>
-  </p>
-  <div class="buttons">
-    <button class="primary">
-      Message
-    </button>
+<div class="volunteer-card">
+  <div class="round m-2" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" />
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <p>Name: <%= user.first_name %> <%= user.last_name %></p>
+        <p>Country: <%= user.location %></p>
+        <p>Language: <%= user.location %></p>
+        <p>Training: <%= user.training %></p>
+        <p>Past Roles: <%= user.past_roles %></p>
+        <p>Certifications: <%= user.past_roles %></p>
+      </div>
+    </div>
   </div>
-</div>
