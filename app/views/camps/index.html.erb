@@ -7,7 +7,7 @@
 <div class="courses">
   <%  @camps.each do |camp| %>
     <div class="course">
-      <div class="preview" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU'%>);">
+      <div class="preview" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'%>);">
       </div>
       <div class="coursa-info">
         <div class="progressc">
