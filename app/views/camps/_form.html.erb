@@ -3,22 +3,23 @@
     <h1 class="form-title">new camp</h1>
   </div>
   <div class="form-row inline-text">
-    <%= simple_form_for Camp.new do |f| %>
+    <%= simple_form_for @camp do |f| %>
       <%= f.input :camp_name, label: false, placeholder: "Camp Name" %>
       <%= f.input :address, label: false, placeholder: "Country, City" %>
       <div class="form-row form-date">
       </div>
       <%= f.input :start_date, as: :date, label: false %>
       <%= f.input :end_date, as: :date, label: false %>
-      <%= f.input :required_number_volunteers, label: false %>
+      <%= f.input :required_number_volunteers, label: false, placeholder: "Number of volunteers" %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false, placeholder: "Add photos" %>
       <div class="form-row check-box">
-        <%= f.input :required_roles, label: "Required Roles", as: :check_boxes, collection: ["Camp Director","Station Leader", "Crew Leader"], item_wrapper_class: 'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
+        <%= f.input :tag_list, label: "Required Roles", as: :check_boxes, collection: ["Camp Director","Station Leader", "Crew Leader"], item_wrapper_class: 'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
       </div>
       <div class="form-row check-box">
-        <%= f.input :required_roles, label: "If Chosen Station Leader", as: :check_boxes, collection: ["Story telling","Songs", "Snacks", "Crafts", "Games"], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
+        <%= f.input :tag_list, label: "If Chosen Station Leader", as: :check_boxes, collection: ["Story telling","Songs", "Snacks", "Crafts", "Games"], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
       </div>
       <div class="form-row description">
-        <%= f.input :description, as: :text, label: false %>
+        <%= f.input :description, as: :text, label: false, placeholder: "Add description"%>
       </div>
       <div class="button-to-right">
         <%= f.button :submit, "submit" %>
