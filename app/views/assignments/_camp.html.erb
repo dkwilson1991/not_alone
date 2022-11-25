@@ -3,9 +3,9 @@
   <div class="courses-container">
     <div class="course">
       <div class="course-preview">
-        <h2><%= assignment.camp.start_date %> <%= assignment.camp.end_date %></h2>
+        <h2><%= assignment.camp.start_date.strftime('%b %d, %Y') %> <%= assignment.camp.end_date.strftime('%b %d, %Y') %></h2>
         <p><%= assignment.camp.address %></p>
-        <a href="#">View all volunteers </a>
+        <%# <a href="#">View all volunteers </a> %>
       </div>
       <div class="course-info">
         <div class="progress-container">
@@ -16,7 +16,7 @@
         </div>
         <h6><%= assignment.camp.camp_name %></h6>
         <p><%= assignment.camp.description.truncate(100) %></p>
-        <button class="btn">Continue</button>
+        <button class="btn btn-sm mt-2">View Details  <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
   </div>
