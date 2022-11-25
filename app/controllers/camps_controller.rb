@@ -5,6 +5,12 @@ class CampsController < ApplicationController
     authorize @camp
     @assignment = Assignment.new
     @previous_assignment = @camp.assignments.find_by(user: current_user)
+
+    @marker = [{
+        lat: @camp.geocode.first,
+        lng: @camp.geocode.last,
+        popup_html: render_to_string(partial: 'camps/map_popup', locals: { camp: @camp })
+      }]
   end
 
   def index

@@ -9,11 +9,17 @@
 .camp-card-completed {
   margin-bottom: 0;
   color: #B3E8E5;
+  text-shadow: 1rem;
 }
 
 .camp-card-not-completed {
   margin-bottom: 0;
-  color: dimgray;
+  color: red;
+  text-shadow: 1rem;
+}
+
+#map.individual-map {
+  height: 300px;
 }
 
 .show-h1 {
@@ -23,6 +29,10 @@
 
 .card-p {
   margin-bottom: 0;
+}
+
+#card-description {
+  width: 53ch;
 }
 
 .show-h1 {
@@ -39,6 +49,11 @@
   font-weight: bolder;
 	padding: 12px 25px;
 	letter-spacing: 1px;
+}
+
+.applied-btn {
+  background-color: #B3E8E5;
+  opacity: 80%;
 }
 
 .camp-information {
