@@ -293,7 +293,7 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   language: "English, Arabic",
-  past_roles: "Camp Director",
+  past_roles: "Crew Leader",
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954065/heegtqhasvkercvbbzi4.jpg"
@@ -308,7 +308,7 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   language: "English, Ukranian, Polish",
-  past_roles: "Camp Director",
+  past_roles: "Station Leader, Crew Leader",
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
