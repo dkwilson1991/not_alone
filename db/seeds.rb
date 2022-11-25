@@ -347,7 +347,7 @@ role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling"
 Camp.all.each do |camp|
   User.all.each do |user|
     Assignment.create!(
-      final_volunteer_count: user.count,
+      final_volunteer_count: 5,
       roles: role.sample,
       start_date: camp.start_date,
       end_date: camp.end_date,
