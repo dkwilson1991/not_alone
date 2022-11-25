@@ -1,25 +1,35 @@
-<div class="container">
+<div class="container d-flex">
+  <div class="searching-form m-3"><%= form_with url: camps_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a camp by location"
+  %>
+      <%= submit_tag "Search", class: "search" %>
+    <% end %>
+  </div>
   <div id="map"
          data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-<div class="courses">
-  <%  @camps.each do |camp| %>
-    <div class="course">
-      <div class="preview" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU'%>);">
-      </div>
-      <div class="coursa-info">
-        <div class="progressc">
-          <div class="progress"></div>
-          <span class="progress-text">
-            6/9 <i class="fa-solid fa-user"></i> Volunteers
-          </span>
+  <div class="courses">
+    <h1 class="m-3">All upcoming events</h1>
+    <%  @camps.each do |camp| %>
+      <div class="course m-5">
+        <div class="preview" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : camp.images%>);">
         </div>
-        <h2><%= camp.camp_name %></h2>
-        <p><%= camp.description.truncate(200) %></p>
-        <button class="btn">Continue</button>
+        <div class="coursa-info">
+          <div class="progressc">
+            <div class="progress"></div>
+            <span class="progress-text">
+              6/9 <i class="fa-solid fa-user"></i> Volunteers
+            </span>
+          </div>
+          <h2><%= camp.camp_name %></h2>
+          <p><%= camp.description.truncate(100) %></p>
+          <%= link_to "Continue", camp_path(camp), class: "btn" %>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>

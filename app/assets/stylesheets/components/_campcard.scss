@@ -64,7 +64,7 @@
 
 .progressc {
   position: absolute;
-  top: 8px;
+  top: 10%;
   right: 5px;
   text-align: right;
   width: 150px;
@@ -95,18 +95,18 @@
 }
 
 .coursa-info .btn {
-  background-color: #3b7875;
+  background-color: #B3E8E5;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 25px;
-  position: absolute;
-  bottom: 6px;
-  right: 30px;
-  letter-spacing: 1px;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+	letter-spacing: 1px;
 }
 
 @media screen and (max-width: 480px) {
