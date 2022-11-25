@@ -8,9 +8,9 @@
           <div class="col-4">
             <div class="flex-item mb-1">
               <% if @camp.assignments.count < @camp.required_number_volunteers %>
-                <p class="camp-card-not-completed"><%= @camp.assignments.count %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user volunteer-icon"></i> <%= @camp.required_number_volunteers - @camp.assignments.count %> Volunteers Needed </p>
+                <p class="camp-card-not-completed"><%= (@camp.assignments.count - 1) %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user volunteer-icon"></i> <%= @camp.required_number_volunteers - (@camp.assignments.count - 1) %> Volunteers Needed </p>
               <% else %>
-                <p class="camp-card-completed"><%= @camp.assignments.count %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user-check"></i></p>
+                <p class="camp-card-completed"><%= (@camp.assignments.count - 1) %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user-check"></i></p>
                 <p>Your camp is Ready to Go!</p>
               <% end %>
             </div>
