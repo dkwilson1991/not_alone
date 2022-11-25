@@ -16,7 +16,7 @@
         </div>
         <h6><%= assignment.camp.camp_name %></h6>
         <p><%= assignment.camp.description.truncate(100) %></p>
-        <button class="btn btn-sm mt-2">View Details  <i class="fa-solid fa-arrow-right"></i></button>
+        <%= link_to "View Details →", camp_path(assignment.camp), class: "btn" %>
       </div>
     </div>
   </div>
