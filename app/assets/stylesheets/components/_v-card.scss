@@ -10,7 +10,7 @@
 }
 
 .volunteer-card .round {
-  border: 2px solid gray;
+  border: 0.2rem solid white;
   background-size: cover;
   border-radius: 50%;
   padding: 0px;
@@ -21,12 +21,39 @@
 }
 
 .volunteer-card .round:hover {
-  border: 2px solid #82dbd8;
+  border: 0.2rem solid #82dbd8;
 }
 
 .inner-card {
-  width: 160px;
   padding: 1rem;
+  max-width: 250px;
+  position: relative;
+  right: 64px;
+}
+
+.border-color {
+  border: 2px solid #82dbd8;
+}
+
+.positioning-icon {
+  display: flex;
+  justify-content: right;
+}
+
+.pending-icon {
+  color: gray;
+  font-size:36px;
+  opacity: 90%;
+}
+.confirm-icon {
+  color: #82dbd8;
+  font-size:36px;
+  opacity: 90%;
+}
+.decline-icon {
+  color: red;
+  font-size:36px;
+  opacity: 90%;
 }
 
 // Smallest device

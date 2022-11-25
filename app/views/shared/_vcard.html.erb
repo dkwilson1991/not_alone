@@ -1,13 +1,38 @@
 <div class="volunteer-card">
-  <div class="round m-2" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapse-<%= user.id %>" role="button" aria-expanded="false" aria-controls="collapseExample">
-    <div class="collapse" id="collapse-<%= user.id %>">
-      <div class="card inner-card">
+  <div class="round m-2 border-color" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapse-<%= user.id %>" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <div class="positioning-icon">
+      <% if assignment.status == "pending" %>
+        <i class="fa-sharp fa-solid fa-pause pending-icon"></i>
+      <% elsif assignment.status == "admin_confirm" %>
+        <i class="fa-solid fa-check confirm-icon"></i>
+      <% else %>
+        <i class="fa-solid fa-xmark decline-icon"></i>
+      <% end %>
+    </div>
+  </div>
+  <div class="collapse" id="collapse-<%= user.id %>">
+    <div class="card inner-card d-flex flex-row align-items-center">
+      <div>
         <p>Name: <%= user.first_name %> <%= user.last_name %></p>
-        <p>Country: <%= user.location %></p>
-        <p>Language: <%= user.location %></p>
+        <p><i class="fa-regular fa-house"></i>: <%= user.location %></p>
+        <p><i class="fa-regular fa-flag"></i>: <%= user.location %></p>
         <p>Training: <%= user.training %></p>
         <p>Past Roles: <%= user.past_roles %></p>
         <p>Certifications: <%= user.past_roles %></p>
+      </div>
+      <div class="status-actions">
+        <% if policy(assignment).update? %>
+          <%= simple_form_for assignment do |f| %>
+            <%= f.input :status, as: :hidden, input_html: { value: 'admin_confirm'} %>
+            <%= f.submit 'Accept', class: 'btn btn-info accept' %>
+          <% end %>
+          <%= simple_form_for assignment do |f| %>
+            <%= f.input :status, as: :hidden, input_html: { value: 'admin_decline'} %>
+            <%= f.submit 'Decline', class: 'btn btn-light decline' %>
+          <% end %>
+        <% else %>
+          <p><%= assignment.status %></p>
+        <% end %>
       </div>
     </div>
   </div>
