@@ -51,18 +51,19 @@
   <div class="camp-container container">
     <div class="camp-card content">
       <div class="camp-inner-text">
-        <p class="pt-4"><i class="fa-solid fa-envelope"></i> <%= @camp.user.email %></p>
-        <p class="pt-2"><i class="fa-solid fa-file-lines"></i> <%= @camp.description.truncate(500) %></p>
+        <p class="pt-4"><i class="fa-solid fa-envelope"></i>  <%= @camp.user.email %></p>
+        <p class="pt-4"><i class="fa-solid fa-file-lines"></i>  <%= @camp.description %></p>
+        <p class="pt-4"><i class="fa-solid fa-users"></i>  <%= @camp.tag_list.split.join(', ') %></p>
       </div>
     </div>
   </div>
   <div class="camp-container container">
     <div class="row border-top">
       <h2 class="mt-3">Volunteer Team List</h2>
-      <div class="col-12 d-flex">
+      <div class="col-12 d-flex flex-wrap">
         <% @camp.assignments.each do |assignment| %>
           <div class="rounded-circle">
-            <%= render "shared/vcard", user: assignment.user %>
+            <%= render "shared/vcard", user: assignment.user, assignment: assignment %>
           </div>
         <% end %>
       </div>

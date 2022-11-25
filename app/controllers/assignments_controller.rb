@@ -28,7 +28,11 @@ class AssignmentsController < ApplicationController
   end
 
   def update
+    @assignment = Assignment.find(params[:id])
     authorize @assignment
+    if @assignment.update(assignment_params)
+      redirect_to camp_path(@assignment.camp)
+    end
   end
 
   def assignment_params

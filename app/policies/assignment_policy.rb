@@ -10,6 +10,6 @@ class AssignmentPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    record.camp.user == user
   end
 end
