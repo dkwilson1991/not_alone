@@ -15,10 +15,10 @@
       <div>
         <p>Name: <%= user.first_name %> <%= user.last_name %></p>
         <p><i class="fa-regular fa-house"></i>: <%= user.location %></p>
-        <p><i class="fa-regular fa-flag"></i>: <%= user.location %></p>
+        <p><i class="fa-regular fa-flag"></i>: <%= user.language %></p>
         <p>Training: <%= user.training %></p>
         <p>Past Roles: <%= user.past_roles %></p>
-        <p>Certifications: <%= user.past_roles %></p>
+        <p>Certifications: <%= user.certifications %></p>
       </div>
       <div class="status-actions">
         <% if policy(assignment).update? %>
