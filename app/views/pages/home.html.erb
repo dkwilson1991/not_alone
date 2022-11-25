@@ -1,9 +1,9 @@
 <div class="home-container">
   <%= render "banner" %>
   <div class="container d-flex justify-content-center">
-    <div class="newsfeed mt-4 me-5">
+    <div class="newsfeed mt-5 me-5">
       <h2>Change a child's life today</h2>
-      <p class='mb-4'>Read about what previous camps have accomplished.</p>
+      <p class='mb-5'>Read about what previous camps have accomplished.</p>
       <% @past_camps.each do |camp| %>
         <%= link_to camp_path(camp), class:"text-decoration-none" do %>
           <%= render "newsfeed_post", camp: camp %>

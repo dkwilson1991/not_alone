@@ -274,10 +274,12 @@ User.create!(
   password: "123456",
   first_name: "Keita",
   last_name: "Wilson",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   language: "English, Japanese",
+  past_roles: "Camp Director",
+  certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
 )
@@ -287,10 +289,12 @@ User.create!(
   password: "123456",
   first_name: "Ayhem",
   last_name: "Chelly",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   language: "English, Arabic",
+  past_roles: "Camp Director",
+  certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954065/heegtqhasvkercvbbzi4.jpg"
 )
@@ -300,10 +304,12 @@ User.create!(
   password: "123456",
   first_name: "Yulia",
   last_name: "Naumenko",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   language: "English, Ukranian, Polish",
+  past_roles: "Camp Director",
+  certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
 )
@@ -313,7 +319,7 @@ User.create!(
   password: "123456",
   first_name: "Joyce",
   last_name: "Chan",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   avatar_pic: "https://avatars.githubusercontent.com/u/109743083?v=4"
@@ -324,7 +330,7 @@ User.create!(
   password: "123456",
   first_name: "Fred",
   last_name: "Faeger",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "1 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664745102/jdcxntptl5cqvp63kvmi.jpg"
@@ -335,7 +341,7 @@ User.create!(
   password: "123456",
   first_name: "Will",
   last_name: "Hargrave",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "1 Days",
   avatar_pic: "https://avatars.githubusercontent.com/u/77623750?v=4"
@@ -346,7 +352,7 @@ User.create!(
   password: "123456",
   first_name: "Yumi",
   last_name: "Kimura",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "1 Days",
   avatar_pic: "https://avatars.githubusercontent.com/u/88379080?v=4"
@@ -357,7 +363,7 @@ User.create!(
   password: "123456",
   first_name: "Thomas",
   last_name: "Price",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1666749630/eest1b3axeabmyxbrbhj.jpg"
@@ -368,7 +374,7 @@ User.create!(
   password: "123456",
   first_name: "Mohamed",
   last_name: "Shegow",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
@@ -379,7 +385,7 @@ User.create!(
   password: "123456",
   first_name: "Soren",
   last_name: "Umstot",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   avatar_pic: "https://avatars.githubusercontent.com/u/108733009?v=4"
@@ -390,7 +396,7 @@ User.create!(
   password: "123456",
   first_name: "Erika",
   last_name: "Ura",
-  location: "Japan, Tokyo",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
   avatar_pic: "https://avatars.githubusercontent.com/u/104239957?v=4"
@@ -529,8 +535,6 @@ camp6 = Camp.create!(
   user: admin.sample
 )
 
-
-
 camps.each do |camp|
   date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
   Camp.create!(
@@ -553,12 +557,11 @@ camps = [camp1, camp2, camp3, camp4, camp5, camp6]
 User.all.each do |user|
   Assignment.create!(
     final_volunteer_count: rand(9..15),
-    status: "apply",
+    status: "user_apply",
     user: user,
     camp: camps.sample
   )
 end
-
 
 puts "... created #{Camp.count} Camps"
 

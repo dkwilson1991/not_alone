@@ -1,7 +1,7 @@
 <div class="newsfeed-card mb-5">
   <img src= <%=camp.images %> />
   <div class="newsfeed-card-infos mt-2">
-    <h2><%= camp.camp_name.capitalize %></h2>
+    <h2><%= camp.camp_name %></h2>
     <p><%= camp.newsfeed_post&.truncate(150) %></p>
      <small>
         <p class="upper-left-date"><%= camp.start_date.strftime('%b %d, %Y')%> - <%= camp.end_date.strftime('%b %d, %Y')%></p>
