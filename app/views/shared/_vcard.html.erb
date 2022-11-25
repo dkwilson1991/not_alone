@@ -13,14 +13,14 @@
   <div class="collapse" id="collapse-<%= user.id %>">
     <div class="card inner-card d-flex flex-row align-items-center">
       <div>
-        <p>Name: <%= user.first_name %> <%= user.last_name %></p>
-        <p><i class="fa-regular fa-house"></i>: <%= user.location %></p>
-        <p><i class="fa-regular fa-flag"></i>: <%= user.language %></p>
+        <p><%= user.first_name %> <%= user.last_name %></p>
+        <p><i class="fa-solid fa-earth-americas"></i> : <%= user.location %></p>
+        <p><i class="fa-regular fa-flag"></i> : <%= user.language %></p>
         <p>Training: <%= user.training %></p>
         <p>Past Roles: <%= user.past_roles %></p>
         <p>Certifications: <%= user.certifications %></p>
       </div>
-      <div class="status-actions">
+      <div class="status-actions ms-2">
         <% if policy(assignment).update? %>
           <%= simple_form_for assignment do |f| %>
             <%= f.input :status, as: :hidden, input_html: { value: 'admin_confirm'} %>
