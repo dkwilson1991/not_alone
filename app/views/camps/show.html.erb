@@ -34,7 +34,7 @@
           <p class="card-p"> Camp Information</p>
           <div class="assignment-status">
             <% if @previous_assignment %>
-              <button class="btn btn-light" disabled><%= @previous_assignment.status %></button>
+              <button class="btn btn-light" disabled> Applied </button>
             <% else %>
               <%= simple_form_for [@camp, @assignment] do |f| %>
                 <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
