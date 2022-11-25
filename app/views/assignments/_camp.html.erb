@@ -2,10 +2,10 @@
 <% @upcoming_assignments.each do |assignment| %>
   <div class="courses-container">
     <div class="course">
-      <div class="course-preview" style="background-image: url(<%= assignment.camp.photos.attached? ? cl_image_path(assignment.camp.photos.first.key) : assignment.camp.images%>);">
-        <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
+      <div class="course-preview">
+        <h2><%= assignment.camp.start_date.strftime('%b %d, %Y') %> <%= assignment.camp.end_date.strftime('%b %d, %Y') %></h2>
         <p><%= assignment.camp.address %></p>
-        <a href="#">View all volunteers </a>
+        <%# <a href="#">View all volunteers </a> %>
       </div>
       <div class="course-info">
         <div class="progress-container">
@@ -16,7 +16,7 @@
         </div>
         <h6><%= assignment.camp.camp_name %></h6>
         <p><%= assignment.camp.description.truncate(100) %></p>
-        <button class="btn">Continue</button>
+        <%= link_to "View Details →", camp_path(assignment.camp), class: "btn" %>
       </div>
     </div>
   </div>
@@ -25,8 +25,8 @@
 <% @previous_assignments.each do |assignment| %>
   <div class="courses-container">
     <div class="course">
-      <div class="course-preview" style="background-image: url(<%= assignment.camp.photos.attached? ? cl_image_path(assignment.camp.photos.first.key) : assignment.camp.images%>);">
-        <h2><%= assignment.start_date %> <%= assignment.end_date %></h2>
+      <div class="course-preview">
+        <h2><%= assignment.camp.start_date %> <%= assignment.camp.end_date %></h2>
         <p><%= assignment.camp.address %></p>
         <a href="#">View all volunteers </a>
       </div>

@@ -7,10 +7,11 @@
           </div>
           <div class="col-4">
             <div class="flex-item mb-1">
-              <% if @camp.required_number_volunteers <= @camp.required_number_volunteers %>
-                <p class="camp-card-completed"><%= @camp.required_number_volunteers %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user volunteer-icon"></i> Volunteers</p>
+              <% if @camp.assignments.count < @camp.required_number_volunteers %>
+                <p class="camp-card-not-completed"><%= (@camp.assignments.count - 1) %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user volunteer-icon"></i> <%= @camp.required_number_volunteers - (@camp.assignments.count - 1) %> Volunteers Needed </p>
               <% else %>
-                <p class="camp-card-not-completed"><%= @camp.required_number_volunteers %><i class="fa-solid fa-user volunteer-icon"></i></p>
+                <p class="camp-card-completed"><%= (@camp.assignments.count - 1) %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user-check"></i></p>
+                <p>Your camp is Ready to Go!</p>
               <% end %>
             </div>
             <div class="flex-item">
@@ -30,17 +31,19 @@
   <div class="bounds">
     <div class="">
       <div class="border-top">
-        <div class="d-flex justify-content-between p-4 ms-4 me-4">
-          <p class="card-p"> Camp Information</p>
-          <div class="assignment-status">
-            <% if @previous_assignment %>
-              <button class="btn btn-light" disabled><%= @previous_assignment.status %></button>
-            <% else %>
-              <%= simple_form_for [@camp, @assignment] do |f| %>
-                <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
-                <%= f.submit 'Apply', class: 'btn cta-button' %>
+        <div class="camp-container container">
+          <div class="d-flex justify-content-between py-4">
+            <p class="card-p"> Camp Information</p>
+            <div class="assignment-status">
+              <% if @previous_assignment %>
+                <button class="btn btn-light applied-btn" disabled> Applied </button>
+              <% else %>
+                <%= simple_form_for [@camp, @assignment] do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
+                  <%= f.submit 'Apply', class: 'btn cta-button' %>
+                <% end %>
               <% end %>
-            <% end %>
+            </div>
           </div>
         </div>
       </div>
@@ -49,11 +52,16 @@
 </div>
 <div class="camp-information">
   <div class="camp-container container">
-    <div class="camp-card content">
+    <div class="camp-card content d-flex gap-3">
       <div class="camp-inner-text">
-        <p class="pt-4"><i class="fa-solid fa-envelope"></i>  <%= @camp.user.email %></p>
-        <p class="pt-4"><i class="fa-solid fa-file-lines"></i>  <%= @camp.description %></p>
-        <p class="pt-4"><i class="fa-solid fa-users"></i>  <%= @camp.tag_list.split.join(', ') %></p>
+        <p class="pt-4"><i class="fa-solid fa-envelope"></i> <%= @camp.user.email %></p>
+        <p class="pt-2" id="card-description"><i class="fa-solid fa-file-lines"></i> <%= @camp.description %></p>
+        <p class="pt-2"><i class="fa-solid fa-users"></i> Required Roles: <%= @camp.tag_list.split.join(', ') %></p>
+      </div>
+      <div class="individual-map" id="map"
+         data-controller="map"
+  data-map-markers-value="<%= @marker.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
   </div>
