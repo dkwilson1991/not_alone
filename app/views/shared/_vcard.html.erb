@@ -30,8 +30,8 @@
             <%= f.input :status, as: :hidden, input_html: { value: 'admin_decline'} %>
             <%= f.submit 'Decline', class: 'btn btn-light decline' %>
           <% end %>
-        <% else %>
-          <p><%= assignment.status %></p>
+        <% elsif assignment.status == "user_apply" %>
+          <p class="border-color p-2">Applied!</p>
         <% end %>
       </div>
     </div>

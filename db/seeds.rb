@@ -557,12 +557,11 @@ camps = [camp1, camp2, camp3, camp4, camp5, camp6]
 User.all.each do |user|
   Assignment.create!(
     final_volunteer_count: rand(9..15),
-    status: "apply",
+    status: "user_apply",
     user: user,
     camp: camps.sample
   )
 end
-
 
 puts "... created #{Camp.count} Camps"
 
