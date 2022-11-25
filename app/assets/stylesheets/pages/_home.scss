@@ -13,12 +13,11 @@
       display: flex;
       align-items: center;
       border-radius: 30px;
-      position: relative;
       transition: 0.5s;
 
         &:hover {
           transform: scale(1.010);
-          box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
           z-index: 2;
           border-color: #007bff !important;
         }
@@ -49,19 +48,20 @@
 
     .newsfeed-card .newsfeed-card-infos {
       padding: 20px;
+      position: relative;
 
         .lower-right-location {
           position: absolute;
-          bottom: 16px;
-          right: 16px;
+          bottom: 0px;
+          right: 20px;
           color: rgb(140, 138, 138);
           font-size: 12px;
         }
 
         .lower-left-date {
-          // position: absolute;
-          // bottom: 8px;
-          // left: 16px;
+          position: absolute;
+          bottom: 0px;
+          left: 20px;
           color: rgb(140, 138, 138);
           font-size: 12px;
         }

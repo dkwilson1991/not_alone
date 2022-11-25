@@ -559,7 +559,6 @@ end
 puts "... created #{Camp.count} Camps"
 
 role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
-
 # Camp.all.each do |camp|
 #   User.all.each do |user|
 #     Assignment.create!(
@@ -573,5 +572,6 @@ role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling"
 #     )
 #   end
 # end
+
 
 puts "... created #{Assignment.count} Assignments"

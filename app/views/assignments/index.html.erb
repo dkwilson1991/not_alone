@@ -1,7 +1,7 @@
 <h1></h1>
 <div class="d-flex flex-wrap mx-5 px-5" data-controller="create-assignment">
   <div id="card-camps-one">
-    <%= render 'assignments/camp', assignments: @assignments %>
+    <%= render 'assignments/camp', upcoming_assignments: @upcoming_assignments, past_assignments: @previous_assignments %>
   </div>
   <div class="container" id='calendar'>
     <%= month_calendar do |date| %>
