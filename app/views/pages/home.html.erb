@@ -2,7 +2,7 @@
   <%= render "banner" %>
   <div class="container d-flex justify-content-center">
     <div class="newsfeed mt-4 me-5">
-      <h2>Will you change a child's life today?</h2>
+      <h2>Change a child's life today</h2>
       <p class='mb-4'>Read about what previous camps have accomplished.</p>
       <% @past_camps.each do |camp| %>
         <%= link_to camp_path(camp), class:"text-decoration-none" do %>
