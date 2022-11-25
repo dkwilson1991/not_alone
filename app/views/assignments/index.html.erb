@@ -4,8 +4,13 @@
     <%= render 'assignments/camp', upcoming_assignments: @upcoming_assignments, past_assignments: @previous_assignments %>
   </div>
   <div class="container" id='calendar'>
-    <%= month_calendar do |date| %>
+    <%= month_calendar(events: @assignments) do |date, assignments| %>
       <%= date.day %>
+      <% assignments.each_with_index do |assignment,index| %>
+        <div class="color-change">
+          <p style="  background-color: <%= ['#f8b79f', 'lightblue', '#c690ee', 'lightpurple'][index]%>; height: 4px"></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div class="create-camp">
