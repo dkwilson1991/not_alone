@@ -1,7 +1,7 @@
 class Assignment < ApplicationRecord
   belongs_to :user
   belongs_to :camp
-  enum status: { pending: "pending", confirm: "apply", decline: "decline" }, _default: :pending
+  enum status: { pending: "pending", confirm: "confirm", decline: "decline" }, _default: :pending
 
   def pending?
     status == "pending"
