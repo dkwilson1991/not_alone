@@ -9,10 +9,10 @@
       overflow: hidden;
       width: 50vw;
       background: white;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      // box-shadow: 0 0 15px rgba(0,0,0,0.2);
       display: flex;
-      align-items: center;
-      border-radius: 30px;
+      // align-items: center;
+      // border-radius: 30px;
       transition: 0.5s;
 
         &:hover {
@@ -50,17 +50,17 @@
       padding: 20px;
       position: relative;
 
-        .lower-right-location {
+        .upper-right-location {
           position: absolute;
-          bottom: 0px;
+          top: -10px;
           right: 20px;
           color: rgb(140, 138, 138);
           font-size: 12px;
         }
 
-        .lower-left-date {
+        .upper-left-date {
           position: absolute;
-          bottom: 0px;
+          top: -10px;
           left: 20px;
           color: rgb(140, 138, 138);
           font-size: 12px;
@@ -84,3 +84,15 @@
     }
 
 }
+
+// @media (min-width: 1400px) {
+//   .newsfeed-card {
+//     width: 10vw;
+//   }
+// }
+
+// @media (min-width: 992px) {
+//   .newsfeed-card {
+//     width: 30vw;
+//   }
+// }
