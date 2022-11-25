@@ -15,9 +15,9 @@ class Camp < ApplicationRecord
   after_create :invite_volunteers
 
   def invite_volunteers
-    @users = User.all
+    @users = User.near(self.address)
     @users.each do |user|
-      UserMailer.with(user: user, camp: self).invitation.deliver_now if User.near(self.address, 50)
+      UserMailer.with(user: user, camp: self).invitation.deliver_now
     end
   end
 end

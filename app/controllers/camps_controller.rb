@@ -8,7 +8,12 @@ class CampsController < ApplicationController
   end
 
   def index
-    @camps = policy_scope(Camp)
+    @camps =
+    if params[:query].present?
+      policy_scope(Camp).search_by_address(params[:query])
+    else
+      policy_scope(Camp)
+    end
 
     @markers = @camps.geocoded.map do |camp|
       {
