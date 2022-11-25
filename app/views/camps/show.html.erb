@@ -51,8 +51,9 @@
   <div class="camp-container container">
     <div class="camp-card content">
       <div class="camp-inner-text">
-        <p class="pt-4"><i class="fa-solid fa-envelope"></i> <%= @camp.user.email %></p>
-        <p class="pt-2"><i class="fa-solid fa-file-lines"></i> <%= @camp.description.truncate(500) %></p>
+        <p class="pt-4"><i class="fa-solid fa-envelope"></i>  <%= @camp.user.email %></p>
+        <p class="pt-4"><i class="fa-solid fa-file-lines"></i>  <%= @camp.description %></p>
+        <p class="pt-4"><i class="fa-solid fa-users"></i>  <%= @camp.tag_list.split.join(', ') %></p>
       </div>
     </div>
   </div>
