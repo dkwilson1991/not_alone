@@ -264,6 +264,7 @@ User.create!(
   location: "Japan, Tokyo",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
+  language: "English",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
 )
@@ -276,6 +277,7 @@ User.create!(
   location: "Japan, Tokyo",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
+  language: "English, Japanese",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
 )
@@ -288,6 +290,7 @@ User.create!(
   location: "Japan, Tokyo",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
+  language: "English, Arabic",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954065/heegtqhasvkercvbbzi4.jpg"
 )
@@ -300,6 +303,7 @@ User.create!(
   location: "Japan, Tokyo",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
   training: "3 Days",
+  language: "English, Ukranian, Polish",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
 )
