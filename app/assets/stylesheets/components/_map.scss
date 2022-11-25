@@ -1,7 +1,10 @@
 #map {
   border-radius: 16px;
   width: 100%;
-  height: 600px;
+  height: 550px;
+  margin-top: 2.5%;
+  position: sticky;
+  top: 20%;
 }
 
 .mapboxgl-popup {
@@ -12,4 +15,42 @@
 .mapboxgl-popup-content {
   text-align: center;
 
+}
+.courses h1 {
+  text-align: center;
+}
+
+.preview {
+background-size: cover;
+}
+
+.searching-form .form-control {
+  width: 100%;
+  margin-left: 15%;
+  background-color: rgba(#B3E8E5, 0.5);
+  text-shadow: 0.5px 0.5px 0px #3bacb6;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  letter-spacing: 1px;
+}
+.searching-form {
+  position: fixed;
+  top: 8%;
+  width: 30%;
+}
+
+.search{
+  background-color: #B3E8E5;
+  text-shadow: 0.5px 0.5px 0px #3bacb6;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	letter-spacing: 1px;
 }

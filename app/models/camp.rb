@@ -13,11 +13,15 @@ class Camp < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   after_create :invite_volunteers
+  after_create :create_assignment
 
+  def create_assignment
+    Assignment.create(status: "confirm", user: self.user, camp: self)
+  end
   def invite_volunteers
-    @users = User.all
+    @users = User.near(self.address)
     @users.each do |user|
-      UserMailer.with(user: user, camp: self).invitation.deliver_now if User.near(self.address, 50)
+      UserMailer.with(user: user, camp: self).invitation.deliver_now
     end
   end
 end
