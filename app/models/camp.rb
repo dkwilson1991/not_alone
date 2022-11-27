@@ -1,4 +1,13 @@
 class Camp < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+    against: :address,
+    using: {
+      tsearch: { prefix: true }
+    }
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   has_many :assignments, dependent: :destroy
   belongs_to :user
   has_many_attached :photos
@@ -10,8 +19,6 @@ class Camp < ApplicationRecord
   # validates :required_roles, presence: true
   validates :description, presence: true
   acts_as_taggable_on :tags
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
   after_create :invite_volunteers
   after_create :create_assignment
 

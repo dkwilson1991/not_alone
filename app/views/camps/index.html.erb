@@ -26,10 +26,9 @@
               6/9 <i class="fa-solid fa-user"></i> Volunteers
             </span>
           </div>
-          <h2><%= camp.camp_name %></h2>
+          <h6><%= camp.camp_name %></h6>
           <p><%= camp.description.truncate(100) %></p>
           <%= link_to "Continue", camp_path(camp), class: "btn" %>
-
         </div>
       </div>
     <% end %>

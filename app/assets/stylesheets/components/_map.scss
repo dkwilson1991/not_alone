@@ -26,7 +26,6 @@ background-size: cover;
 
 .searching-form .form-control {
   width: 100%;
-  margin-left: 15%;
   background-color: rgba(#B3E8E5, 0.5);
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
@@ -53,4 +52,11 @@ background-size: cover;
 	font-size: 16px;
 	padding: 12px 25px;
 	letter-spacing: 1px;
+  margin-right: 10%;
+}
+.mapboxgl-popup-content {
+  background-color: #e8e8e8 !important;
+  &h1 {
+font-size: 16px !important;
+  }
 }
