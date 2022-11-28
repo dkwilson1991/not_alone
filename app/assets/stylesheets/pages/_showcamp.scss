@@ -6,6 +6,18 @@
   background-position: center;
 }
 
+.camp-container .round {
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  padding: 0px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.collapse-horizontal {
+padding: 1rem;
+}
+
 .camp-card-completed {
   margin-bottom: 0;
   color: #B3E8E5;
@@ -58,4 +70,11 @@
 
 .camp-information {
   background-color: #F6F7F8;
+}
+
+.camp-owner-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0.2rem solid white;
 }

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "notaloneon@gmail.com"
+  default from: "info@not-alone.online"
   layout "mailer"
 end
