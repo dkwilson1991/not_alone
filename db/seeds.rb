@@ -520,7 +520,7 @@ puts "... created #{User.count} Users."
 #   required_roles: "Camp Director, Station Leader, Crew Leader",
 #   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
 #   user: admin.sample
-)
+# )
 
 camp2 = Camp.create!(
   address: "Nepal, Kathmandu",
@@ -564,11 +564,6 @@ camp3 = Camp.create!(
   Pray for Gintong Aral (Jackson Toledo Natividad) and the Philippine Children's Ministry Network (Fe Adul Foronda) as they lead these efforts and pray for the children and communities that will be strengthened after the disaster.",
 user: admin.sample
 )
-capm3.a
-
-
-
-
 
 camp4 = Camp.create!(
   address:  "Philippines, Manila",
@@ -638,7 +633,7 @@ camps.each do |camp|
   )
 end
 
-camps = [camp1, camp2, camp3, camp4, camp5, camp6]
+camps = [camp2, camp3, camp4, camp5, camp6]
 User.all.each do |user|
   Assignment.create!(
     final_volunteer_count: rand(9..15),
@@ -649,21 +644,5 @@ User.all.each do |user|
 end
 
 puts "... created #{Camp.count} Camps"
-
-role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
-# Camp.all.each do |camp|
-#   User.all.each do |user|
-#     Assignment.create!(
-#       final_volunteer_count: rand(9..15),
-#       roles: role.sample,
-#       start_date: camp.start_date,
-#       end_date: camp.end_date,
-#       status: "pending",
-#       user: user,
-#       camp: camp
-#     )
-#   end
-# end
-
 
 puts "... created #{Assignment.count} Assignments"
