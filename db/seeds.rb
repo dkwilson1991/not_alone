@@ -246,48 +246,48 @@ camps = [
   },
 ]
 
-# User.create!(
-#   email: "savi@me.com",
-#   password: "123456",
-#   first_name: "Savithri",
-#   last_name: "Wewala",
-#   location: "Japan, Tokyo",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   language: "English",
-#   admin_status: true,
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
-# )
+User.create!(
+  email: "savi@me.com",
+  password: "123456",
+  first_name: "Savithri",
+  last_name: "Wewala",
+  location: "Japan, Tokyo",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  admin_status: true,
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
+)
 
-# User.create!(
-#   email: "keita@me.com",
-#   password: "123456",
-#   first_name: "Keita",
-#   last_name: "Wilson",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   language: "English, Japanese",
-#   past_roles: "Camp Director",
-#   certifications: "Programmer",
-#   admin_status: true,
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
-# )
+User.create!(
+  email: "keita@me.com",
+  password: "123456",
+  first_name: "Keita",
+  last_name: "Wilson",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English, Japanese",
+  past_roles: "Camp Director",
+  certifications: "Programmer",
+  admin_status: true,
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
+)
 
-# User.create!(
-#   email: "ayhem@me.com",
-#   password: "123456",
-#   first_name: "Ayhem",
-#   last_name: "Chelly",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   language: "English, Arabic",
-#   past_roles: "Crew Leader",
-#   certifications: "Programmer",
-#   admin_status: true,
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954040/heegtqhasvkercvbbzi4.jpg"
-# )
+User.create!(
+  email: "ayhem@me.com",
+  password: "123456",
+  first_name: "Ayhem",
+  last_name: "Chelly",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English, Arabic",
+  past_roles: "Crew Leader",
+  certifications: "Programmer",
+  admin_status: true,
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954040/heegtqhasvkercvbbzi4.jpg"
+)
 
 User.create!(
   email: "naumenkoyuliya@ukr.net",
@@ -304,207 +304,207 @@ User.create!(
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
 )
 
-# User.create!(
-#   email: "joyce@me.com",
-#   password: "123456",
-#   first_name: "Joyce",
-#   last_name: "Chan",
-#   location: "Toronto, Canada",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/109743083?v=4"
-# )
+User.create!(
+  email: "joyce@me.com",
+  password: "123456",
+  first_name: "Joyce",
+  last_name: "Chan",
+  location: "Toronto, Canada",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/109743083?v=4"
+)
 
-# User.create!(
-#   email: "fred@me.com",
-#   password: "123456",
-#   first_name: "Fred",
-#   last_name: "Faeger",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "1 Days",
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664745102/jdcxntptl5cqvp63kvmi.jpg"
-# )
+User.create!(
+  email: "fred@me.com",
+  password: "123456",
+  first_name: "Fred",
+  last_name: "Faeger",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "1 Days",
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664745102/jdcxntptl5cqvp63kvmi.jpg"
+)
 
-# User.create!(
-#   email: "will@me.com",
-#   password: "123456",
-#   first_name: "Will",
-#   last_name: "Hargrave",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "1 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/77623750?v=4"
-# )
+User.create!(
+  email: "will@me.com",
+  password: "123456",
+  first_name: "Will",
+  last_name: "Hargrave",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "1 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/77623750?v=4"
+)
 
-# User.create!(
-#   email: "yumi@me.com",
-#   password: "123456",
-#   first_name: "Yumi",
-#   last_name: "Kimura",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "1 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/88379080?v=4"
-# )
+User.create!(
+  email: "yumi@me.com",
+  password: "123456",
+  first_name: "Yumi",
+  last_name: "Kimura",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "1 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/88379080?v=4"
+)
 
-# User.create!(
-#   email: "thomas@me.com",
-#   password: "123456",
-#   first_name: "Thomas",
-#   last_name: "Price",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1666749630/eest1b3axeabmyxbrbhj.jpg"
-# )
+User.create!(
+  email: "thomas@me.com",
+  password: "123456",
+  first_name: "Thomas",
+  last_name: "Price",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1666749630/eest1b3axeabmyxbrbhj.jpg"
+)
 
-# User.create!(
-#   email: "mo@me.com",
-#   password: "123456",
-#   first_name: "Mohamed",
-#   last_name: "Shegow",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
-# )
+User.create!(
+  email: "mo@me.com",
+  password: "123456",
+  first_name: "Mohamed",
+  last_name: "Shegow",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
+)
 
-# User.create!(
-#   email: "soren@me.com",
-#   password: "123456",
-#   first_name: "Soren",
-#   last_name: "Umstot",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/108733009?v=4"
-# )
+User.create!(
+  email: "soren@me.com",
+  password: "123456",
+  first_name: "Soren",
+  last_name: "Umstot",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/108733009?v=4"
+)
 
-# User.create!(
-#   email: "erika@me.com",
-#   password: "123456",
-#   first_name: "Erika",
-#   last_name: "Ura",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/104239957?v=4"
-# )
+User.create!(
+  email: "erika@me.com",
+  password: "123456",
+  first_name: "Erika",
+  last_name: "Ura",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/104239957?v=4"
+)
 
-# User.create!(
-#   email: "kaho@me.com",
-#   password: "123456",
-#   first_name: "Kaho",
-#   last_name: "Cheng",
-#   location: "London, UK",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/59798103?v=4"
-# )
-# User.create!(
-#   email: "clement@me.com",
-#   password: "123456",
-#   first_name: "Clement",
-#   last_name: "Choi",
-#   location: "Hong Kong, Hong Kong",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664808689/oiwkwdtavfgvgwuczsgn.jpg"
-# )
+User.create!(
+  email: "kaho@me.com",
+  password: "123456",
+  first_name: "Kaho",
+  last_name: "Cheng",
+  location: "London, UK",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/59798103?v=4"
+)
+User.create!(
+  email: "clement@me.com",
+  password: "123456",
+  first_name: "Clement",
+  last_name: "Choi",
+  location: "Hong Kong, Hong Kong",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664808689/oiwkwdtavfgvgwuczsgn.jpg"
+)
 
 
-# User.create!(
-#   email: "cris@me.com",
-#   password: "123456",
-#   first_name: "Christopher",
-#   last_name: "Bush",
-#   location: "Barcelona, Spain",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
-# )
+User.create!(
+  email: "cris@me.com",
+  password: "123456",
+  first_name: "Christopher",
+  last_name: "Bush",
+  location: "Barcelona, Spain",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
+)
 
-# User.create!(
-#   email: "tash@me.com",
-#   password: "123456",
-#   first_name: "Tashika",
-#   last_name: "Cruz",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664802291/etmamyn3hjuz1pqq1gik.jpg"
-# )
+User.create!(
+  email: "tash@me.com",
+  password: "123456",
+  first_name: "Tashika",
+  last_name: "Cruz",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664802291/etmamyn3hjuz1pqq1gik.jpg"
+)
 
-# User.create!(
-#   email: "sho@me.com",
-#   password: "123456",
-#   first_name: "Sho",
-#   last_name: "Fujiwara",
-#   location: "Manila, Philippines",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://media-exp1.licdn.com/dms/image/C5603AQGhlFSlqVzV8g/profile-displayphoto-shrink_800_800/0/1616994473301?e=2147483647&v=beta&t=hWhpcfI8L40nGokDPdqbpd_eL_8-OXslFL6NupxVPJY"
-# )
+User.create!(
+  email: "sho@me.com",
+  password: "123456",
+  first_name: "Sho",
+  last_name: "Fujiwara",
+  location: "Manila, Philippines",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://media-exp1.licdn.com/dms/image/C5603AQGhlFSlqVzV8g/profile-displayphoto-shrink_800_800/0/1616994473301?e=2147483647&v=beta&t=hWhpcfI8L40nGokDPdqbpd_eL_8-OXslFL6NupxVPJY"
+)
 
-# User.create!(
-#   email: "sammy@me.com",
-#   password: "123456",
-#   first_name: "Sammy",
-#   last_name: "Kavanagh",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
-# )
+User.create!(
+  email: "sammy@me.com",
+  password: "123456",
+  first_name: "Sammy",
+  last_name: "Kavanagh",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
+)
 
-# User.create!(
-#   email: "sunny@me.com",
-#   password: "123456",
-#   first_name: "Sunny",
-#   last_name: "Liu",
-#   location: "Taiwan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/99332370?v=4"
-# )
+User.create!(
+  email: "sunny@me.com",
+  password: "123456",
+  first_name: "Sunny",
+  last_name: "Liu",
+  location: "Taiwan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/99332370?v=4"
+)
 
-# User.create!(
-#   email: "hafid@me.com",
-#   password: "123456",
-#   first_name: "Hafid",
-#   last_name: "Qarchi",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
-# )
+User.create!(
+  email: "hafid@me.com",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
 
-# User.create!(
-#   email: "patrick@me.com",
-#   password: "123456",
-#   first_name: "Patrick",
-#   last_name: "Stark",
-#   location: "Tokyo, Japan",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/94529648?v=4"
-# )
+User.create!(
+  email: "patrick@me.com",
+  password: "123456",
+  first_name: "Patrick",
+  last_name: "Stark",
+  location: "Tokyo, Japan",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/94529648?v=4"
+)
 
-# User.create!(
-#   email: "mattias@me.com",
-#   password: "123456",
-#   first_name: "Mattias",
-#   last_name: "Velamsson",
-#   location: "Stockholm, Sweden",
-#   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
-#   training: "3 Days",
-#   avatar_pic: "https://avatars.githubusercontent.com/u/66011769?v=4"
-# )
+User.create!(
+  email: "mattias@me.com",
+  password: "123456",
+  first_name: "Mattias",
+  last_name: "Velamsson",
+  location: "Stockholm, Sweden",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  avatar_pic: "https://avatars.githubusercontent.com/u/66011769?v=4"
+)
 
-# # admin_user = User.all.where do |user|
-# #   user if user.admin_status == true
-# # end
+# admin_user = User.all.where do |user|
+#   user if user.admin_status == true
+# end
 
 puts "... created #{User.count} Users."
 
