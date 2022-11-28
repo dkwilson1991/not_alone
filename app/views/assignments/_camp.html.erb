@@ -11,12 +11,16 @@
         <div class="progress-container">
           <div class="progress"></div>
           <span class="progress-text">
-            <%=assignment.final_volunteer_count%>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
+            <% if assignment.camp.assignments.count <= 0 %>
+              <p>0</p>
+            <% else %>
+              <%= assignment.camp.assignments.count - 1 %>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
+            <% end %>
           </span>
         </div>
         <h6><%= assignment.camp.camp_name %></h6>
         <p><%= assignment.camp.description.truncate(100) %></p>
-        <button class="btn">Continue</button>
+        <%= link_to "Continue", camp_path(assignment.camp), class: "btn" %>
       </div>
     </div>
   </div>
