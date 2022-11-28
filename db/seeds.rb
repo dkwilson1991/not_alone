@@ -11,7 +11,7 @@ location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "I
 email = ['savi@not-alone.online', 'keita@not-alone.online', 'yulia@not-alone.online', 'ayhem@not-alone.online']
 training = ["None", "1 Day", "3 Days"]
 roles = ["Camp Director", "Station Leader", "Crew Leader", "Game", "Story telling", "Songs", "Snacks", "Crafts"]
-date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
+
 
 admin = User.where(admin_status: true)
 
@@ -522,9 +522,11 @@ puts "... created #{User.count} Users."
 #   user: admin.sample
 # )
 
-file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
-camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
-camp1.save
+# file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
+# camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
+# camp1.save
+
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp2 = Camp.create!(
   address: "Nepal, Kathmandu",
@@ -541,6 +543,7 @@ file2 = URI.open("https://www.volunteersinitiativenepal.org/wp-content/uploads/2
 camp2.photos.attach(io: file2, filename: "nepal.png", content_type: "image/png")
 camp2.save
 
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp3 = Camp.create!(
   address: "Philippines, Saint Bernard",
@@ -574,6 +577,8 @@ file3 = URI.open("https://ftcj.org/wp/wp-content/uploads/2019/12/2-2-1-e15754570
 camp3.photos.attach(io: file3, filename: "philippines.png", content_type: "image/png")
 camp3.save
 
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
+
 camp4 = Camp.create!(
   address:  "Philippines, Manila",
   required_number_volunteers: 10,
@@ -589,6 +594,8 @@ camp4 = Camp.create!(
 file4 = URI.open("https://www.adb.org/sites/default/files/styles/content_media/public/content-media/8170-primary-education.jpg?itok=d4nBXY-g")
 camp4.photos.attach(io: file4, filename: "philippine.png", content_type: "image/png")
 camp4.save
+
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp5 = Camp.create!(
   address: "Ukraine, Kyiv",
@@ -608,6 +615,8 @@ user: admin.sample
 file5 = URI.open("https://www.worldvision.org/wp-content/uploads/2022/03/01_W322-0075-145.jpg")
 camp5.photos.attach(io: file5, filename: "kyiv.png", content_type: "image/png")
 camp5.save
+
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 
 camp6 = Camp.create!(
