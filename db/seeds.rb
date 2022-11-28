@@ -118,7 +118,7 @@ camps = [
     congregated in Tundikhel - the large parade ground - and within a week Tundikhel had become a tented city.
     In the first week itself, UNICEF and partners set up a child-friendly space made of bamboo and
     tarpaulin in Tundikhel.",
-    images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/278940936_10158109865607136_8893217911541043320_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=wYEP6XrNNp0AX8D7vdo&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfB98OTkazZkLDcmSpIJrHsDzM7ytdZIuLxe6MlxDLyXGg&oe=637FDC5F",
+    images: "https://images.news18.com/ibnlive/uploads/2022/06/children-day.jpg",
     comments: "none",
     camp_name: "UNICEF tent in Nepal",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -189,7 +189,7 @@ camps = [
     Praise God for the lives of these volunteers who shared their time and talents that facilitated the successful implementation:
     Thank you also to the support of the leadership of IBC thru Pastor Ninfa Espina - Senior Pastor and Mrs. Gyceria Paglumotan - Chairperson of the BOT.
     This initiative is in partnership with the Alliance of Children's Ministries in Negros (ACMN) thru its Post Disaster Response Project in Ilog and Kabankalan. Funding support comes from the Philippine Children's Ministries Network, Inc., Viva, Global Care Kinderhilfswerk, and Aktion Deutschland Hilft.",
-    images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/218960379_4079597528761428_6312920815306183617_n.png?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=VRt-1fmzpagAX9ojucr&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDla-Zq47LXYWITLd8NOV43hdhEMVUXUF49XXHtGqCZhA&oe=63804C64",
+    images: "https://www.smilefoundationindia.org/blog/wp-content/uploads/2019/11/XB5A4920-1024x683.jpg",
     comments: "none",
     camp_name: "Alliance of Children's Ministries in Negros",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -283,7 +283,7 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English, Arabic",
-  past_roles: "Camp Director",
+  past_roles: "Crew Leader",
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954040/heegtqhasvkercvbbzi4.jpg"
@@ -298,7 +298,7 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English, Ukranian, Polish",
-  past_roles: "Camp Director",
+  past_roles: "Station Leader, Crew Leader",
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
