@@ -40,8 +40,13 @@
 .preview {
   background-color: #b3e8e5;
   color: #fff;
+  text-shadow: 1px 1px 0px #000000;
   padding: 100px;
-  max-width: 250px;
+  // padding-top: 8%;
+  // padding-left: 4%;
+  // padding-right: 4%;
+  // max-width: 250px;
+  // text-align: center;
 }
 
 .preview a {
