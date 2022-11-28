@@ -9,6 +9,10 @@
   margin-right: 20px;
 }
 
+.course-preview {
+  text-shadow: 0.5px 0.5px 0px #8d8d8d;
+}
+
 .coursa {
   background-color: #fff;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
@@ -63,14 +67,6 @@
   width: 50%;
 }
 
-.progressc {
-  position: absolute;
-  top: 10%;
-  right: 5px;
-  text-align: right;
-  width: 150px;
-}
-
 .progress {
   background-color: rgb(238, 238, 238);
   border-radius: 3px;
@@ -80,13 +76,14 @@
 
 .progress::after {
   border-radius: 3px;
-  background-color: #b3e8e5;
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 66%;
+  display: none;
+
+}
+
+.progress-bar {
+  z-index: 1000;
+  border-radius: 3px;
 }
 
 .progress-text {

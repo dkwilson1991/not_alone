@@ -8,15 +8,21 @@
         <%# <a href="#">View all volunteers </a> %>
       </div>
       <div class="course-info">
-        <div class="progress-container">
-          <div class="progress"></div>
+        <div class="progress-container" >
+          <div class="progress">
+            <div class="progress-bar <%= assignment.camp.required_number_volunteers <= assignment.camp.assignments.count - 1 ? 'bg-info': 'progress-bar-striped progress-bar-animated' %>" role="progressbar" aria-label="Animated striped example" aria-valuenow="<%= assignment.camp.assignments.count - 1 %>" aria-valuemin="0" aria-valuemax="<%= assignment.camp.required_number_volunteers %>" style="width: <%= ((assignment.camp.assignments.count - 1) * 10) %>%;"></div>
+          </div>
           <span class="progress-text">
-            <%=assignment.final_volunteer_count%>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
+            <% if assignment.camp.assignments.count <= 0 %>
+              <p>0</p>
+            <% else %>
+              <%= assignment.camp.assignments.count - 1 %>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
+            <% end %>
           </span>
         </div>
         <h6><%= assignment.camp.camp_name %></h6>
         <p><%= assignment.camp.description.truncate(100) %></p>
-        <%= link_to "View Details →", camp_path(assignment.camp), class: "btn" %>
+        <%= link_to "Continue", camp_path(assignment.camp), class: "btn" %>
       </div>
     </div>
   </div>
