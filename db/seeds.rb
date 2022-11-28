@@ -509,18 +509,18 @@ User.create!(
 
 puts "... created #{User.count} Users."
 
-
-camp1 = Camp.create!(
-  address: "Japan, Tokyo",
-  required_number_volunteers: 11,
-  start_date: date,
-  end_date: date + 7,
-  description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
-  camp_name: "Camp for Disaster Prevension in Akita",
-  required_roles: "Camp Director, Station Leader, Crew Leader",
-  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
-  user: admin.sample
-)
+# camp1 = Camp.create!(
+#   address: "Japan, Tokyo",
+#   required_number_volunteers: 11,
+#   start_date: date,
+#   end_date: date + 7,
+#   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
+#   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
+#   camp_name: "Camp for Disaster Prevension in Akita",
+#   required_roles: "Camp Director, Station Leader, Crew Leader",
+#   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
+#   user: admin.sample
+# )
 file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
 camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
 camp1.save
@@ -572,6 +572,7 @@ file3 = URI.open("https://ftcj.org/wp/wp-content/uploads/2019/12/2-2-1-e15754570
 camp3.photos.attach(io: file3, filename: "philippines.png", content_type: "image/png")
 camp3.save
 
+
 camp4 = Camp.create!(
   address:  "Philippines, Manila",
   required_number_volunteers: 10,
@@ -594,7 +595,6 @@ camp5 = Camp.create!(
   start_date: date,
   end_date: date + 7,
   description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
-  images: "ukraine3.jpeg",
   camp_name: "OpSAFE camp in Ukraine",
   required_roles: "Camp Director, Station Leader, Crew Leader, Game, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
@@ -633,7 +633,7 @@ camp6.photos.attach(io: file6, filename: "kyiv.png", content_type: "image/png")
 camp6.save
 
 
-camps = [camp1, camp2, camp3, camp4, camp5, camp6]
+camps = [camp2, camp3, camp4, camp5, camp6]
 
 # camps.each do |camp|
 #   date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
