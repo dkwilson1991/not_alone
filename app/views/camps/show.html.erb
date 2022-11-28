@@ -19,7 +19,7 @@
             </div>
             <div class="flex-item">
               <p class="card-p"><i class="fa-solid fa-location-dot"></i> <%= @camp.address %></p>
-              <p class="card-p"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date %> - <%= @camp.end_date %></p>
+              <p class="card-p"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></p>
             </div>
           </div>
         </div>
