@@ -521,6 +521,7 @@ puts "... created #{User.count} Users."
 #   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
 #   user: admin.sample
 # )
+
 file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
 camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
 camp1.save
@@ -568,10 +569,10 @@ camp3 = Camp.create!(
   Pray for Gintong Aral (Jackson Toledo Natividad) and the Philippine Children's Ministry Network (Fe Adul Foronda) as they lead these efforts and pray for the children and communities that will be strengthened after the disaster.",
 user: admin.sample
 )
+
 file3 = URI.open("https://ftcj.org/wp/wp-content/uploads/2019/12/2-2-1-e1575457082586.jpg")
 camp3.photos.attach(io: file3, filename: "philippines.png", content_type: "image/png")
 camp3.save
-
 
 camp4 = Camp.create!(
   address:  "Philippines, Manila",
@@ -663,21 +664,5 @@ User.all.each do |user|
 end
 
 puts "... created #{Camp.count} Camps"
-
-role = ["Camp Director", "Station Leader: Game", "Station Leader: Story telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Crew Leader", "Volunteer"]
-# Camp.all.each do |camp|
-#   User.all.each do |user|
-#     Assignment.create!(
-#       final_volunteer_count: rand(9..15),
-#       roles: role.sample,
-#       start_date: camp.start_date,
-#       end_date: camp.end_date,
-#       status: "pending",
-#       user: user,
-#       camp: camp
-#     )
-#   end
-# end
-
 
 puts "... created #{Assignment.count} Assignments"
