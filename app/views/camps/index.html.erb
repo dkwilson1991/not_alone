@@ -28,6 +28,7 @@
           </div>
           <h6><%= camp.camp_name %></h6>
           <p><%= camp.description.truncate(100) %></p>
+          <p><strong><%= camp.start_date.strftime('%b %d, %Y') %> - <%= camp.end_date.strftime('%b %d, %Y') %></strong></p>
           <%= link_to "Continue", camp_path(camp), class: "btn" %>
         </div>
       </div>
