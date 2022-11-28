@@ -8,6 +8,10 @@
   margin-right: 20px;
 }
 
+.course-preview {
+  text-shadow: 0.5px 0.5px 0px #8d8d8d;
+}
+
 .coursa {
   background-color: #fff;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
@@ -60,14 +64,6 @@
 
 .coursa-info h6 {
   width: 50%;
-}
-
-.progressc {
-  position: absolute;
-  top: 10%;
-  right: 5px;
-  text-align: right;
-  width: 150px;
 }
 
 .progress {
