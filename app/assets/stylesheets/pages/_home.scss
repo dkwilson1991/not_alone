@@ -3,6 +3,8 @@
 
     h2 {
       font-size: 36px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: bold;
     }
 
     .newsfeed-card {
@@ -34,6 +36,7 @@
       font-weight: bold;
       margin: 0;
       text-align: justify;
+      font-family: 'Nunito', sans-serif;
     }
 
     .newsfeed-card p {
@@ -84,6 +87,7 @@
     }
 
 }
+
 
 // @media (min-width: 1400px) {
 //   .newsfeed-card {

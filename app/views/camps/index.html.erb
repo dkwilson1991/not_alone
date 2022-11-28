@@ -14,7 +14,7 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <div class="courses">
-    <h1 class="m-3">All upcoming events</h1>
+    <h1 class="m-3">All Upcoming Camps</h1>
     <%  @camps.each do |camp| %>
       <div class="course m-5">
         <div class="preview" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : camp.images%>);">
@@ -26,10 +26,9 @@
               6/9 <i class="fa-solid fa-user"></i> Volunteers
             </span>
           </div>
-          <h2><%= camp.camp_name %></h2>
+          <h6><%= camp.camp_name %></h6>
           <p><%= camp.description.truncate(100) %></p>
           <%= link_to "Continue", camp_path(camp), class: "btn" %>
-
         </div>
       </div>
     <% end %>

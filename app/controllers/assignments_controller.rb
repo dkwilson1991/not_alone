@@ -1,7 +1,7 @@
 class AssignmentsController < ApplicationController
   def index
     @assignments = policy_scope(Assignment).joins(:camp)
-    @upcoming_assignments = @assignments.where('camps.start_date >= ?', Date.today).order(:created_at)
+    @upcoming_assignments = @assignments.where('camps.start_date >= ?', Date.today).order(:start_date)
     @previous_assignments = @assignments.where('camps.start_date < ?', Date.today).order(:start_date)
     @camp = Camp.new
     @future_camps = Camp.where('start_date > ?', Date.today).order(:start_date).first(3)

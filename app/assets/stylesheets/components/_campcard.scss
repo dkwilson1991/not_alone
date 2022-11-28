@@ -1,5 +1,6 @@
 .courses {
   background-image: transparent;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -59,7 +60,7 @@
 }
 .coursa-info p {
   padding: 5px;
-  margin-left: -11px;
+  margin-top: 8px;
 }
 
 .coursa-info h6 {
@@ -98,10 +99,10 @@
   border-radius: 50px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
   color: #fff;
-  font-size: 11px;
-  padding: 12px 25px;
+  font-size: 16px;
+  padding: 8px 25px;
   position: absolute;
-  bottom: 6px;
+  bottom: 20px;
   right: 30px;
   letter-spacing: 1px;
 }
