@@ -9,12 +9,12 @@
       <div class="form-row form-date">
       </div>
       <div class="d-flex">
-      <div class="flex-fill">
-        <%= f.input :start_date, as: :date, label: false, html5: true %>
-      </div>
-      <div class="flex-fill">
-        <%= f.input :end_date, as: :date, label: false, html5: true %>
-      </div>
+        <div class="flex-fill">
+          <%= f.input :start_date, as: :date, label: false, html5: true %>
+        </div>
+        <div class="flex-fill">
+          <%= f.input :end_date, as: :date, label: false, html5: true %>
+        </div>
       </div>
       <%= f.input :required_number_volunteers, label: false, placeholder: "Number of volunteers" %>
       <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false, placeholder: "Add photos" %>
