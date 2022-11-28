@@ -13,10 +13,10 @@
       <%= f.input :required_number_volunteers, label: false, placeholder: "Number of volunteers" %>
       <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false, placeholder: "Add photos" %>
       <div class="form-row check-box">
-        <%= f.input :tag_list, label: "Required Positions:", as: :check_boxes, collection: ["Camp Director", "Station Leader", "Crew Leader"], item_wrapper_class: 'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
+        <%= f.input :tag_list, label: "Required Positions:", as: :check_boxes, collection: ["Camp Director", "Crew Leader"], item_wrapper_class: 'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
       </div>
       <div class="form-row check-box">
-        <%= f.input :tag_list, label: "Required Station Leader Roles:", as: :check_boxes, collection: ["Story Telling", "Songs", "Snacks", "Crafts", "Games"], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
+        <%= f.input :tag_list, label: "Required Station Leader Roles:", as: :check_boxes, collection: [ ["Story Telling", "Station Leader: Story Telling"], ["Songs", "Station Leader: Songs"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %>
       </div>
       <div class="form-row description">
         <%= f.input :description, as: :text, label: false, placeholder: "Camp description"%>

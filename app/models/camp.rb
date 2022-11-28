@@ -16,7 +16,6 @@ class Camp < ApplicationRecord
   validates :end_date, presence: true
   validates :required_number_volunteers, presence: true
   validates :camp_name, presence: true
-  # validates :required_roles, presence: true
   validates :description, presence: true
   acts_as_taggable_on :tags
   after_create :invite_volunteers

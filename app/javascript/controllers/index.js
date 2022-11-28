@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-// import AddressAutocompleteController from "./address_autocomplete_controller"
-// application.register("address-autocomplete", AddressAutocompleteController)
-
 import CreateAssignmentController from "./create_assignment_controller"
 application.register("create-assignment", CreateAssignmentController)
 
@@ -15,3 +12,6 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import SortableRolesController from "./sortable_roles_controller"
+application.register("sortable-roles", SortableRolesController)
