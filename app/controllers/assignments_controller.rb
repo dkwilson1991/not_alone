@@ -22,9 +22,12 @@ class AssignmentsController < ApplicationController
     @assignment.user = current_user
     @assignment.camp = @camp
     authorize @assignment
-    @assignment.save
-    flash[:notice] = "Application submitted"
-    redirect_to camp_path(@camp)
+    if @assignment.save
+      flash[:notice] = "Application submitted"
+      redirect_to camp_path(@camp)
+    else
+      render 'assignments', status: :unprocessable_entity
+    end
   end
 
   def update
@@ -35,7 +38,16 @@ class AssignmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @assignment = Assignment.find(params[:id])
+    @assignment.destroy
+    redirect_to assignments_path, status: :see_other
+  end
+
   def assignment_params
     params.require(:assignment).permit(:status, :roles)
   end
 end
+
+if @bookmark.save
+  redirect_to list_path(@list)
