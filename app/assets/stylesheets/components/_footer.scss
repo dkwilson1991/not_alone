@@ -1,26 +1,27 @@
 .footer {
   background: transparent;
   align-items: center;
-  height: 100px;
-  padding: 0px 50px;
+  height: 1px;
+  padding: 0px 03px;
   color: rgba(0, 0, 0, 0.3);
   left: 0;
   bottom: 0;
   text-align: center;
   display: flex;
-  justify-content: inherit;
-  background-color: rgb(250, 250, 250);
+  justify-content: space-between;
+  background-color: transparent;
   flex-shrink: 0;
 }
 .footer-links {
   display: flex;
   align-items: center;
+  size: 0ch;
 }
 .footer-links a {
   color: black;
   opacity: 0.15;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
@@ -40,4 +41,12 @@ body {
 }
 .content {
   flex: 1 0 auto;
+}
+
+.footer-image {
+  width: 27px;
+}
+
+.footer-copyright {
+  font-size: 12px;
 }
