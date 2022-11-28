@@ -520,7 +520,6 @@ puts "... created #{User.count} Users."
 #   required_roles: "Camp Director, Station Leader, Crew Leader",
 #   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
 #   user: admin.sample
-)
 
 camp2 = Camp.create!(
   address: "Nepal, Kathmandu",
