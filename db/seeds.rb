@@ -33,7 +33,7 @@ camps = [
 
   {
     description: "During war in Ukraine we need volunteers to help kinds.",
-    images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293354658_10160681233332518_8084655627895499452_n.jpg?stp=cp6_dst-jpg_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=8KsmmZwhtLQAX9LtPmu&_nc_ht=scontent-nrt1-1.xx&oh=00_AfBIV888Cc4_re6E7jroQ32FDkiXyLLT0B6sk10QXzip2Q&oe=6380A2A1",
+    images: "app/assets/images/ukraine1.jpeg",
     comments: "none",
     camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
@@ -44,7 +44,7 @@ camps = [
 
   {
     description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
-    images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/315590583_139977992135778_7807916700988978741_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=zX9ADdDCA0AAX-zc_5d&_nc_ht=scontent-nrt1-1.xx&oh=00_AfAYangxdA-FDkPyAnPnkRusoVlwK2rpQu12DqDV_Vsp2Q&oe=638076BC",
+    images: "app/assets/images/ukraine2.jpeg",
     comments: "none",
     camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "今週はウクライナにおいて10個のプログラムキャンプが行われます。
@@ -75,7 +75,7 @@ camps = [
     Praise God for the lives of these volunteers who shared their time and talents that facilitated the successful implementation:
     Thank you also to the support of the leadership of IBC thru Pastor Ninfa Espina - Senior Pastor and Mrs. Gyceria Paglumotan - Chairperson of the BOT.
     This initiative is in partnership with the Alliance of Children's Ministries in Negros (ACMN) thru its Post Disaster Response Project in Ilog and Kabankalan. Funding support comes from the Philippine Children's Ministries Network, Inc., Viva, Global Care Kinderhilfswerk, and Aktion Deutschland Hilft.",
-    images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/218960379_4079597528761428_6312920815306183617_n.png?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=VRt-1fmzpagAX9ojucr&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDla-Zq47LXYWITLd8NOV43hdhEMVUXUF49XXHtGqCZhA&oe=63804C64",
+    images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/nepal.jpeg",
     comments: "none",
     camp_name: "Alliance of Children's Ministries in Negros",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -104,7 +104,7 @@ camps = [
     6. Kitchen kit
     7. Committed volunteers ready to respond
     Thanks for all your support and prayers. ",
-    images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/278953355_10158109863002136_3395951317285035086_n.jpg?stp=dst-jpg_p960x960&_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=Uf5ox9X4B5sAX99whbj&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfDWg6G5rbCFbsf_ylbrhdS4qEOJyhRME-i4_u5gi3gp5w&oe=6380EF5F",
+    images: "app/assets/images/philippines.jpeg",
     comments: "none",
     camp_name: "Camp in St Bernard, Southern Leyte.",
     newsfeed_post: "A month ago a late-season super typhoon struck the Philippines doing great damage across the Visayas. Super Typhoon Odette (known internationally as Rai) has been ranked as the 3rd costliest storm in Philippine history.
@@ -118,7 +118,7 @@ camps = [
     congregated in Tundikhel - the large parade ground - and within a week Tundikhel had become a tented city.
     In the first week itself, UNICEF and partners set up a child-friendly space made of bamboo and
     tarpaulin in Tundikhel.",
-    images: "https://images.news18.com/ibnlive/uploads/2022/06/children-day.jpg",
+    images: "app/assets/images/nepal2.jpeg",
     comments: "none",
     camp_name: "UNICEF tent in Nepal",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -147,7 +147,7 @@ camps = [
 
   {
     description: "During war in Ukraine we need volunteers to help kinds.",
-    images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293354658_10160681233332518_8084655627895499452_n.jpg?stp=cp6_dst-jpg_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=8KsmmZwhtLQAX9LtPmu&_nc_ht=scontent-nrt1-1.xx&oh=00_AfBIV888Cc4_re6E7jroQ32FDkiXyLLT0B6sk10QXzip2Q&oe=6380A2A1",
+    images: "app/assets/images/ukraine3.jpeg",
     comments: "none",
     camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
@@ -158,7 +158,7 @@ camps = [
 
   {
     description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
-    images: "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/315590583_139977992135778_7807916700988978741_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=zX9ADdDCA0AAX-zc_5d&_nc_ht=scontent-nrt1-1.xx&oh=00_AfAYangxdA-FDkPyAnPnkRusoVlwK2rpQu12DqDV_Vsp2Q&oe=638076BC",
+    images: "app/assets/images/ukraine1.jpeg",
     comments: "none",
     camp_name: "OpSAFE camp in Ukraine",
     newsfeed_post: "今週はウクライナにおいて10個のプログラムキャンプが行われます。
@@ -189,7 +189,7 @@ camps = [
     Praise God for the lives of these volunteers who shared their time and talents that facilitated the successful implementation:
     Thank you also to the support of the leadership of IBC thru Pastor Ninfa Espina - Senior Pastor and Mrs. Gyceria Paglumotan - Chairperson of the BOT.
     This initiative is in partnership with the Alliance of Children's Ministries in Negros (ACMN) thru its Post Disaster Response Project in Ilog and Kabankalan. Funding support comes from the Philippine Children's Ministries Network, Inc., Viva, Global Care Kinderhilfswerk, and Aktion Deutschland Hilft.",
-    images: "https://www.smilefoundationindia.org/blog/wp-content/uploads/2019/11/XB5A4920-1024x683.jpg",
+    images: "app/assets/images/philippines1.png",
     comments: "none",
     camp_name: "Alliance of Children's Ministries in Negros",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -218,7 +218,7 @@ camps = [
     6. Kitchen kit
     7. Committed volunteers ready to respond
     Thanks for all your support and prayers. ",
-    images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/278953355_10158109863002136_3395951317285035086_n.jpg?stp=dst-jpg_p960x960&_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=Uf5ox9X4B5sAX99whbj&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfDWg6G5rbCFbsf_ylbrhdS4qEOJyhRME-i4_u5gi3gp5w&oe=6380EF5F",
+    images: "app/assets/images/philippines3.jpeg",
     comments: "none",
     camp_name: "Camp in St Bernard, Southern Leyte.",
     newsfeed_post: "A month ago a late-season super typhoon struck the Philippines doing great damage across the Visayas. Super Typhoon Odette (known internationally as Rai) has been ranked as the 3rd costliest storm in Philippine history.
@@ -232,7 +232,7 @@ camps = [
     congregated in Tundikhel - the large parade ground - and within a week Tundikhel had become a tented city.
     In the first week itself, UNICEF and partners set up a child-friendly space made of bamboo and
     tarpaulin in Tundikhel.",
-    images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/278940936_10158109865607136_8893217911541043320_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=wYEP6XrNNp0AX8D7vdo&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfB98OTkazZkLDcmSpIJrHsDzM7ytdZIuLxe6MlxDLyXGg&oe=637FDC5F",
+    images: "app/assets/images/nepal2.jpeg",
     comments: "none",
     camp_name: "UNICEF tent in Nepal",
     newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served.
@@ -515,7 +515,7 @@ camp1 = Camp.create!(
   start_date: date,
   end_date: date + 7,
   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
-  images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
+  images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/tokyo.jpeg",
   camp_name: "Camp for Disaster Prevension in Akita",
   required_roles: "Camp Director, Station Leader, Crew Leader",
   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
@@ -528,7 +528,7 @@ camp2 = Camp.create!(
   start_date: date,
   end_date: date + 7,
   description: "After the devastating earthquake, thousands of homes and schools across 14 districts were destroyed, forcing people to take shelter in open grounds. In Kathmandu city, most of the mid-city dwellers congregated in Tundikhel - the large parade ground - and within a week Tundikhel had become a tented city. In the first week itself, UNICEF and partners set up a child-friendly space made of bamboo and tarpaulin in Tundikhel.",
-  images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/244363430_10160141788107518_3321247744292222299_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=8E8S5lx8HE4AX_MMt0H&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfDDqX1babseVBAPwocOSxQGVyllGbOGav_Zyz1aNFEuFA&oe=63839A37",
+  images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/nepal.jpeg",
   camp_name: "UNICEF tent in Nepal",
   required_roles: "Camp Director, Station Leader, Crew Leader, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served. As part of my PhD program I am now digging deeper into the data we collected on over 7,000 children after disasters.  Let me share a little of what I am discovering. Many studies point to around 30% of children exposed to traumatic events being at risk for developing mental health pathologies.  We assess each child at the beginning (pre) and end (post) of each camp and one thing our data shows clearly is that younger children make up proportionately more of the lowest 30% than older school age children. There were 262 six year olds (32.7%) and 309 seven year olds (31.6%) in this most at-risk group.  But there was also good news! We knew that most children made significant improvement in trauma symptoms by the end of the camp, but I wondered if these most vulnerable children were also improving or were being left behind. Looking deeper into the post data, I found that out of the 262 at-risk 6yr olds only one child finished the camp still in the lowest 30%.  Out of the most vulnerable 309 7 yr. olds only three failed to improve out of the bottom 30%. We don't yet know all the reasons why some children are more vulnerable to mass trauma than others, because all we can do is look at the symptoms.  But even when symptoms are severe, most children respond to being safe, listened to, given hope, encouraged to ask for help, and loved by volunteers in their own community. My hope is that my research will enable communities to focus more timely help to the most vulnerable children. xsThank you for praying and encouraging me during this time of research.",
@@ -556,7 +556,7 @@ camp3 = Camp.create!(
   6. Kitchen kit
   7. Committed volunteers ready to respond
   Thanks for all your support and prayers. ",
-  images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/273006613_5425461824134602_2574458260735916423_n.jpg?stp=dst-jpg_p960x960&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=slthCSKFzf8AX8WkiKd&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfCbnPp9yBBI1cgwGzvE_jn_FCThiMGtQXFxAdgYZXuZsw&oe=6384F58F",
+  images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/philippines.jpeg",
   camp_name: "Camp in St Bernard, Southern Leyte.",
   required_roles: "Camp Director, Station Leader, Crew Leader",
   newsfeed_post: "A month ago a late-season super typhoon struck the Philippines doing great damage across the Visayas. Super Typhoon Odette (known internationally as Rai) has been ranked as the 3rd costliest storm in Philippine history.
@@ -575,7 +575,7 @@ camp4 = Camp.create!(
   start_date: date,
   end_date: date + 7,
   description: "It was a fire in Quezon City, Philippines literally just down the street from our partners the Philippine Children's Ministry Network.  The fire affected 100 families with 140 children and OpSAFE trained volunteers are already responding to bring hugs, help and hope to the children.  Please pray for these volunteers and the children they are serving. " ,
-  images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/294748006_10160173776159455_1411786688824990575_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xpsi09vpvxoAX_-QrFk&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfDyLvAe_YyMVhsyWUF6OS6FGI8xz1yZEnZJkFjKwZkJVQ&oe=6385111E",
+  images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/philippines1.png",
   comments: "You should have excperions of working with kids",
   camp_name: "Camp in Philippine",
   required_roles: "Camp Director, Station Leader, Crew Leader, Snacks, Crafts",
@@ -589,7 +589,7 @@ camp5 = Camp.create!(
   start_date: date,
   end_date: date + 7,
   description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
-  images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/301943005_10160764331552518_2849208163049402845_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=mX6GyW93uI4AX_dvXFM&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfCNeUxDoddgWYz1C59c4Vb0sHot016VDNz1ufeJdrqkBg&oe=6383917D",
+  images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/ukraine3.jpeg",
   camp_name: "OpSAFE camp in Ukraine",
   required_roles: "Camp Director, Station Leader, Crew Leader, Game, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
@@ -608,7 +608,7 @@ camp6 = Camp.create!(
   Szkolenie przygotuje Cię do udzielania pierwszej pomocy psychologicznej dzieciom dotkniętym wojną.
   Wszystko, co dzieje się z dzieckiem po doświadczeniu stresu, nagłej zmiany okoliczności życiowych jest normalną reakcją na nienormalną sytuację. Ale wszystkie dzieci potrzebują pomocy po doświadczeniu traumy!
   OperationSAFE to program zajęć dla dzieci 6-12 lat, który pomaga prowadzić dzieci do emocjonalnego uzdrowienia, rozwijając u nich odporność na traumatyczne przeżycia oraz ucząc znaleźć ukojenie w sytuacji chaosu.",
-  images: "https://scontent.fhnd2-4.fna.fbcdn.net/v/t39.30808-6/311478875_646734176984296_7991225747355725212_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=S1oJl1FnH0wAX97ravC&tn=twxPw37y5vdtVh8L&_nc_ht=scontent.fhnd2-4.fna&oh=00_AfCFvVjFxVGVPHKNxnXfbUa4vz7UjwKj6duQLEydFd2aVA&oe=63847A02",
+  images: "/Users/yuliianaumenko/code/Junalem/not_alone/app/assets/images/poland.jpegg",
   camp_name: "OpSAFE camp in Poland",
   required_roles: "Camp Director, Station Leader, Crew Leader, Game, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: 'Miło jest wspomnieć szkolenie OpSAFE w Mińsku Mazowieckim. Tak duża grupa była dla nas nie lada wyzwaniem!
