@@ -8,7 +8,7 @@ puts "Destroying all Camps..."
 Camp.destroy_all
 
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
-email = ['savi@me.com', 'keita@me.com', 'yulia@me.com', 'ayhem@me.com']
+email = ['savi@not-alone.online', 'keita@not-alone.online', 'yulia@not-alone.online', 'ayhem@not-alone.online']
 training = ["None", "1 Day", "3 Days"]
 roles = ["Camp Director", "Station Leader", "Crew Leader", "Game", "Story telling", "Songs", "Snacks", "Crafts"]
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
@@ -247,7 +247,7 @@ camps = [
 ]
 
 User.create!(
-  email: "savi@me.com",
+  email: "savi@not-alone.online",
   password: "123456",
   first_name: "Savithri",
   last_name: "Wewala",
@@ -260,7 +260,7 @@ User.create!(
 )
 
 User.create!(
-  email: "keita@me.com",
+  email: "keita@not-alone.online",
   password: "123456",
   first_name: "Keita",
   last_name: "Wilson",
@@ -275,7 +275,7 @@ User.create!(
 )
 
 User.create!(
-  email: "ayhem@me.com",
+  email: "ayhem@not-alone.online",
   password: "123456",
   first_name: "Ayhem",
   last_name: "Chelly",
@@ -290,11 +290,11 @@ User.create!(
 )
 
 User.create!(
-  email: "naumenkoyuliya@ukr.net",
+  email: "yulia@not-alone.online",
   password: "123456",
   first_name: "Yulia",
   last_name: "Naumenko",
-  location: "Lviv, Ukraine",
+  location: "Kyiv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English, Ukranian, Polish",
@@ -305,7 +305,7 @@ User.create!(
 )
 
 User.create!(
-  email: "joyce@me.com",
+  email: "joyce@not-alone.online",
   password: "123456",
   first_name: "Joyce",
   last_name: "Chan",
@@ -316,7 +316,7 @@ User.create!(
 )
 
 User.create!(
-  email: "fred@me.com",
+  email: "fred@not-alone.online",
   password: "123456",
   first_name: "Fred",
   last_name: "Faeger",
@@ -327,7 +327,7 @@ User.create!(
 )
 
 User.create!(
-  email: "will@me.com",
+  email: "will@not-alone.online",
   password: "123456",
   first_name: "Will",
   last_name: "Hargrave",
@@ -338,7 +338,7 @@ User.create!(
 )
 
 User.create!(
-  email: "yumi@me.com",
+  email: "yumi@not-alone.online",
   password: "123456",
   first_name: "Yumi",
   last_name: "Kimura",
@@ -349,7 +349,7 @@ User.create!(
 )
 
 User.create!(
-  email: "thomas@me.com",
+  email: "thomas@not-alone.online",
   password: "123456",
   first_name: "Thomas",
   last_name: "Price",
@@ -360,7 +360,7 @@ User.create!(
 )
 
 User.create!(
-  email: "mo@me.com",
+  email: "mo@not-alone.online",
   password: "123456",
   first_name: "Mohamed",
   last_name: "Shegow",
@@ -371,7 +371,7 @@ User.create!(
 )
 
 User.create!(
-  email: "soren@me.com",
+  email: "soren@not-alone.online",
   password: "123456",
   first_name: "Soren",
   last_name: "Umstot",
@@ -382,7 +382,7 @@ User.create!(
 )
 
 User.create!(
-  email: "erika@me.com",
+  email: "erika@not-alone.online",
   password: "123456",
   first_name: "Erika",
   last_name: "Ura",
@@ -393,7 +393,7 @@ User.create!(
 )
 
 User.create!(
-  email: "kaho@me.com",
+  email: "kaho@not-alone.online",
   password: "123456",
   first_name: "Kaho",
   last_name: "Cheng",
@@ -403,7 +403,7 @@ User.create!(
   avatar_pic: "https://avatars.githubusercontent.com/u/59798103?v=4"
 )
 User.create!(
-  email: "clement@me.com",
+  email: "clement@not-alone.online",
   password: "123456",
   first_name: "Clement",
   last_name: "Choi",
@@ -415,7 +415,7 @@ User.create!(
 
 
 User.create!(
-  email: "cris@me.com",
+  email: "cris@not-alone.online",
   password: "123456",
   first_name: "Christopher",
   last_name: "Bush",
@@ -426,7 +426,7 @@ User.create!(
 )
 
 User.create!(
-  email: "tash@me.com",
+  email: "tash@not-alone.online",
   password: "123456",
   first_name: "Tashika",
   last_name: "Cruz",
@@ -437,7 +437,7 @@ User.create!(
 )
 
 User.create!(
-  email: "sho@me.com",
+  email: "sho@not-alone.online",
   password: "123456",
   first_name: "Sho",
   last_name: "Fujiwara",
@@ -448,7 +448,7 @@ User.create!(
 )
 
 User.create!(
-  email: "sammy@me.com",
+  email: "sammy@not-alone.online",
   password: "123456",
   first_name: "Sammy",
   last_name: "Kavanagh",
@@ -459,7 +459,7 @@ User.create!(
 )
 
 User.create!(
-  email: "sunny@me.com",
+  email: "sunny@not-alone.online",
   password: "123456",
   first_name: "Sunny",
   last_name: "Liu",
@@ -470,7 +470,7 @@ User.create!(
 )
 
 User.create!(
-  email: "hafid@me.com",
+  email: "hafid@not-alone.online",
   password: "123456",
   first_name: "Hafid",
   last_name: "Qarchi",
@@ -481,7 +481,7 @@ User.create!(
 )
 
 User.create!(
-  email: "patrick@me.com",
+  email: "patrick@not-alone.online",
   password: "123456",
   first_name: "Patrick",
   last_name: "Stark",
@@ -492,7 +492,7 @@ User.create!(
 )
 
 User.create!(
-  email: "mattias@me.com",
+  email: "mattias@not-alone.online",
   password: "123456",
   first_name: "Mattias",
   last_name: "Velamsson",
@@ -509,17 +509,17 @@ User.create!(
 puts "... created #{User.count} Users."
 
 
-camp1 = Camp.create!(
-  address: "Japan, Tokyo",
-  required_number_volunteers: 11,
-  start_date: date,
-  end_date: date + 7,
-  description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
-  images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
-  camp_name: "Camp for Disaster Prevension in Akita",
-  required_roles: "Camp Director, Station Leader, Crew Leader",
-  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
-  user: admin.sample
+# camp1 = Camp.create!(
+#   address: "Japan, Tokyo",
+#   required_number_volunteers: 11,
+#   start_date: date,
+#   end_date: date + 7,
+#   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
+#   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
+#   camp_name: "Camp for Disaster Prevension in Akita",
+#   required_roles: "Camp Director, Station Leader, Crew Leader",
+#   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
+#   user: admin.sample
 )
 
 camp2 = Camp.create!(
@@ -564,6 +564,7 @@ camp3 = Camp.create!(
   Pray for Gintong Aral (Jackson Toledo Natividad) and the Philippine Children's Ministry Network (Fe Adul Foronda) as they lead these efforts and pray for the children and communities that will be strengthened after the disaster.",
 user: admin.sample
 )
+capm3.a
 
 
 
@@ -589,7 +590,7 @@ camp5 = Camp.create!(
   start_date: date,
   end_date: date + 7,
   description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
-  images: "https://scontent.fhnd2-3.fna.fbcdn.net/v/t39.30808-6/301943005_10160764331552518_2849208163049402845_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=mX6GyW93uI4AX_dvXFM&_nc_ht=scontent.fhnd2-3.fna&oh=00_AfCNeUxDoddgWYz1C59c4Vb0sHot016VDNz1ufeJdrqkBg&oe=6383917D",
+  images: "bannerpic.jpg",
   camp_name: "OpSAFE camp in Ukraine",
   required_roles: "Camp Director, Station Leader, Crew Leader, Game, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
