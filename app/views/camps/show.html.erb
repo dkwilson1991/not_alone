@@ -56,16 +56,18 @@
           <div class="camp-container container">
             <div class="d-flex justify-content-between py-4">
               <p class="card-p"> Camp Information</p>
-              <div class="assignment-status">
-                <% if @previous_assignment %>
-                  <button class="btn btn-light applied-btn" disabled> Applied </button>
-                <% else %>
-                  <%= simple_form_for [@camp, @assignment] do |f| %>
-                    <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
-                    <%= f.submit 'Apply', class: 'btn cta-button' %>
+              <% if @camp.user != current_user %>
+                <div class="assignment-status">
+                  <% if @previous_assignment %>
+                    <button class="btn btn-light applied-btn" disabled> Applied </button>
+                  <% else %>
+                    <%= simple_form_for [@camp, @assignment] do |f| %>
+                      <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
+                      <%= f.submit 'Apply', class: 'btn cta-button' %>
+                    <% end %>
                   <% end %>
-                <% end %>
-              </div>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
