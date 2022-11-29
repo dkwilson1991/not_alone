@@ -28,16 +28,19 @@
             <%= link_to assignment_path(assignment), data: { turbo_method: 'delete', turbo_confirm: "Delete #{assignment.camp.camp_name}?" }, class: 'text-decoration-none' do %>
               <i class="fa-solid fa-trash-can"></i>
             <% end %>
-            <div data-action="click->create-assignment#edit" class='text-decoration-none ms-3'>
+            <%= link_to assignment_path(assignment), class: 'text-decoration-none ps-3' do %>
               <i class="fa-solid fa-pen"></i>
-            </div>
+            <% end %>
+            <%# <div data-action="click->create-assignment#edit" class='text-decoration-none ms-3'>
+              <i class="fa-solid fa-pen"></i>
+            </div> %>
           </div>
         </div>
       </div>
     </div>
-    <div class="edit-ass-form" >
+    <%# <div class="edit-ass-form" >
       <%= render "camps/edit_form"%>
-    </div>
+    <%# </div> %>
   <% end %>
 <% else %>
   <li>No upcoming camps...</li>
@@ -71,16 +74,16 @@
             <%= link_to camp_path(assignment.camp), data: { turbo_method: 'delete', turbo_confirm: "Delete #{assignment.camp.camp_name}?" }, class: 'text-decoration-none' do %>
               <i class="fa-solid fa-trash-can"></i>
             <% end %>
-            <div data-action="click->create-assignment#edit" class='text-decoration-none ms-3'>
+            <%# <div data-action="click->create-assignment#edit" class='text-decoration-none ms-3'>
               <i class="fa-solid fa-pen"></i>
-            </div>
+            </div> %>
           </div>
         </div>
       </div>
     </div>
-    <div class="edit-ass-form" >
+    <%# <div class="edit-ass-form" >
       <%= render "camps/edit_form" assignment: assignment %>
-    </div>
+    <%# </div> %>
   <% end %>
 <% else %>
   <li>No previous camps...</li>
