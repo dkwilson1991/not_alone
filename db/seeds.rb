@@ -659,6 +659,27 @@ camps = [camp2, camp3, camp4, camp5, camp6]
 #   )
 # end
 
+
+camps.each do |camp|
+  date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
+  Camp.create!(
+    user: User.where(admin_status: true).sample,
+    description: camp[:description],
+    images: camp[:images],
+    comments: camp[:comments],
+    camp_name: camp[:camp_name],
+    newsfeed_post: camp[:newsfeed_post],
+    address: location.sample,
+    required_number_volunteers: rand(15..30),
+    start_date: date,
+    end_date: date + 7,
+    director_email: email.sample,
+    required_roles: "Camp Director; Station Leader: Game, Story telling, Songs, Snacks, Crafts; Crew Leader"
+  )
+end
+
+camps = [camp2, camp3, camp4, camp5, camp6]
+
 User.all.each do |user|
   Assignment.create!(
     final_volunteer_count: rand(9..15),
@@ -671,3 +692,4 @@ end
 puts "... created #{Camp.count} Camps"
 
 puts "... created #{Assignment.count} Assignments"
+
