@@ -23,6 +23,7 @@ User.create!(
   training: "3 Days",
   language: "English",
   certifications: "Psychologist",
+  past_roles: "Camp Director",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
 )
@@ -80,6 +81,8 @@ User.create!(
   location: "Lviv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Teacher",
+  language: "English",
+  past_roles: "None",
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
 )
@@ -92,6 +95,8 @@ User.create!(
   location: "Lviv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Teacher",
+  language: "English",
+  past_roles: "None",
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664808689/oiwkwdtavfgvgwuczsgn.jpg"
 )
@@ -105,6 +110,8 @@ User.create!(
   location: "Lviv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
+  language: "English",
+  past_roles: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
 )
 
@@ -116,6 +123,8 @@ User.create!(
   location: "Lviv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
+  language: "English",
+  past_roles: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
 )
 
@@ -128,6 +137,8 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Psychologist",
   training: "3 Days",
+  language: "English",
+  past_roles: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/99332370?v=4"
 )
 
@@ -139,6 +150,8 @@ User.create!(
   location: "Lviv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
+  language: "English",
+  past_roles: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
 )
 # admin_user = User.all.where do |user|
@@ -146,7 +159,6 @@ User.create!(
 # end
 
 puts "... created #{User.count} Users."
-date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
