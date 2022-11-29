@@ -1,7 +1,16 @@
-<p>Hi <%= @user.first_name %> <%= @user.last_name %>,</p>
-<p>We will have new camp at <%=@camp.address%></p>
-<p>Starts at <%=@camp.start_date%></p>
-<p>Will end at <%=@camp.end_date%></p>
-<%= link_to "More details", camp_url(@camp) %>
-<p>Best regards,</p>
-<p>Not Alone team</p>
+<p>Dear <%= @user.first_name %> <%= @user.last_name %>,</p>
+
+<p>OperationSAFE is hosting a new camp in your location and would love your participation.</p>
+<p>Please check the details below.</p>
+
+<p>Location: <%=@camp.address%></p>
+<p>Start Date: <%=@camp.start_date.strftime('%b %d, %Y')%></p>
+<p>End Date: <%=@camp.end_date.strftime('%b %d, %Y')%></p>
+
+To apply or learn more information, follow the link below:
+<%= link_to "Apply to an OpSAFE camp through Not Alone", camp_url(@camp) %>
+
+<p>We hope to see you there!</p>
+
+<p>Kind regards,</p>
+<p>Not Alone Team</p>
