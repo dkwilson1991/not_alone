@@ -509,22 +509,22 @@ User.create!(
 
 puts "... created #{User.count} Users."
 
-# camp1 = Camp.create!(
-#   address: "Japan, Tokyo",
-#   required_number_volunteers: 11,
-#   start_date: date,
-#   end_date: date + 7,
-#   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
-#   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
-#   camp_name: "Camp for Disaster Prevension in Akita",
-#   required_roles: "Camp Director, Station Leader, Crew Leader",
-#   newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
-#   user: admin.sample
-# )
+camp1 = Camp.create!(
+  address: "Japan, Tokyo",
+  required_number_volunteers: 11,
+  start_date: date,
+  end_date: date + 7,
+  description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
+  images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
+  camp_name: "Camp for Disaster Prevension in Akita",
+  required_roles: "Camp Director, Station Leader, Crew Leader",
+  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
+  user: admin.sample
+)
 
-# file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
-# camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
-# camp1.save
+file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
+camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
+camp1.save
 
 
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
@@ -635,7 +635,7 @@ camp6 = Camp.create!(
   user: admin.sample
 )
 file6 = URI.open("https://qph.cf2.quoracdn.net/main-qimg-fccf290e25ca2c9ad2946ac99c297dba-lq")
-camp6.photos.attach(io: file6, filename: "kyiv.png", content_type: "image/png")
+camp6.photos.attach(io: file6, filename: "poland.png", content_type: "image/png")
 camp6.save
 
 
