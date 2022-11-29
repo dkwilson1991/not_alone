@@ -508,6 +508,7 @@ User.create!(
 # end
 
 puts "... created #{User.count} Users."
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp1 = Camp.create!(
   address: "Japan, Tokyo",
@@ -692,4 +693,3 @@ end
 puts "... created #{Camp.count} Camps"
 
 puts "... created #{Assignment.count} Assignments"
-
