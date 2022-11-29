@@ -4,6 +4,7 @@
   object-fit: cover;
   background-size: cover;
   background-position: center;
+  border-radius: 16px;
 }
 
 .camp-container .round {
@@ -12,6 +13,7 @@
   padding: 0px;
   margin-top: 1rem;
   text-align: center;
+  display: inline-block;
 }
 
 .collapse-horizontal {
@@ -51,6 +53,11 @@ padding: 1rem;
   font-weight: bolder;
 }
 
+.collapse {
+  display: flex;
+  justify-content: center;
+}
+
 .cta-button {
   background-color: #B3E8E5;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
@@ -77,4 +84,25 @@ padding: 1rem;
   height: 80px;
   border-radius: 50%;
   border: 0.2rem solid white;
+}
+
+.unassigned-role {
+  margin-top: -16px;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 0, 0, 0.800);
+}
+
+.roles-border {
+  border: 0.2rem solid #82dbd8;
+  text-align: center;
+}
+
+.owner-box {
+  width: 50%;
+}
+
+.roles-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
