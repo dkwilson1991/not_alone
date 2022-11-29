@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 .footer {
   background: white;
   align-items: center;
   margin: inherit;
-  height: 20px;
+  height: 52px;
   padding: 0px 03px;
   color: rgba(0, 0, 0, 0.3);
   left: 0;
@@ -10,7 +11,7 @@
   text-align: center;
   display: flex;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: #edebeb;
   flex-shrink: 0;
 }
 .footer-links {
@@ -46,8 +47,17 @@ body {
 
 .footer-image {
   width: 27px;
+  margin-right: 10px;
 }
 
 .footer-copyright {
   font-size: 12px;
+}
+
+.footer-links p {
+  font-size: medium;
+  margin-right: 20px;
+  margin-top: 19px;
+  font-family: "Lobster", cursive;
+  color: darkgray;
 }

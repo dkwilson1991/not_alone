@@ -146,6 +146,7 @@ User.create!(
 # end
 
 puts "... created #{User.count} Users."
+date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
