@@ -39,7 +39,7 @@ class CampsController < ApplicationController
     @camp = Camp.new(camp_params)
     @camp.user = current_user
     authorize @camp
-    if @camp.save
+    if @camp.save!
       redirect_to camp_path(@camp)
     else
       @assignments = policy_scope(Assignment)
