@@ -112,6 +112,7 @@ User.create!(
   training: "3 Days",
   language: "English",
   past_roles: "None",
+  certifications: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
 )
 
@@ -124,6 +125,7 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
+  certifications: "None",
   past_roles: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
 )
@@ -151,6 +153,7 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
+  certifications: "None",
   past_roles: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
 )
