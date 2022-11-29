@@ -26,7 +26,6 @@
       </div>
     </div>
   </div>
-
 </div>
 <div class="stripe">
   <div class="bounds">
@@ -39,7 +38,6 @@
               <div class="assignment-status">
                 <% if @previous_assignment %>
                   <button class="btn btn-light applied-btn" disabled> Applied </button>
-
                 <% else %>
                   <%= simple_form_for [@camp, @assignment] do |f| %>
                     <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
