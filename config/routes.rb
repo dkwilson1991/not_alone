@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :camps, only: %i[index show edit create update] do
     resources :assignments, only: [:create]
   end
-  resources :assignments, only: %i[index update show]
+  resources :assignments, only: %i[index update show destroy]
 end

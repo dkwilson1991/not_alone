@@ -12,4 +12,8 @@ class AssignmentPolicy < ApplicationPolicy
   def update?
     record.camp.user == user
   end
+
+  def destroy?
+    true
+  end
 end

@@ -1,7 +1,7 @@
 <div class="newsfeed-card mb-5 w-100">
-  <div class="preview" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : camp.images%>);">
-  </div>
-  <%# <img src= <%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : camp.images%>
+  <%# <div class="newsfeed-img" style="background-image: url(<%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : camp.images%>
+  <%# </div> %>
+  <img src= <%= camp.photos.attached? ? cl_image_path(camp.photos.first.key) : camp.images%>>
   <div class="newsfeed-card-infos mt-2">
     <h2><%= camp.camp_name %></h2>
     <p><%= camp.newsfeed_post&.truncate(150) %></p>

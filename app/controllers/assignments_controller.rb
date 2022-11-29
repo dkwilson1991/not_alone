@@ -33,15 +33,27 @@ class AssignmentsController < ApplicationController
     if @assignment.update(assignment_params)
       redirect_to camp_path(@assignment.camp)
     end
+    @camp = @assignment.camp
+    authorize @camp
+    if @camp.update(camp_params)
+      redirect_to camp_path(@assignment.camp)
+    end
   end
 
   def destroy
     @assignment = Assignment.find(params[:id])
+    authorize @assignment
     @assignment.destroy
     redirect_to assignments_path, status: :see_other
   end
 
+  private
+
   def assignment_params
     params.require(:assignment).permit(:status, :role)
+  end
+
+  def camp_params
+    params.require(:camp).permit(:camp_name, :address, :start_date, :end_date, :required_number_volunteers, :description, :director_email, :comments, :newsfeed_post, tag_list: [], photos:[])
   end
 end

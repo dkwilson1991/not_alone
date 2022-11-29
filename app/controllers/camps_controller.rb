@@ -39,17 +39,15 @@ class CampsController < ApplicationController
     @camp = Camp.new(camp_params)
     @camp.user = current_user
     authorize @camp
-    if @camp.save!
-      redirect_to camp_path(@camp)
-    else
-      @assignments = policy_scope(Assignment)
-      @upcoming_assignments = policy_scope(Assignment).where('start_date > ?', Date.today).order(:created_at)
-      @previous_assignments = policy_scope(Assignment).where('start_date <= ?', Date.today).order(:start_date).first(3)
-      @camp = Camp.new
-      @future_camps = Camp.where('start_date > ?', Date.today).order(:start_date).first(3)
-      @past_camps = Camp.where('start_date <= ?', Date.today).order(:start_date)
-      render "assignments/index", status: :unprocessable_entity
-    end
+    redirect_to camp_path(@camp) if @camp.save!
+    # else
+    #   @assignments = policy_scope(Assignment)
+    #   @upcoming_assignments = policy_scope(Assignment).where('start_date > ?', Date.today).order(:created_at)
+    #   @previous_assignments = policy_scope(Assignment).where('start_date <= ?', Date.today).order(:start_date).first(3)
+    #   @camp = Camp.new
+    #   @future_camps = Camp.where('start_date > ?', Date.today).order(:start_date).first(3)
+    #   @past_camps = Camp.where('start_date <= ?', Date.today).order(:start_date)
+    #   render "assignments/index", status: :unprocessable_entity
   end
 
   def update
