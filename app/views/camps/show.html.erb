@@ -90,7 +90,6 @@
 <div class="camp-container container">
   <div class="row" data-controller="sortable-roles">
     <h2 class="border-bottom p-2 m-2">Volunteer Team List</h2>
-
     <div class="col-12 d-flex flex-wrap" id="all" data-sortable-roles-target="group">
       <% @camp.assignments.where(role: nil).each do |assignment| %>
         <div class="rounded-circle" data-assignment-id="<%= assignment.id %>">
@@ -98,20 +97,22 @@
         </div>
       <% end %>
     </div>
-    <div class="roles-cards">
-      <% @camp.tags.each do |role| %>
-        <div data-sortable-roles-target="group" data-role-name="<%= role.name %>" class="p-2 m-2 roles-border">
-          <h2><%= role.name %></h2>
-          <% @camp.assignments.where(role: role.name).each do |assignment| %>
-            <div class="rounded-circle" data-assignment-id="<%= assignment.id %>">
-              <%= render "shared/vcard", user: assignment.user, assignment: assignment %>
-            </div>
-          <% end %>
-          <% if @camp.assignments.where(role: role.name).empty? %>
-            <p class="unassigned-role">*No one assigned to this role yet</p>
-          <% end %>
-        </div>
-      <% end %>
+    <div class="mb-4">
+      <div class="roles-cards">
+        <% @camp.tags.each do |role| %>
+          <div data-sortable-roles-target="group" data-role-name="<%= role.name %>" class="p-2 m-2 roles-border">
+            <h2><%= role.name %></h2>
+            <% @camp.assignments.where(role: role.name).each do |assignment| %>
+              <div class="rounded-circle" data-assignment-id="<%= assignment.id %>">
+                <%= render "shared/vcard", user: assignment.user, assignment: assignment %>
+              </div>
+            <% end %>
+            <% if @camp.assignments.where(role: role.name).empty? %>
+              <p class="unassigned-role">*No one assigned to this role yet</p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
