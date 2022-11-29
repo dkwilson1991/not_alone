@@ -60,6 +60,6 @@ class CampsController < ApplicationController
   private
 
   def camp_params
-    params.require(:camp).permit(:camp_name, :address, :start_date, :end_date, :required_number_volunteers, :required_roles, :description, :director_email, :comments, :newsfeed_post, tag_list: [], photos:[])
+    params.require(:camp).permit(:camp_name, :address, :start_date, :end_date, :required_number_volunteers, :description, :director_email, :comments, :newsfeed_post, tag_list: [], photos:[])
   end
 end
