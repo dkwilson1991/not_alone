@@ -1,8 +1,8 @@
 Arguments: 
-  /root/.nvm/versions/node/v16.15.1/bin/node /root/.nvm/versions/node/v16.15.1/bin/yarn install
+  /Users/keita/.nvm/versions/node/v16.15.1/bin/node /Users/keita/.nvm/versions/node/v16.15.1/bin/yarn
 
 PATH: 
-  ./bin:./node_modules/.bin:/root/.nvm/versions/node/v16.15.1/bin:/root/.rbenv/shims:/root/.rbenv/bin:/root/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/SYSTEM32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/SYSTEM32/WBEM:/mnt/c/WINDOWS/SYSTEM32/WINDOWSPOWERSHELL/V1.0/:/mnt/c/WINDOWS/SYSTEM32/OPENSSH/:/mnt/c/Users/Savit/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Savit/AppData/Local/Programs/Microsoft VS Code/bin:/usr/local/sbin
+  ./bin:./node_modules/.bin:/Users/keita/.nvm/versions/node/v16.15.1/bin:/Users/keita/.rbenv/shims:/Users/keita/.rbenv/bin:/Users/keita/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/sbin
 
 Yarn version: 
   1.22.19
@@ -11,18 +11,18 @@ Node version:
   16.15.1
 
 Platform: 
-  linux x64
+  darwin x64
 
 Trace: 
-  SyntaxError: Unknown token: { line: 671, col: 1, type: 'INVALID', value: undefined } 671:1 in /root/code/Sabi95/not_alone/yarn.lock
-      at Parser.unexpected (/root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63491:11)
-      at Parser.parse (/root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63622:14)
-      at parse (/root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63696:21)
-      at module.exports.exports.default (/root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63258:96)
-      at Function.<anonymous> (/root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:3068:63)
+  SyntaxError: Unknown token: { line: 671, col: 1, type: 'INVALID', value: undefined } 671:1 in /Users/keita/code/dkwilson1991/not_alone/yarn.lock
+      at Parser.unexpected (/Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63491:11)
+      at Parser.parse (/Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63622:14)
+      at parse (/Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63696:21)
+      at module.exports.exports.default (/Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:63258:96)
+      at Function.<anonymous> (/Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:3068:63)
       at Generator.next (<anonymous>)
-      at step (/root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /root/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:321:13
+      at step (/Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/keita/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
