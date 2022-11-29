@@ -42,6 +42,6 @@ class AssignmentsController < ApplicationController
   end
 
   def assignment_params
-    params.require(:assignment).permit(:status, :roles)
+    params.require(:assignment).permit(:status, :role)
   end
 end

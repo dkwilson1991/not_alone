@@ -526,6 +526,7 @@ puts "... created #{User.count} Users."
 # camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
 # camp1.save
 
+
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp2 = Camp.create!(
@@ -535,7 +536,6 @@ camp2 = Camp.create!(
   end_date: date + 7,
   description: "After the devastating earthquake, thousands of homes and schools across 14 districts were destroyed, forcing people to take shelter in open grounds. In Kathmandu city, most of the mid-city dwellers congregated in Tundikhel - the large parade ground - and within a week Tundikhel had become a tented city. In the first week itself, UNICEF and partners set up a child-friendly space made of bamboo and tarpaulin in Tundikhel.",
   camp_name: "UNICEF tent in Nepal",
-  required_roles: "Camp Director, Station Leader, Crew Leader, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: "This was me in a UNICEF tent in Nepal training local communities how to provide pediatric mental health first-aid after disaster.  We have been doing this now for 12 years and collecting data on the children served. As part of my PhD program I am now digging deeper into the data we collected on over 7,000 children after disasters.  Let me share a little of what I am discovering. Many studies point to around 30% of children exposed to traumatic events being at risk for developing mental health pathologies.  We assess each child at the beginning (pre) and end (post) of each camp and one thing our data shows clearly is that younger children make up proportionately more of the lowest 30% than older school age children. There were 262 six year olds (32.7%) and 309 seven year olds (31.6%) in this most at-risk group.  But there was also good news! We knew that most children made significant improvement in trauma symptoms by the end of the camp, but I wondered if these most vulnerable children were also improving or were being left behind. Looking deeper into the post data, I found that out of the 262 at-risk 6yr olds only one child finished the camp still in the lowest 30%.  Out of the most vulnerable 309 7 yr. olds only three failed to improve out of the bottom 30%. We don't yet know all the reasons why some children are more vulnerable to mass trauma than others, because all we can do is look at the symptoms.  But even when symptoms are severe, most children respond to being safe, listened to, given hope, encouraged to ask for help, and loved by volunteers in their own community. My hope is that my research will enable communities to focus more timely help to the most vulnerable children. xsThank you for praying and encouraging me during this time of research.",
 user: admin.sample
 )
@@ -566,7 +566,6 @@ camp3 = Camp.create!(
   7. Committed volunteers ready to respond
   Thanks for all your support and prayers. ",
   camp_name: "Camp in St Bernard, Southern Leyte.",
-  required_roles: "Camp Director, Station Leader, Crew Leader",
   newsfeed_post: "A month ago a late-season super typhoon struck the Philippines doing great damage across the Visayas. Super Typhoon Odette (known internationally as Rai) has been ranked as the 3rd costliest storm in Philippine history.
   OpSAFE International has been working in this region since 2013 training communities how to care for the emotional needs of children who have experienced mass trauma. Two partners are conducting training in South Leyte and Negros Occidental in response to Typhoon Odette.
   Pray for Gintong Aral (Jackson Toledo Natividad) and the Philippine Children's Ministry Network (Fe Adul Foronda) as they lead these efforts and pray for the children and communities that will be strengthened after the disaster.",
@@ -587,7 +586,6 @@ camp4 = Camp.create!(
   description: "It was a fire in Quezon City, Philippines literally just down the street from our partners the Philippine Children's Ministry Network.  The fire affected 100 families with 140 children and OpSAFE trained volunteers are already responding to bring hugs, help and hope to the children.  Please pray for these volunteers and the children they are serving. " ,
   comments: "You should have excperions of working with kids",
   camp_name: "Camp in Philippine",
-  required_roles: "Camp Director, Station Leader, Crew Leader, Snacks, Crafts",
   newsfeed_post: "An Opsafe camp reaches  to 51 children affected by the fire in Pajo St., Project 2, QC. Church of Praise lead the team of station leaders from  PCMN staff. The crew leaders and volunteers' food were supplied by Pajo Outreach Church. The venue was lent by Community Bible Church. It took the unity of 3 churches and PCMN to respond to the psycho-social trauma debriefing camp for these children. Praise God for the unity of believers!",
   user: admin.sample
 )
@@ -604,7 +602,6 @@ camp5 = Camp.create!(
   end_date: date + 7,
   description: "OpSAFE camps are continuing in Ukraine! Keep praying for these children and hundreds more who are being helped to feel safe, important, empowered, loved, and hopeful.",
   camp_name: "OpSAFE camp in Ukraine",
-  required_roles: "Camp Director, Station Leader, Crew Leader, Game, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: "We are seeing some really great results from the camps in Ukraine.  With seven out of ten camps reporting, we found 37 out of 145 children were 'at risk' with more severe post-traumatic stress symptoms than their peers. What was wonderful was that 20 of these children made enough progress that their symptoms were similar to their peers by the end of the camp. The remaining 17 still had more severe symptoms than their peers, but all of them showed substantial improvement.
   Of the 108 children who exhibited mild PTSS, 80 showed significant improvement in their symptoms, and 25 did not primarily because their initial symptoms were very mild leaving not much room for improvement. 3 of these children showed a slight regression.
   By the end of the camps, none of the children were flagged as being exceptionally at risk in comparison with their peers. Continued support from friends and community should see continued progress in children's resilience to trauma.
@@ -630,7 +627,6 @@ camp6 = Camp.create!(
   OperationSAFE to program zajęć dla dzieci 6-12 lat, który pomaga prowadzić dzieci do emocjonalnego uzdrowienia, rozwijając u nich odporność na traumatyczne przeżycia oraz ucząc znaleźć ukojenie w sytuacji chaosu.",
   images: "poland.jpegg",
   camp_name: "OpSAFE camp in Poland",
-  required_roles: "Camp Director, Station Leader, Crew Leader, Game, Story telling, Songs, Snacks, Crafts",
   newsfeed_post: 'Miło jest wspomnieć szkolenie OpSAFE w Mińsku Mazowieckim. Tak duża grupa była dla nas nie lada wyzwaniem!
   Dużo było spisanych kartek, dużo dyskusji, trochę łez wzruszenia, ale dużo też uśmiechu i wdzięczności.
   Dziękujemy Inna Karpenko za zaproszenie i pomoc w organizacji. Bardzo dziękujemy Svetlana Popovych i Sofii za nakarmienie 100 osób oraz opiekę nad dziećmi 🙂 I serdecznie dziękujemy OM w Polsce za realizację takich spotkań jak to!
