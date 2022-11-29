@@ -35,6 +35,12 @@ class AssignmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @assignment = Assignment.find(params[:id])
+    @assignment.destroy
+    redirect_to assignments_path, status: :see_other
+  end
+
   def assignment_params
     params.require(:assignment).permit(:status, :role)
   end

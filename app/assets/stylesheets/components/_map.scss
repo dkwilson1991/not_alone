@@ -55,7 +55,12 @@ background-size: cover;
   margin-right: 10%;
 }
 .mapboxgl-popup-content {
-  background-color: #e8e8e8 !important;
+  // background-color: #e8e8e8 !important;
+  max-width: none !important;
+  width: 100% !important;
+  border: 1px solid lightgrey !important;
+  box-shadow: none !important;
+  background-color: rgba(#e8e8e8, 0.6) !important;
   &h1 {
 font-size: 16px !important;
   }
