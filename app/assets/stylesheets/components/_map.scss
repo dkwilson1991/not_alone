@@ -31,15 +31,21 @@ background-size: cover;
   border: 0;
   border-radius: 50px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
-  color: #fff;
+  color: #3c3c3c;
   font-size: 16px;
   padding: 12px 25px;
   letter-spacing: 1px;
+  opacity: 70%;
 }
 .searching-form {
   position: fixed;
   top: 8%;
   width: 30%;
+}
+
+#query:focus {
+  border: 2px solid #3bacb6;
+  opacity: 100%;
 }
 
 .search{
