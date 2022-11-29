@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="create-assignment"
 export default class extends Controller {
   // static values = { chatroomId: Number }
-  static targets = ["create", "form"]
+  static targets = ["create", "form", "editForm"]
   connect() {
     console.log(`this should connect`)
     console.log(this.formTarget)
@@ -18,5 +18,11 @@ export default class extends Controller {
     } else {
       this.createTarget.innerText = "Close"
     }
+  }
+
+  edit()
+  {
+    this.editFormTarget.classList.toggle("d-none")
+    console.log(this.editFormTarget.classList)
   }
 }
