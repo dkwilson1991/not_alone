@@ -90,6 +90,7 @@
 <div class="camp-container container">
   <div class="row" data-controller="sortable-roles">
     <h2 class="border-bottom p-2 m-2">Volunteer Team List</h2>
+
     <div class="col-12 d-flex flex-wrap" id="all" data-sortable-roles-target="group">
       <% @camp.assignments.where(role: nil).each do |assignment| %>
         <div class="rounded-circle" data-assignment-id="<%= assignment.id %>">
