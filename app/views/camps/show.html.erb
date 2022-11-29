@@ -19,13 +19,14 @@
             </div>
             <div class="flex-item">
               <p class="card-p"><i class="fa-solid fa-location-dot"></i> <%= @camp.address %></p>
-              <p class="card-p"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date %> - <%= @camp.end_date %></p>
+              <p class="card-p"><i class="fa-solid fa-calendar-week"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
 <div class="stripe">
   <div class="bounds">
@@ -38,6 +39,7 @@
               <div class="assignment-status">
                 <% if @previous_assignment %>
                   <button class="btn btn-light applied-btn" disabled> Applied </button>
+
                 <% else %>
                   <%= simple_form_for [@camp, @assignment] do |f| %>
                     <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>

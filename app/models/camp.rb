@@ -25,6 +25,8 @@ class Camp < ApplicationRecord
     Assignment.create(status: "admin_confirm", user: self.user, camp: self)
   end
 
+  private
+
   def invite_volunteers
     @users = User.near(self.address)
     @users.each do |user|
