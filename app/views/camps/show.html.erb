@@ -1,7 +1,6 @@
 <% content_for :meta_title, "#{@camp.camp_name} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @camp.description %>
 <% content_for :meta_image, @camp.photos.attached? ? cl_image_path(@camp.photos.first.key) : 'https://images.unsplash.com/photo' %>
-
 <div class="flex-item" style="position: relative;">
   <div class="groupHomeHeader stripe border--none">
     <div class="bounds bounds--wide">
@@ -32,7 +31,7 @@
               <h4 class="card-p pt-2"><i class="fa-solid fa-calendar-week" style="color: #3bacb6;"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></h4>
               <div class="d-flex justify-content-end">
                 <% if @camp.user != current_user %>
-                  <div class="assignment-status me-5">
+                  <div class="assignment-status">
                     <% if @previous_assignment %>
                       <button class="btn btn-light applied-btn" disabled> Applied </button>
                     <% else %>
