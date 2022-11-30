@@ -74,5 +74,12 @@
 @media screen and (max-width: 480px) {
   .searching-form {
     position: inherit;
+    margin-top: 30px;
+  }
+  .searching-form .form-control {
+    width: 27vh;
+  }
+  .search {
+    margin-top: 30px;
   }
 }
