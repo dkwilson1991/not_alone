@@ -176,9 +176,11 @@
         </div>
       <% end %>
     </div>
-    <%= render 'camps/form_comment', camp: @comment.camp, comment: @comment %>
-    <% @camp.comments.each do |comment| %>
-      <%= render 'camps/comment', comment: comment %>
-    <% end %>
-  </div>
-<% end %>
+  <% end %>
+</div>
+<div class="d-flex">
+  <%= render 'camps/form_comment', camp: @comment.camp, comment: @comment %>
+  <% @camp.comments.each do |comment| %>
+    <%= render 'camps/comment', comment: comment %>
+  <% end %>
+</div>

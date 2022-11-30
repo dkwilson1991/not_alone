@@ -3,6 +3,7 @@
   width: 45%;
   padding: 10px 20px;
   background-color:rgba($color: #B3E8E5, $alpha: 0.5);
+  margin-left: 5%;
 
 }
 
@@ -83,7 +84,7 @@
 
 
 
-.camp-container .round {
+.avatar-coment {
   border: 0.2rem solid white;
   border-radius: 50%;
   padding: 0px;
@@ -93,11 +94,14 @@
   height: 64px;
   background-size: cover;
   width: 64px;
+  margin-left: 40% !important;
 }
 
 .one-comment {
   background-color:rgba($color: #B3E8E5, $alpha: 0.5);
-  width: 45%;
+  width: 300px;
+  margin-left: 20%;
+  text-align: center;
 }
 .comment-time {
   font-size: 8px;
