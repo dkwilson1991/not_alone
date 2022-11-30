@@ -54,6 +54,10 @@ padding: 1rem;
   width: 53ch;
 }
 
+#newsfeed-length {
+  width: 50ch;
+}
+
 .show-h1 {
   font-weight: bolder;
 }
@@ -116,4 +120,8 @@ padding: 1rem;
 .roles-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.card-image {
+  border-radius: 5%;
 }
