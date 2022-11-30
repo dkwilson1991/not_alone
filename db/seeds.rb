@@ -9,7 +9,7 @@ Camp.destroy_all
 
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
 email = ['savi@not-alone.online', 'keita@not-alone.online', 'yulia@not-alone.online', 'ayhem@not-alone.online']
-roles = ["Camp Director", "Crew Leader", "Game", "Story telling", "Songs", "Snacks", "Crafts"]
+roles = ["Crew Leader", "Game", "Story telling", "Songs", "Snacks", "Crafts"]
 
 admin = User.where(admin_status: true)
 
