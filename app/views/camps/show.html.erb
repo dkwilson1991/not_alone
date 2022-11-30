@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@camp.camp_name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @camp.description %>
+<% content_for :meta_image, @camp.photos.attached? ? cl_image_path(@camp.photos.first.key) : 'https://images.unsplash.com/photo' %>
+
 <div class="flex-item" style="position: relative;">
   <div class="groupHomeHeader stripe border--none">
     <div class="bounds bounds--wide">
