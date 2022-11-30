@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :assignments, dependent: :destroy
+  has_many :comments
   has_many :camps, dependent: :destroy
   has_one_attached :photo
   # Include default devise modules. Others available are:

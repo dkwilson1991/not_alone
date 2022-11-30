@@ -174,4 +174,9 @@
       <% end %>
     </div>
   </div>
+  <%= render 'camps/form_comment', camp: @comment.camp, comment: @comment %>
+  <% @camp.comments.each do |comment| %>
+    <%= render 'camps/comment', comment: comment %>
+  <% end %>
+</div>
 <% end %>

@@ -1,6 +1,7 @@
 class CampsController < ApplicationController
   def show
     @camp = Camp.find(params[:id])
+    @comment = Comment.new(camp: @camp)
     @assignments = policy_scope(Assignment)
     authorize @camp
     @assignment = Assignment.new
