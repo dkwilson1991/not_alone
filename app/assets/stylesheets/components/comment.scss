@@ -1,0 +1,75 @@
+.simple_form .new_comment {
+  max-width: 75%;
+  width: 50%;
+  padding: 10px 20px;
+  background-color: #B3E8E5;
+  margin: 10px auto;
+  border-radius: 5%;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.inline-text {
+  color: #3BACB6;
+}
+
+.form-date {
+  border-radius: 10%;
+}
+
+.check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tag-item {
+  display: inline-block;
+}
+
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: #fff;
+  color: #3BACB6;
+  border: 1px solid #3BACB6;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.tag-selector:checked + label {
+  background-color: #3BACB6;
+  color: white;
+}
+
+.description {
+  width: 100%;
+}
+
+.button-to-right {
+
+  display: flex;
+  justify-content: right;
+
+  .btn {
+    background-color: #3BACB6;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+    color: #fff;
+    font-size: 16px;
+  }
+}
