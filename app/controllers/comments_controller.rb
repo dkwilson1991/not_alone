@@ -3,10 +3,13 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @camp = Camp.find(params[:camp_id])
     @comment.camp = @camp
+    @camp.user = current_user
+    @comment.user = current_user
+    authorize @camp
       if @comment.save
         redirect_to camp_path(@camp)
       else
-        render :new, status: :unprocessable_entity
+        render camp_path(@camp), status: :unprocessable_entity
       end
   end
 

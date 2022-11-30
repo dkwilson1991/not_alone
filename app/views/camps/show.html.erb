@@ -137,5 +137,8 @@
       </div>
     <% end %>
   </div>
-  <%= render 'camps/comment', camp: @comment.camp, comment: @comment %>
+  <%= render 'camps/form_comment', camp: @comment.camp, comment: @comment %>
+  <% @camp.comments.each do |comment| %>
+    <%= render 'camps/comment', comment: comment %>
+  <% end %>
 </div>

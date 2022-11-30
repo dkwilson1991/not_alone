@@ -1,10 +1,9 @@
-.simple_form .new_comment {
+.comment {
   max-width: 75%;
-  width: 50%;
+  width: 45%;
   padding: 10px 20px;
-  background-color: #B3E8E5;
-  margin: 10px auto;
-  border-radius: 5%;
+  background-color:rgba($color: #B3E8E5, $alpha: 0.5);
+
 }
 
 .form-title {
@@ -58,6 +57,14 @@
 .description {
   width: 100%;
 }
+#new_comment .btn {
+  background-color: #3BACB6;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+  color: #fff;
+  font-size: 16px;
+}
 
 .button-to-right {
 
@@ -72,4 +79,26 @@
     color: #fff;
     font-size: 16px;
   }
+}
+
+
+
+.camp-container .round {
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  padding: 0px;
+  margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+  height: 64px;
+  background-size: cover;
+  width: 64px;
+}
+
+.one-comment {
+  background-color:rgba($color: #B3E8E5, $alpha: 0.5);
+  width: 45%;
+}
+.comment-time {
+  font-size: 8px;
 }
