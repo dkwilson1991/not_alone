@@ -3,11 +3,11 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-8">
+        <div class="newsfeed mt-5">
         <div>
           <h2>Change a child's life today</h2>
           <p class='mb-5'>Read about what previous camps have accomplished.</p>
         </div>
-        <div class="newsfeed mt-5">
           <% @past_camps.each do |camp| %>
             <%= link_to camp_path(camp), class:"text-decoration-none" do %>
               <%= render "newsfeed_post", camp: camp %>
