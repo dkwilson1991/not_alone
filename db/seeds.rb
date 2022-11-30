@@ -9,7 +9,7 @@ Camp.destroy_all
 
 location = ["Japan, Tokyo", "Chile, Santiago", "Costa, Rica", "Havana, Cuba", "Iraq Bagdad", "Canada Ottawa", "Ukraine, Kyiv", "Spain, Madrid", "Philippines, Manila", "Tunisia, Tunis"]
 email = ['savi@not-alone.online', 'keita@not-alone.online', 'yulia@not-alone.online', 'ayhem@not-alone.online']
-roles = ["Camp Director", "Crew Leader", "Game", "Story telling", "Songs", "Snacks", "Crafts"]
+roles = ["Crew Leader", "Game", "Story telling", "Songs", "Snacks", "Crafts"]
 
 admin = User.where(admin_status: true)
 
@@ -177,12 +177,18 @@ camp1 = Camp.create!(
   user: admin.sample
 )
 
+
 file1 = URI.open("https://i.guim.co.uk/img/media/d682d208509a7d55cbd03e0eecaa264679f130ee/0_127_2048_1229/master/2048.jpg?width=480&quality=85&dpr=1&s=none")
 camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
+file_2 = URI.open("https://cdn-japantimes.com/wp-content/uploads/2021/04/np_file_82259.jpeg")
+camp1.photos.attach(io: file_2, filename: "tokyo1.png", content_type: "image/png")
+file_3 = URI.open("https://thumbs.dreamstime.com/b/japanese-kindergarten-kids-field-trip-chureito-pagoda-92781874.jpg")
+camp1.photos.attach(io: file_3, filename: "tokyo2.png", content_type: "image/png")
+file_4 = URI.open("https://bestlivingjapan.com/wp-content/uploads/2015/02/asobono1.jpg")
+camp1.photos.attach(io: file_4, filename: "tokyo3.png", content_type: "image/png")
+
 camp1.tag_list.add("Camp Director", "Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp1.save
-
-
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp2 = Camp.create!(
@@ -320,8 +326,8 @@ camp7 = Camp.create!(
   ❤️ Реалізовувати власні творчі ідеї на авторських майстер-класах.
   ❤️ Підтримувати дітей під час майстерок та самому бути учасником різноманітних творчих занять.
   ❤️Багато грати в ігри та спілкуватися, a отже вчитися взаємодіїти з дітьми еоклогічно та ефективно.",
-  newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
-  Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
+  # newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
+  # Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
   user: admin.sample
 )
 file7 = URI.open("https://www.childfund.org/uploadedImages/NewCF/Ecommerce/Emergencies/ukraine-emergency-update-2.jpg")
@@ -342,7 +348,7 @@ camp8 = Camp.create!(
   Важливі та прості умови:
 - 18+
 - любов до дітей",
-  newsfeed_post: "Заняття уже завершилися, але позитивні враження та результат, який отримали діти залишаться назавжди 🥰",
+  # newsfeed_post: "Заняття уже завершилися, але позитивні враження та результат, який отримали діти залишаться назавжди 🥰",
   user: admin.sample
 )
 file8 = URI.open("https://www.acacamps.org/sites/default/files/styles/uncropped_1700/public/2022-08/Ukrainian-Campers-FLEX-kids.jpg?itok=IPIANEyx")
@@ -358,10 +364,10 @@ camp9 = Camp.create!(
   required_number_volunteers: 10,
   start_date: date,
   end_date: date + 7,
-  description: "Волонтери для проведення заходів для дітей. Зараз нам потрібна допомога активних волонтерів для проведення майстер-класів для діток.
-  Тож якщо Вам від 16 i Ви хочете долучитись до нас i робити ще більше дітей щасливими.",
-  newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
-  Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
+  # description: "Волонтери для проведення заходів для дітей. Зараз нам потрібна допомога активних волонтерів для проведення майстер-класів для діток.
+  # Тож якщо Вам від 16 i Ви хочете долучитись до нас i робити ще більше дітей щасливими.",
+  # newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
+  # Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
   user: admin.sample
 )
 
