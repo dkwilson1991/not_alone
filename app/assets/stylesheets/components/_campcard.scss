@@ -83,7 +83,6 @@
   border-radius: 3px;
   content: "";
   display: none;
-
 }
 
 .progress-bar {
@@ -97,7 +96,7 @@
 }
 
 .coursa-info .btn {
-  background-color: #B3E8E5;
+  background-color: #b3e8e5;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
   border-radius: 50px;
@@ -112,12 +111,15 @@
 }
 
 @media screen and (max-width: 480px) {
-  .social-panel-container.visible {
-    transform: translateX(0px);
+  .preview {
+    padding: 100px;
   }
-
-  .floating-btn {
-    right: 10px;
+  .mobile-reverse {
+    flex-direction: column-reverse;
+  }
+  .coursa-info .btn {
+    font-size: 14px;
+    padding: 8px 12px;
   }
 }
 

@@ -14,19 +14,18 @@
 
 .mapboxgl-popup-content {
   text-align: center;
-
 }
 .courses h1 {
   text-align: center;
 }
 
 .preview {
-background-size: cover;
+  background-size: cover;
 }
 
 .searching-form .form-control {
   width: 100%;
-  background-color: rgba(#B3E8E5, 0.5);
+  background-color: rgba(#b3e8e5, 0.5);
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
   border-radius: 50px;
@@ -48,16 +47,16 @@ background-size: cover;
   opacity: 100%;
 }
 
-.search{
-  background-color: #B3E8E5;
+.search {
+  background-color: #b3e8e5;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
-	border: 0;
-	border-radius: 50px;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
-	color: #fff;
-	font-size: 16px;
-	padding: 12px 25px;
-	letter-spacing: 1px;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  letter-spacing: 1px;
   margin-right: 10%;
 }
 .mapboxgl-popup-content {
@@ -68,6 +67,20 @@ background-size: cover;
   box-shadow: none !important;
   background-color: rgba(#e8e8e8, 0.6) !important;
   &h1 {
-font-size: 16px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searching-form {
+    position: inherit;
+    margin-top: 30px;
+  }
+  .searching-form .form-control {
+    width: 27vh;
+    margin-top: 41px;
+  }
+  .search {
+    margin-top: 42px;
   }
 }
