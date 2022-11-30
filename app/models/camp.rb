@@ -10,7 +10,7 @@ class Camp < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   has_many :assignments, dependent: :destroy
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many_attached :photos
   validates :address, presence: true
   validates :start_date, presence: true
