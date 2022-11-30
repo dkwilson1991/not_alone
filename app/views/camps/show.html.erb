@@ -23,6 +23,9 @@
           <div class="col-4">
             <div class="flex-item d-flex justify-content-between">
               <% if @camp.newsfeed_post? %>
+                <div class="news-head">
+                  <h3>Camp finished ❤️</h3>
+                </div>
               <% else %>
                 <div class="d-flex justify-content-end" style="width: 100%">
                   <div class="progress-container-show pt-2">
@@ -173,5 +176,9 @@
         </div>
       <% end %>
     </div>
+    <%= render 'camps/form_comment', camp: @comment.camp, comment: @comment %>
+    <% @camp.comments.each do |comment| %>
+      <%= render 'camps/comment', comment: comment %>
+    <% end %>
   </div>
 <% end %>
