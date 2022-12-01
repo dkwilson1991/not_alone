@@ -1,6 +1,7 @@
 class CampsController < ApplicationController
   def show
     @camp = Camp.find(params[:id])
+    @comment = Comment.new(camp: @camp)
     @assignments = policy_scope(Assignment)
     authorize @camp
     @assignment = Assignment.new
@@ -20,7 +21,7 @@ class CampsController < ApplicationController
     else
       policy_scope(Camp).order(:start_date)
     end
-
+    @future_camps = Camp.where('start_date > ?', Date.today).order(:start_date)
     @markers = @camps.geocoded.map do |camp|
       {
         lat: camp.latitude,
