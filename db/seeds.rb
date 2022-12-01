@@ -596,7 +596,7 @@ camp7 = Camp.create!(
   # Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
   user: admin.sample
 )
-file7 = URI.open("")
+file7 = URI.open("https://www.childfund.org/uploadedImages/NewCF/Ecommerce/Emergencies/ukraine-emergency-update-2.jpg")
 camp7.photos.attach(io: file7, filename: "poland.png", content_type: "image/png")
 camp7.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp7.save
