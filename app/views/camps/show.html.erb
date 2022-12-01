@@ -49,7 +49,7 @@
             <div class="flex-item">
               <h1 class="show-h1"> <%= @camp.camp_name %></h1>
               <h5 class="card-p pt-1"><i class="fa-solid fa-location-dot" style="color: #3bacb6;"></i> <%= @camp.address %></h5>
-              <h5 class="card-p pt-1"><i class="fa-solid fa-calendar-week" style="color: #3bacb6;"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></h5>
+              <h5 class="card-p pt-1 pb-2"><i class="fa-solid fa-calendar-week" style="color: #3bacb6;"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></h5>
               <% if @camp.newsfeed_post?%>
                 <p class="pt-4" id="newsfeed-length" style="width: 100%"> 💚 <%= @camp.newsfeed_post %> 💚 </p>
               <% end %>
@@ -66,11 +66,9 @@
                       <div class="d-flex justify-content-center">
                         <%= simple_form_for [@camp, @assignment] do |f| %>
                           <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
-                          <div style="text-align: center;"><%= f.input :role, label: "How would you like to help? (Choose one)", as: :radio_buttons, collection: [["Crew Leader", "Crew Leader"], ["Story Telling", "Station Leader: Story Telling"], ["Songs", "Station Leader: Songs"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %></div>
+                          <div style="text-align: center;" class="tag-font"><%= f.input :role, label: "How would you like to help? (Choose one)", as: :radio_buttons, collection: [["Crew Leader", "Crew Leader"], ["Story Telling", "Station Leader: Story Telling"], ["Songs", "Station Leader: Songs"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %></div>
                           <div class="d-flex justify-content-end" style=""><%= f.submit 'Apply', class: 'btn cta-button' %></div>
                         <% end %>
-                      </div>
-                      <div>
                       </div>
                     <% end %>
                   <% end %>
@@ -82,7 +80,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 <div class="camp-information">
   <div class="camp-container container pb-4">

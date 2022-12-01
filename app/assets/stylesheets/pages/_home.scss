@@ -1,93 +1,89 @@
 .newsfeed {
   text-align: center;
 
-    h2 {
-      font-size: 36px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: bold;
+  h2 {
+    font-size: 36px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+  }
+
+  .newsfeed-card {
+    overflow: hidden;
+    width: 50vw;
+    background: white;
+    // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    // align-items: center;
+    // border-radius: 30px;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
+      z-index: 2;
+      border-color: #007bff !important;
+    }
+  }
+
+  .newsfeed-card img {
+    height: 100%;
+    width: 12vw;
+    object-fit: cover;
+  }
+
+  .newsfeed-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    text-align: justify;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .newsfeed-card p {
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0.7;
+    margin-bottom: 0;
+    margin-top: 8px;
+    text-align: justify;
+    color: black;
+  }
+
+  .newsfeed-card .newsfeed-card-infos {
+    padding: 20px;
+    position: relative;
+
+    .upper-right-location {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      color: rgb(140, 138, 138);
+      font-size: 12px;
     }
 
-    .newsfeed-card {
-      overflow: hidden;
-      width: 50vw;
-      background: white;
-      // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      display: flex;
-      // align-items: center;
-      // border-radius: 30px;
-      transition: 0.5s;
-
-        &:hover {
-          transform: scale(1.010);
-          box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
-          z-index: 2;
-          border-color: #007bff !important;
-        }
+    .upper-left-date {
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      color: rgb(140, 138, 138);
+      font-size: 12px;
     }
-
-    .newsfeed-card img {
-      height: 100%;
-      width: 12vw;
-      object-fit: cover;
-    }
-
-    .newsfeed-card h2 {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0;
-      text-align: justify;
-      font-family: 'Nunito', sans-serif;
-    }
-
-    .newsfeed-card p {
-      font-size: 16px;
-      line-height: 1.4;
-      opacity: .7;
-      margin-bottom: 0;
-      margin-top: 8px;
-      text-align: justify;
-      color: black;
-    }
-
-    .newsfeed-card .newsfeed-card-infos {
-      padding: 20px;
-      position: relative;
-
-        .upper-right-location {
-          position: absolute;
-          top: -10px;
-          right: 20px;
-          color: rgb(140, 138, 138);
-          font-size: 12px;
-        }
-
-        .upper-left-date {
-          position: absolute;
-          top: -10px;
-          left: 20px;
-          color: rgb(140, 138, 138);
-          font-size: 12px;
-        }
-    }
-
+  }
 }
 
 .upcoming-camps {
   // border-radius: 4px;
   // box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1%);
   // padding: 8px;
-  position: sticky;
+  // position: sticky;
   top: 8vh;
   // padding: 24px;
-  height: 100%;
   width: fit-content;
 
-    h3 {
-      font-size: 24px;
-    }
-
+  h3 {
+    font-size: 24px;
+  }
 }
-
 
 // @media (min-width: 1400px) {
 //   .newsfeed-card {
@@ -104,6 +100,5 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .home-column {
     flex-direction: column;
-
   }
 }
