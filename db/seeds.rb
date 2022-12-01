@@ -133,7 +133,7 @@ User.create!(
   language: "English",
   certifications: "None",
   past_roles: "Station Leader: Songs",
-  past_roles: "Station Leader: Crafts",
+  applied_to: "Station Leader: Crafts",
   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
 )
 
