@@ -11,91 +11,82 @@
   width: 200vh;
 }
 
-.course-preview {
-  text-shadow: 0.5px 0.5px 0px #8d8d8d;
-}
+  .course-preview {
+    text-shadow: 0.5px 0.5px 0px #8d8d8d;
+  }
 
-.coursa {
-  background-color: #fff;
-  text-shadow: 0.5px 0.5px 0px #3bacb6;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1%);
-  display: flex;
-  max-width: 100%;
-  margin: 30px;
-  overflow: hidden;
-  width: 700px;
-}
+  .coursa {
+    background-color: #fff;
+    text-shadow: 0.5px 0.5px 0px #3bacb6;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1%);
+    display: flex;
+    max-width: 100%;
+    margin: 30px;
+    overflow: hidden;
+    width: 700px;
+  }
 
-.coursa h6 {
-  opacity: 0.6;
-  margin: 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+  .coursa h6 {
+    opacity: 0.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
-.coursa h2 {
-  letter-spacing: 1px;
-  margin: 10px 0;
-}
+  .coursa h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
 
-.preview {
-  background-color: $main;
-  color: #fff;
-  text-shadow: 1px 1px 0px #000000;
-  padding: 100px;
-  // padding-top: 8%;
-  // padding-left: 4%;
-  // padding-right: 4%;
-  // max-width: 250px;
-  // text-align: center;
-}
+  .preview {
+    background-color: #b3e8e5;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    padding: 100px;
+    // padding-top: 8%;
+    // padding-left: 4%;
+    // padding-right: 4%;
+    // max-width: 250px;
+    // text-align: center;
+  }
 
-.preview a {
-  color: #fff;
-  display: inline-block;
-  font-size: 12px;
-  opacity: 0.6;
-  margin-top: 30px;
-  text-decoration: none;
-}
+  .preview a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+  }
 
-.coursa-info {
-  padding: 30px;
-  position: relative;
-  width: 100%;
-}
-.coursa-info p {
-  padding: 5px;
-  margin-top: 8px;
-}
+  .coursa-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+  }
+  .coursa-info p {
+    padding: 5px;
+    margin-top: 8px;
+  }
 
-.coursa-info h6 {
-  width: 50%;
-}
+  .coursa-info h6 {
+    width: 50%;
+  }
 
-.progress {
-  background-color: rgb(238, 238, 238);
-  border-radius: 3px;
-  height: 5px;
-  width: 100%;
-}
+  .progress {
+    background-color: rgb(238, 238, 238);
+    border-radius: 3px;
+    height: 5px;
+    width: 100%;
+  }
 
-.progress::after {
-  border-radius: 3px;
-  content: "";
-  display: none;
-}
 
-.progress-bar {
-  border-radius: 3px;
-}
-
-.progress-text {
-  font-size: 10px;
-  opacity: 0.6;
-  letter-spacing: 1px;
-}
+  .progress::after {
+    border-radius: 3px;
+    content: "";
+    display: none;
+  }
 
 .coursa-info .btn {
   background-color: $main;
@@ -112,34 +103,61 @@
   letter-spacing: 1px;
 }
 
-@media screen and (max-width: 480px) {
-  .preview {
-    padding: 100px;
-  }
-  .mobile-reverse {
-    flex-direction: column-reverse;
-  }
-  .coursa-info .btn {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-}
 
-.card-remove-link {
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  left: 10px;
-  bottom: 20px;
-  opacity: 0.8;
-  font-weight: lighter;
-  &:hover {
-    color: rgb(61, 58, 58);
-    text-decoration: none;
-    opacity: 1;
+  .progress-bar {
+    border-radius: 3px;
+  }
+
+  .progress-text {
+    font-size: 10px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+
+  .coursa-info .btn {
+    background-color: #b3e8e5;
+    text-shadow: 0.5px 0.5px 0px #3bacb6;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 25px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    letter-spacing: 1px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .preview {
+      padding: 100px;
+    }
+    .mobile-reverse {
+      flex-direction: column-reverse;
+    }
+    .coursa-info .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+
+  .card-remove-link {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    opacity: 0.8;
+    font-weight: lighter;
+    &:hover {
+      color: rgb(61, 58, 58);
+      text-decoration: none;
+      opacity: 1;
+    }
   }
 }
