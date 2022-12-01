@@ -3,7 +3,7 @@
   display: flex;
 }
 
-.create-camp .btn {
+.create-camp > .btn {
   position: sticky;
   top: 90%;
   right: 0;
@@ -18,6 +18,7 @@
   // height: 48px;
 	// position: absolute;
 	letter-spacing: 1px;
+  left: 5%;
 }
 
 #calendar {
@@ -29,6 +30,7 @@
   top: 7vh;
   right: 2vw;
   width: 50vw;
+  z-index: 3;
 
 }
 
