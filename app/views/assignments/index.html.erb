@@ -1,4 +1,9 @@
 <h1></h1>
+<div class="volunteer-map" id="map"
+         data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 <div class="d-flex mx-5 px-5" data-controller="create-assignment">
   <div id="card-camps-one">
     <%= render 'assignments/camp', upcoming_assignments: @upcoming_assignments, past_assignments: @previous_assignments %>

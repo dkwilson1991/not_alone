@@ -4,10 +4,19 @@ class AssignmentsController < ApplicationController
     @upcoming_assignments = @assignments.where('camps.start_date >= ?', Date.today).order(:start_date)
     @previous_assignments = @assignments.where('camps.start_date < ?', Date.today).order(:start_date)
     @camp = Camp.new
+    @users = User.all
     @future_camps = Camp.where('start_date > ?', Date.today).order(:start_date).first(3)
     @past_camps = Camp.where('start_date <= ?', Date.today).order(:start_date)
     start_date = params.fetch(:start_date, Date.today).to_date
     @camps = Camp.where(starts_at: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        popup_html: render_to_string(partial: 'camps/map_popup2', locals: { user: user })
+
+      }
+    end
   end
 
   def show
