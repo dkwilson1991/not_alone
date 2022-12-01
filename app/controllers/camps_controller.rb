@@ -41,7 +41,10 @@ class CampsController < ApplicationController
     @camp.user = current_user
     authorize @camp
     if @camp.save!
-      redirect_to camp_path(@camp)
+      respond_to do |format|
+        format.json { render json: {id: @camp.id} }
+      end
+      # redirect_to camp_path(@camp)
     else
       @assignments = policy_scope(Assignment)
       @upcoming_assignments = policy_scope(Assignment).where('start_date > ?', Date.today).order(:created_at)
