@@ -5,17 +5,17 @@
 
 .create-camp .btn {
   position: sticky;
-  top: 92%;
+  top: 90%;
   right: 0;
-  background-color: #B3E8E5;
+  background-color: #90DBD8;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
 	border: 0;
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
 	color: #fff;
-	font-size: 16px;
-	padding: 0px 25px;
-  height: 48px;
+	font-size: 20px;
+	padding: 8px 16px;
+  // height: 48px;
 	// position: absolute;
 	letter-spacing: 1px;
 }
@@ -37,4 +37,12 @@
   margin: 0;
   padding: 0;
   line-height: 0.5em;
+}
+
+#card-camps-one {
+  h1 {
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color:rgb(24, 24, 24);
+  }
 }
