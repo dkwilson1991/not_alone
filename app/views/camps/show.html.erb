@@ -5,7 +5,7 @@
   <div class="groupHomeHeader stripe border--none">
     <div class="bounds bounds--wide">
       <div class="flex flex--column atLarge_flex--row groupHomeHeader-content">
-        <div class="d-flex justify-content-center gap-5 m-5">
+        <div class="d-flex justify-content-center gap-5 mx-5 mt-5 mb-3">
           <% if @camp.newsfeed_post?%>
             <%# <div class="row"> %>
             <div class="card-home-photos">
@@ -47,27 +47,34 @@
               <% end %>
             </div>
             <div class="flex-item">
-              <h1 class="show-h1 pt-2"> <%= @camp.camp_name %></h1>
-              <h4 class="card-p pt-3"><i class="fa-solid fa-location-dot" style="color: #3bacb6;"></i> <%= @camp.address %></h4>
-              <h4 class="card-p pt-2"><i class="fa-solid fa-calendar-week" style="color: #3bacb6;"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></h4>
+              <h1 class="show-h1"> <%= @camp.camp_name %></h1>
+              <h5 class="card-p pt-1"><i class="fa-solid fa-location-dot" style="color: #3bacb6;"></i> <%= @camp.address %></h5>
+              <h5 class="card-p pt-1"><i class="fa-solid fa-calendar-week" style="color: #3bacb6;"></i> <%= @camp.start_date.strftime('%b %d, %Y') %> - <%= @camp.end_date.strftime('%b %d, %Y') %></h5>
               <% if @camp.newsfeed_post?%>
                 <p class="pt-4" id="newsfeed-length" style="width: 100%"> 💚 <%= @camp.newsfeed_post %> 💚 </p>
               <% end %>
-              <div class="d-flex justify-content-end">
+              <div class="">
                 <% if @camp.user != current_user %>
-                  <div class="assignment-status">
+                  <div class="assignment-status-show my-4">
                     <% if @camp.newsfeed_post?%>
                       <div></div>
                     <% else %>
                       <% if @previous_assignment %>
                         <button class="btn btn-light applied-btn" disabled> Applied </button>
                       <% else %>
-                        <%= simple_form_for [@camp, @assignment] do |f| %>
-                          <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
-                          <%= f.submit 'Apply', class: 'btn cta-button' %>
+                        <div class="d-flex justify-content-center py-2 ps-2 my-2 border-top" style="text-align: center;">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                          <%= simple_form_for [@camp, @assignment] do |f| %>
+                            <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
+                            <div style="text-align: center;"><%= f.input :role, label: "How would you like to help?", as: :radio_buttons, collection: [["Crew Leader", "Crew Leader"], ["Story Telling", "Station Leader: Story Telling"], ["Songs", "Station Leader: Songs"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %></div>
+                            <div class="d-flex justify-content-end" style=""><%= f.submit 'Apply', class: 'btn cta-button' %></div>
+                          <% end %>
+                        </div>
+                        <div>
                         <% end %>
                       <% end %>
-                    <% end %>
+                    </div>
                   </div>
                 <% end %>
               </div>
@@ -84,7 +91,7 @@
       <div class="camp-inner-text">
         <h4 class="card-p pt-4"> Camp Information</h4>
         <p class="pt-3" id="card-description"><i class="fa-solid fa-file-lines" style="color: #3bacb6;"></i> <%= @camp.description %></p>
-        <p class="pt-2"><i class="fa-solid fa-users" style="color: #3bacb6;"></i> Required Roles: <%= @camp.tag_list.split.join(', ') %></p>
+        <%# <p class="pt-2"><i class="fa-solid fa-users" style="color: #3bacb6;"></i> Required Roles: <%= @camp.tag_list.split.join(', ') %>
       </div>
       <div class="individual-map" id="map"
          data-controller="map"
@@ -116,7 +123,7 @@
     </div>
   <% else %>
     <div class="row roles-border">
-      <h2 class="p-2 m-2">Camp Director</h2>
+      <h2 class="p-2 m-2" style="text-align: center;">Camp Director</h2>
       <div class="d-flex justify-content-center">
         <div class="m-2 d-flex align-items-center" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseWidth-<%= @camp.user.id %>" role="button" aria-expanded="false" aria-controls="collapseWidthExample">
           <div>
@@ -140,7 +147,7 @@
       <div class="d-flex flex-wrap justify-content-center">
         <% @camp.assignments.each do |assignment| %>
           <div class="rounded-circle" data-assignment-id="<%= assignment.id %>">
-            <%= render "shared/vcard", user: assignment.user, assignment: assignment %>
+            <%= render "shared/vcard", user: assignment.user, assignment: assignment, camp: @camp %>
           </div>
         <% end %>
       </div>
@@ -148,37 +155,39 @@
   <% else %>
   </div>
   <div class="camp-container container">
-    <div class="row" data-controller="sortable-roles" style="text-align: center;">
+    <div class="row" data-controller="sortable-roles">
       <h2 class="border-bottom p-2 m-2">Volunteer Team List</h2>
       <div class="col-12 d-flex flex-wrap" id="all" data-sortable-roles-target="group">
-        <% @camp.assignments.where(role: nil).each do |assignment| %>
+        <% @camp.assignments.where.not(status: "admin_confirm").each do |assignment| %>
           <div class="rounded-circle" data-assignment-id="<%= assignment.id %>">
-            <%= render "shared/vcard", user: assignment.user, assignment: assignment %>
+            <%= render "shared/vcard", user: assignment.user, assignment: assignment, camp: @camp %>
           </div>
         <% end %>
       </div>
       <% if @camp.newsfeed_post?%>
         <div></div>
       <% else %>
-        <div class="mb-4">
-          <div class="roles-cards">
-            <% @camp.tags.each do |role| %>
-              <div data-sortable-roles-target="group" data-role-name="<%= role.name %>" class="p-2 m-2 roles-border">
-                <h3><%= role.name %></h3>
-                <% @camp.assignments.where(role: role.name).each do |assignment| %>
-                  <div class="rounded-circle" style="display: inline-block" data-assignment-id="<%= assignment.id %>">
-                    <%= render "shared/vcard", user: assignment.user, assignment: assignment %>
-                  </div>
-                <% end %>
-                <% if @camp.assignments.where(role: role.name).empty? %>
-                  <p class="unassigned-role">*No one assigned to this role yet</p>
-                <% end %>
-              </div>
-            <% end %>
+        <% if @camp.user == current_user %>
+          <div class="mb-4">
+            <div class="roles-cards">
+              <% @camp.tags.each do |role| %>
+                <div data-sortable-roles-target="group" data-role-name="<%= role.name %>" class="p-2 m-2 roles-border">
+                  <h3><%= role.name %></h3>
+                  <% @camp.assignments.where(role: role.name, status: "admin_confirm").each do |assignment| %>
+                    <div class="rounded-circle" style="display: inline-block" data-assignment-id="<%= assignment.id %>">
+                      <%= render "shared/vcard", user: assignment.user, assignment: assignment, camp: @camp %>
+                    </div>
+                  <% end %>
+                  <% if @camp.assignments.where(role: role.name).empty? %>
+                    <p class="unassigned-role">*No one assigned to this role yet</p>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 <% if @camp.newsfeed_post?%>
@@ -189,4 +198,3 @@
     <% end %>
   </div>
 <% end %>
-

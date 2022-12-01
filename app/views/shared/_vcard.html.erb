@@ -1,4 +1,4 @@
-<% if user == @camp.user %>
+<% if user == camp.user %>
 <% else %>
   <div class="volunteer-card">
     <div class="round m-2 border-color" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapse-<%= user.id %>" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -19,7 +19,7 @@
           <p><i class="fa-regular fa-flag"></i> : <%= user.language %></p>
           <p><i class="fa-solid fa-envelope"></i> : <%= user.email %></p>
           <p>Training: <%= user.training %></p>
-          <p>Past Roles: <%= user.past_roles %></p>
+          <p>Preferable Role: <%= assignment.role %></p>
           <p>Certifications: <%= user.certifications %></p>
         </div>
         <div class="status-actions ms-2">
