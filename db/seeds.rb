@@ -278,6 +278,7 @@ puts "... created #{User.count} Users."
 
 date = Faker::Date.between(from: 'Dec 2, 2022', to: 'Mar 1, 2023')
 
+
 camp1 = Camp.create!(
   address: "Japan, Akita",
   required_number_volunteers: 11,
@@ -292,6 +293,8 @@ file1 = URI.open("https://jobsinjapan.com/wpdata/wp-content/uploads/2021/07/teac
 camp1.photos.attach(io: file1, filename: "tokyo.png", content_type: "image/png")
 camp1.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp1.save
+
+puts "link 1"
 
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Nov 20, 2022')
 
@@ -318,6 +321,8 @@ camp10.photos.attach(io: file_4, filename: "tokyo3.png", content_type: "image/pn
 camp10.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp10.save
 
+puts "section 2"
+
 date = Faker::Date.between(from: 'Dec 2, 2022', to: 'Feb 1, 2023')
 
 camp2 = Camp.create!(
@@ -333,6 +338,8 @@ file2 = URI.open("https://upload.wikimedia.org/wikipedia/commons/e/e0/Kathmandu.
 camp2.photos.attach(io: file2, filename: "nepal.png", content_type: "image/png")
 camp2.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp2.save
+
+puts "section 3"
 
 date = Faker::Date.between(from: 'July 1, 2021', to: 'Nov 1, 2022')
 
@@ -360,6 +367,8 @@ camp11.photos.attach(io: file_7, filename: "nepal3.png", content_type: "image/pn
 
 camp11.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp11.save
+
+puts "section 4"
 
 date = Faker::Date.between(from: 'Dec 2, 2022', to: 'Feb 1, 2023')
 
@@ -392,6 +401,8 @@ camp3.photos.attach(io: file3, filename: "philippines.png", content_type: "image
 camp3.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 
 camp3.save
+
+puts "section 5"
 
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Nov 1, 2022')
 
@@ -430,6 +441,8 @@ camp12.photos.attach(io: file_8, filename: "philippines.png", content_type: "ima
 file_9 = URI.open("https://www.umnews.org/-/media/umc-media/2018/05/15/21/34/climate-kids-leaf-march-philippines-crop.ashx?mw=1200&hash=85C434F82D3406EAE5964D5ABB38662BF3FB97D7")
 camp12.photos.attach(io: file_9, filename: "philippines.png", content_type: "image/png")
 
+puts "section 6"
+
 camp12.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp12.save
 
@@ -446,6 +459,9 @@ camp4 = Camp.create!(
 )
 file4 = URI.open("https://www.adb.org/sites/default/files/styles/content_media/public/content-media/8170-primary-education.jpg?itok=d4nBXY-g")
 camp4.photos.attach(io: file4, filename: "philippine.png", content_type: "image/png")
+
+puts "section 7"
+
 camp4.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp4.save
 
@@ -472,6 +488,8 @@ camp13.photos.attach(io: file_13, filename: "philippine.png", content_type: "ima
 camp13.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp13.save
 
+puts "section 8"
+
 date = Faker::Date.between(from: 'Dec 2, 2022', to: 'Feb 1, 2023')
 
 camp5 = Camp.create!(
@@ -488,6 +506,8 @@ file5 = URI.open("https://www.worldvision.org/wp-content/uploads/2022/03/01_W322
 camp5.photos.attach(io: file5, filename: "kyiv.png", content_type: "image/png")
 camp5.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp5.save
+
+puts "section 9"
 
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Nov 29, 2023')
 
@@ -513,6 +533,8 @@ file_15 = URI.open("https://zooniverseblog.files.wordpress.com/2016/02/ysh_p1080
 camp14.photos.attach(io: file_15, filename: "kyiv.png", content_type: "image/png")
 file_16 = URI.open("https://static01.nyt.com/images/2022/06/23/world/00ukraine-lviv-children-top-01/00ukraine-lviv-children-top-01-videoSixteenByNine3000.jpg")
 camp14.photos.attach(io: file_16, filename: "kyiv.png", content_type: "image/png")
+puts "section 10"
+
 camp14.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp14.save
 
@@ -533,6 +555,8 @@ camp6 = Camp.create!(
 )
 file6 = URI.open("https://qph.cf2.quoracdn.net/main-qimg-fccf290e25ca2c9ad2946ac99c297dba-lq")
 camp6.photos.attach(io: file6, filename: "poland.png", content_type: "image/png")
+
+puts "section 11"
 camp6.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp6.save
 
@@ -561,6 +585,8 @@ camp15.photos.attach(io: file15, filename: "poland.png", content_type: "image/pn
 
 file_17 = URI.open("https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/17FE5/production/_89977289_img_5497.jpg")
 camp15.photos.attach(io: file_17, filename: "poland.png", content_type: "image/png")
+
+puts "section 12"
 
 # file_18 = URI.open("https://notesfrompoland.com/wp-content/uploads/2022/05/280897722_263972322555496_3086015688894619479_n-1-1079x675.jpg")
 # camp15.photos.attach(io: file_18, filename: "poland.png", content_type: "image/png")
@@ -619,6 +645,8 @@ camp8 = Camp.create!(
 )
 file8 = URI.open("https://www.acacamps.org/sites/default/files/styles/uncropped_1700/public/2022-08/Ukrainian-Campers-FLEX-kids.jpg?itok=IPIANEyx")
 camp8.photos.attach(io: file8, filename: "poland.png", content_type: "image/png")
+puts "section 13"
+
 camp8.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp8.save
 
@@ -667,6 +695,8 @@ camp16.photos.attach(io: file_21, filename: "palestine.png", content_type: "imag
 
 file_22 = URI.open("https://cdnuploads.aa.com.tr/uploads/Contents/2021/08/16/thumbs_b_c_9264a5ee26676c389f991a6a66d67ea2.jpg?v=130025")
 camp16.photos.attach(io: file_22, filename: "palestine.png", content_type: "image/png")
+
+puts "section 14"
 
 camp16.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp16.save
