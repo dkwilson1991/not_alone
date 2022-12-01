@@ -18,12 +18,13 @@ User.create!(
   password: "123456",
   first_name: "Savithri",
   last_name: "Wewala",
-  location: "Lviv, Ukraine",
+  location: "Sumy, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
   certifications: "Psychologist",
   past_roles: "Camp Director",
+  applied_to: 'Station Leader: Crafts',
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
 )
@@ -48,11 +49,12 @@ User.create!(
   password: "123456",
   first_name: "Ayhem",
   last_name: "Chelly",
-  location: "Lviv, Ukraine",
+  location: "Sumy, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English, Arabic",
   past_roles: "Crew Leader",
+  applied_to: 'Crew Leader',
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954040/heegtqhasvkercvbbzi4.jpg"
@@ -63,11 +65,12 @@ User.create!(
   password: "123456",
   first_name: "Yulia",
   last_name: "Naumenko",
-  location: "Rudne, Ukraine",
+  location: "Lviv, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English, Ukranian, Polish",
   past_roles: "Station Leader: Songs, Crew Leader",
+  applied_to: 'Station Leader: Songs',
   certifications: "Psychologist",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
@@ -78,11 +81,12 @@ User.create!(
   password: "123456",
   first_name: "Mohamed",
   last_name: "Shegow",
-  location: "Lviv, Ukraine",
+  location: "Sumy, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Teacher",
   language: "English",
-  past_roles: "Station Leader: Songs",
+  past_roles: "Station Leader: Story Telling",
+  applied_to: "Station Leader: Story Telling",
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
 )
@@ -92,11 +96,12 @@ User.create!(
   password: "123456",
   first_name: "Clement",
   last_name: "Choi",
-  location: "Lviv, Ukraine",
+  location: "Sumy, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Teacher",
   language: "English",
   past_roles: "Station Leader: Crafts",
+  applied_to: "Station Leader: Crafts, Station Leader: Games",
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664808689/oiwkwdtavfgvgwuczsgn.jpg"
 )
@@ -107,11 +112,12 @@ User.create!(
   password: "123456",
   first_name: "Christopher",
   last_name: "Bush",
-  location: "Lviv, Ukraine",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
-  past_roles: "Station Leader: Games",
+  past_roles: "Crew Leader",
+  applied_to: "Crew Leader",
   certifications: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
 )
@@ -121,12 +127,13 @@ User.create!(
   password: "123456",
   first_name: "Sammy",
   last_name: "Kavanagh",
-  location: "Lviv, Ukraine",
+  location: "Sumy, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
   certifications: "None",
   past_roles: "Station Leader: Songs",
+  past_roles: "Station Leader: Crafts",
   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
 )
 
@@ -135,21 +142,97 @@ User.create!(
   password: "123456",
   first_name: "Sunny",
   last_name: "Liu",
-  location: "Lviv, Ukraine",
+  location: "Sumy, Ukraine",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Psychologist",
   training: "3 Days",
   language: "English",
   past_roles: "Station Leader: Story Telling",
+  applied_to: "Station Leader: Crafts",
   avatar_pic: "https://avatars.githubusercontent.com/u/99332370?v=4"
 )
 
 User.create!(
-  email: "hafid@not-alone.online",
+  email: "mia@not-alone.online",
   password: "123456",
   first_name: "Hafid",
   last_name: "Qarchi",
-  location: "Lviv, Ukraine",
+  location: "Moscow, Russia",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mi@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Bangkok, Thailand",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mu@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Kandy, Sri Lanka",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "me@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Masovian Minsk, Poland",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mee@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Kathmandu, Nepal",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mal@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Manila, Phillippines",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
@@ -166,7 +249,7 @@ puts "... created #{User.count} Users."
 date = Faker::Date.between(from: 'Dec 2, 2022', to: 'Mar 1, 2023')
 
 camp1 = Camp.create!(
-  address: "Japan, Tokyo",
+  address: "Japan, Akita",
   required_number_volunteers: 11,
   start_date: date,
   end_date: date + 7,
@@ -183,14 +266,14 @@ camp1.save
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Nov 20, 2022')
 
 camp10 = Camp.create!(
-  address: "Japan, Tokyo",
+  address: "Japan, Akita",
   required_number_volunteers: 11,
   start_date: date,
   end_date: date + 7,
   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
   camp_name: "Camp for Disaster Prevension in Akita",
-  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
+  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers. Children at the shelter were happy to see the volunteers and they recieved much love from all of them. Many volunteers were touched by the children singing for them and how all of them were excited about the next camp. There were many children born after 2011, but having a disaster prevention camp we were able to prepare them from the worst. Also we were able to refer them to help that they could get in times of need. That they have adults to help them in times of trouble. That the children are Not Alone.",
   user: admin.sample
 )
 
@@ -324,7 +407,7 @@ camp12.save
 date = Faker::Date.between(from: 'Dec 2, 2022', to: 'Feb 1, 2023')
 
 camp4 = Camp.create!(
-  address:  "Philippines, Manila",
+  address: "Philippines, Manila",
   required_number_volunteers: 10,
   start_date: date,
   end_date: date + 7,

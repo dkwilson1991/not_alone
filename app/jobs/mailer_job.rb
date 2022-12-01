@@ -2,7 +2,7 @@ class MailerJob < ApplicationJob
   queue_as :default
 
   def perform(camp)
-    @users = User.all.where('location = ?', 'Lviv, Ukraine')
+    @users = User.all.where('location = ?', 'Sumy, Ukraine')
     @users.each do |user|
       @assignment = Assignment.new
       @assignment.camp = camp
