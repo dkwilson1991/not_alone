@@ -562,17 +562,17 @@ camp15.photos.attach(io: file15, filename: "poland.png", content_type: "image/pn
 file_17 = URI.open("https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/17FE5/production/_89977289_img_5497.jpg")
 camp15.photos.attach(io: file_17, filename: "poland.png", content_type: "image/png")
 
-file_18 = URI.open("https://notesfrompoland.com/wp-content/uploads/2022/05/280897722_263972322555496_3086015688894619479_n-1-1079x675.jpg")
-camp15.photos.attach(io: file_18, filename: "poland.png", content_type: "image/png")
+# file_18 = URI.open("https://notesfrompoland.com/wp-content/uploads/2022/05/280897722_263972322555496_3086015688894619479_n-1-1079x675.jpg")
+# camp15.photos.attach(io: file_18, filename: "poland.png", content_type: "image/png")
 
-file_19 = URI.open("https://www.visitgck.com/wp-content/uploads/2021/05/volunteer-girl-scout.jpg")
-camp15.photos.attach(io: file_19, filename: "poland.png", content_type: "image/png")
+# file_19 = URI.open("https://www.visitgck.com/wp-content/uploads/2021/05/volunteer-girl-scout.jpg")
+# camp15.photos.attach(io: file_19, filename: "poland.png", content_type: "image/png")
 
 camp15.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp15.save
 
 
-date = Faker::Date.between(from: 'Jan 1, 2023', to: 'Feb 23, 2023')
+# date = Faker::Date.between(from: 'Jan 1, 2023', to: 'Feb 23, 2023')
 
 # camp7 = Camp.create!(
 #   camp_name: "OpSAFE camp in Lviv",
@@ -624,23 +624,23 @@ camp8.save
 
 date = Faker::Date.between(from: 'Jan 1, 2023', to: 'Feb 23, 2023')
 
-camp9 = Camp.create!(
-  camp_name: "OpSAFE camp in Lutsk",
-  address: "Lutsk, Ukraine",
-  required_number_volunteers: 10,
-  start_date: date,
-  end_date: date + 7,
-   description: "Волонтери для проведення заходів для дітей. Зараз нам потрібна допомога активних волонтерів для проведення майстер-класів для діток.
-  Тож якщо Вам від 16 i Ви хочете долучитись до нас i робити ще більше дітей щасливими.",
-  # newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
-  # Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
-  user: admin.sample
-)
+# camp9 = Camp.create!(
+#   camp_name: "OpSAFE camp in Lutsk",
+#   address: "Lutsk, Ukraine",
+#   required_number_volunteers: 10,
+#   start_date: date,
+#   end_date: date + 7,
+#    description: "Волонтери для проведення заходів для дітей. Зараз нам потрібна допомога активних волонтерів для проведення майстер-класів для діток.
+#   Тож якщо Вам від 16 i Ви хочете долучитись до нас i робити ще більше дітей щасливими.",
+#   # newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
+#   # Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
+#   user: admin.sample
+# )
 
-file9 = URI.open("https://www.mercyprojects.org/wp-content/uploads/2022/08/untitled-132.jpg")
-camp9.photos.attach(io: file9, filename: "poland.png", content_type: "image/png")
-camp9.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
-camp9.save
+# file9 = URI.open("https://www.mercyprojects.org/wp-content/uploads/2022/08/untitled-132.jpg")
+# camp9.photos.attach(io: file9, filename: "poland.png", content_type: "image/png")
+# camp9.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
+# camp9.save
 
 date = Faker::Date.between(from: 'Jan 1, 2022', to: 'Dec 23, 2023')
 
