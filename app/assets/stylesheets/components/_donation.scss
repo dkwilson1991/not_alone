@@ -45,7 +45,25 @@
   position: inherit;
   cursor: pointer;
   font-weight: 800;
+  width: 270px;
+}
+.donation-box {
+  text-align: center;
+  margin-left: 4rem;
+
+
+}
+.donation-box a {
   text-decoration: none;
+
+}
+
+
+.donation-box h3{
+color: #90dbd8;
+margin-top: 15%;
+width: 270px;
+margin-bottom: 16px;
 }
 
 .donation-box .fields {
