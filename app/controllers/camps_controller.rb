@@ -21,7 +21,7 @@ class CampsController < ApplicationController
     else
       policy_scope(Camp).order(:start_date)
     end
-
+    @future_camps = Camp.where('start_date > ?', Date.today).order(:start_date)
     @markers = @camps.geocoded.map do |camp|
       {
         lat: camp.latitude,
