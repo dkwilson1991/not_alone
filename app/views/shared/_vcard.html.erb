@@ -4,7 +4,6 @@
     <div class="round m-2 border-color" class="btn" data-bs-toggle="collapse" style="background-image: url(<%= user.avatar_pic %>)", alt="user_picture" href="#collapse-<%= user.id %>" role="button" aria-expanded="false" aria-controls="collapseExample">
       <div class="positioning-icon">
         <% if assignment.status == "pending" %>
-          <i class="fa-sharp fa-solid fa-pause pending-icon"></i>
         <% elsif assignment.status == "admin_confirm" %>
           <i class="fa-solid fa-check confirm-icon"></i>
         <% else %>

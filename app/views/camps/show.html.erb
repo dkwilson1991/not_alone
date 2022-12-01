@@ -96,8 +96,8 @@
 </div>
 <div class="camp-container container mt-2 d-flex justify-content-around">
   <% if @camp.newsfeed_post? %>
-    <div class="row p-2 m-2">
-      <h2 class="mt-3" style="text-align: center;">Camp Director</h2>
+    <div class="row">
+      <h2 class="border-bottom p-2 m-2" style="text-align: center;">Camp Director</h2>
       <div class="d-flex justify-content-center">
         <div class="m-2 d-flex align-items-center" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseWidth-<%= @camp.user.id %>" role="button" aria-expanded="false" aria-controls="collapseWidthExample">
           <div>
@@ -115,8 +115,8 @@
       </div>
     </div>
   <% else %>
-    <div class="row p-2 m-2 roles-border">
-      <h2 class="mt-3">Camp Director</h2>
+    <div class="row roles-border">
+      <h2 class="p-2 m-2">Camp Director</h2>
       <div class="d-flex justify-content-center">
         <div class="m-2 d-flex align-items-center" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseWidth-<%= @camp.user.id %>" role="button" aria-expanded="false" aria-controls="collapseWidthExample">
           <div>
@@ -179,9 +179,14 @@
         </div>
       <% end %>
     </div>
+  <% end %>
+</div>
+<% if @camp.newsfeed_post?%>
+  <div class="d-flex">
     <%= render 'camps/form_comment', camp: @comment.camp, comment: @comment %>
     <% @camp.comments.each do |comment| %>
       <%= render 'camps/comment', comment: comment %>
     <% end %>
   </div>
 <% end %>
+

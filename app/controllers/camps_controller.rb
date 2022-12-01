@@ -19,7 +19,7 @@ class CampsController < ApplicationController
     if params[:query].present?
       policy_scope(Camp).search_by_address(params[:query]).order(:start_date)
     else
-      policy_scope(Camp).order(:start_date)
+      policy_scope(Camp).where('start_date > ?', Date.today).order(:start_date)
     end
 
     @markers = @camps.geocoded.map do |camp|
