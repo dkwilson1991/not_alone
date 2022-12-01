@@ -1,5 +1,5 @@
 <h1></h1>
-<div class="d-flex flex-wrap mx-5 px-5" data-controller="create-assignment">
+<div class="d-flex mx-5 px-5" data-controller="create-assignment">
   <div id="card-camps-one">
     <%= render 'assignments/camp', upcoming_assignments: @upcoming_assignments, past_assignments: @previous_assignments %>
   </div>
@@ -16,7 +16,7 @@
   <div class="create-camp">
     <%# <%= link_to "Create Camp", camps_path, class: "btn" %>
     <button class="btn" data-create-assignment-target="create"
-    data-action="click->create-assignment#show">Create Camp</button>
+    data-action="click->create-assignment#show">New Camp</button>
     <div class="create-ass-form">
       <%= render "camps/form"%>
     </div>
