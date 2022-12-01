@@ -40,13 +40,16 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.find(params[:id])
     authorize @assignment
     if @assignment.update(assignment_params)
-      redirect_to camp_path(@assignment.camp)
+      respond_to do |format|
+        format.html { redirect_to camp_path(@assignment.camp) }
+        format.text { render partial: "shared/vcard", locals: { user: @assignment.user, assignment: @assignment, camp: @assignment.camp }, formats: [ :html ] }
+      end
     end
-    @camp = @assignment.camp
-    authorize @camp
-    if @camp.update(camp_params)
-      redirect_to camp_path(@assignment.camp)
-    end
+    # @camp = @assignment.camp
+    # authorize @camp
+    # if @camp.update(camp_params)
+    #   redirect_to camp_path(@assignment.camp)
+    # end
   end
 
   def destroy

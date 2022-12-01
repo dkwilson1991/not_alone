@@ -43,6 +43,7 @@ padding: 1rem;
 
 .show-h1 {
   margin-bottom: 0;
+  margin-top: -10px;
 
 }
 
@@ -108,18 +109,21 @@ padding: 1rem;
   color: rgba(255, 0, 0, 0.800);
 }
 
-.roles-border {
-  border: 0.2rem solid #82dbd8;
-  text-align: center;
+.btn-toggle {
+  background-color: #B3E8E5;
+  color: rgb(41, 41, 41);
+  font-weight: bolder;
+  margin: 1px;
+  font-size: 1rem;
+}
+
+.btn-toggle:active {
+  background-color: #3bacb6;
+  color: #F6F7F8;
 }
 
 .owner-box {
   width: 50%;
-}
-
-.roles-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .card-image {
