@@ -8,6 +8,6 @@ class UserMailer < ApplicationMailer
   def invitation
     @camp = params[:camp]
     @user = params[:user]
-    mail(to: @user.email, subject: 'We have new camp starting soon')
+    mail(to: @user.email, subject: 'New OpSAFE camp starting soon')
   end
 end
