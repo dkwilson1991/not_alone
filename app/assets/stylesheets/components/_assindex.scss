@@ -19,6 +19,7 @@
 	// position: absolute;
 	letter-spacing: 1px;
   left: 5%;
+  width: 160px;
 }
 
 #calendar {
@@ -47,4 +48,10 @@
     font-family: 'Nunito', sans-serif;
     color:rgb(24, 24, 24);
   }
+}
+
+#card-camps-one  > h2 {
+  font-family: 'Nunito', sans-serif;
+  color:rgb(24, 24, 24);
+  margin-top: 2vh;
 }
