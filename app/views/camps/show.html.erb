@@ -53,37 +53,36 @@
               <% if @camp.newsfeed_post?%>
                 <p class="pt-4" id="newsfeed-length" style="width: 100%"> 💚 <%= @camp.newsfeed_post %> 💚 </p>
               <% end %>
-              <div class="">
-                <% if @camp.user != current_user %>
-                  <div class="assignment-status-show my-4">
-                    <% if @camp.newsfeed_post?%>
-                      <div></div>
+              <% if @camp.user != current_user %>
+                <div class="assignment-status-show my-4">
+                  <% if @camp.newsfeed_post?%>
+                    <div></div>
+                  <% else %>
+                    <% if @previous_assignment %>
+                      <button class="btn btn-light applied-btn" disabled> Applied </button>
                     <% else %>
-                      <% if @previous_assignment %>
-                        <button class="btn btn-light applied-btn" disabled> Applied </button>
-                      <% else %>
-                        <div class="d-flex justify-content-center py-2 ps-2 my-2 border-top" style="text-align: center;">
-                        </div>
-                        <div class="d-flex justify-content-center">
-                          <%= simple_form_for [@camp, @assignment] do |f| %>
-                            <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
-                            <div style="text-align: center;"><%= f.input :role, label: "How would you like to help?", as: :radio_buttons, collection: [["Crew Leader", "Crew Leader"], ["Story Telling", "Station Leader: Story Telling"], ["Songs", "Station Leader: Songs"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %></div>
-                            <div class="d-flex justify-content-end" style=""><%= f.submit 'Apply', class: 'btn cta-button' %></div>
-                          <% end %>
-                        </div>
-                        <div>
+                      <div class="d-flex justify-content-center py-2 ps-2 my-2 border-top" style="text-align: center;">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <%= simple_form_for [@camp, @assignment] do |f| %>
+                          <%= f.input :status, as: :hidden, input_html: { value: 'pending'} %>
+                          <div style="text-align: center;"><%= f.input :role, label: "How would you like to help? (Choose one)", as: :radio_buttons, collection: [["Crew Leader", "Crew Leader"], ["Story Telling", "Station Leader: Story Telling"], ["Songs", "Station Leader: Songs"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]], item_wrapper_class:  'tag-item', include_hidden: false, input_html: {class: "tag-selector"} %></div>
+                          <div class="d-flex justify-content-end" style=""><%= f.submit 'Apply', class: 'btn cta-button' %></div>
                         <% end %>
-                      <% end %>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
+                      </div>
+                      <div>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 <div class="camp-information">
   <div class="camp-container container pb-4">

@@ -327,9 +327,9 @@ camp2 = Camp.create!(
   end_date: date + 7,
   description: "After the devastating earthquake, thousands of homes and schools across 14 districts were destroyed, forcing people to take shelter in open grounds. In Kathmandu city, most of the mid-city dwellers congregated in Tundikhel - the large parade ground - and within a week Tundikhel had become a tented city. In the first week itself, UNICEF and partners set up a child-friendly space made of bamboo and tarpaulin in Tundikhel.",
   camp_name: "UNICEF tent in Nepal",
-user: admin.sample
+  user: admin.sample
 )
-file2 = URI.open("https://www.volunteersinitiativenepal.org/wp-content/uploads/2013/08/children.jpg")
+file2 = URI.open("https://cdn-japantimes.com/wp-content/uploads/2021/04/np_file_82259.jpeg")
 camp2.photos.attach(io: file2, filename: "nepal.png", content_type: "image/png")
 camp2.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp2.save
