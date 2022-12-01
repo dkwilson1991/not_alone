@@ -7,15 +7,18 @@
       <div class="flex flex--column atLarge_flex--row groupHomeHeader-content">
         <div class="d-flex justify-content-center gap-5 m-5">
           <% if @camp.newsfeed_post?%>
-            <div class="row">
-              <% if @camp.photos.attached? %>
-                <%@camp.photos.each do |photo| %>
-                  <img src="<%= cl_image_path(photo.key)%>" alt="photos" class="card-category card-image m-3 news-photo d-flex col-6">
-                <% end %>
+            <%# <div class="row"> %>
+            <div class="card-home-photos">
+              <div class="home-maine-photo", style="background-image: url(<%= cl_image_path(@camp.photos.first.key) %>);">
               </div>
-            <% else %>
-              <img src="<%='https://images.unsplash.com/photo'%>" alt="def-photo">
-            <% end %>
+              <div class="home-photos">
+                <div class="photo">
+                  <% @camp.photos[1..-1].each do |photo| %>
+                    <%= cl_image_tag(photo.key) %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
           <% else %>
             <div class="card-category card-image col-8" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0)), url(<%= @camp.photos.attached? ? cl_image_path(@camp.photos.first.key) : 'https://images.unsplash.com/photo'%>)">
             </div>
