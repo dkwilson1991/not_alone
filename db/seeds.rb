@@ -742,17 +742,17 @@ camp16.save
 #   )
 # end
 
-camps = [camp1, camp2, camp3, camp4, camp5, camp6, camp7, camp8, camp9, camp10, camp11, camp12, camp13, camp14, camp15, camp16]
+# camps = [camp1, camp2, camp3, camp4, camp5, camp6, camp8, camp9, camp10, camp11, camp12, camp13, camp14, camp15, camp16]
 
-User.all.each do |user|
-  Assignment.create!(
-    final_volunteer_count: rand(9..15),
-    status: "user_apply",
-    user: user,
-    camp: camps.sample,
-    role: nil
-  )
-end
+# User.all.each do |user|
+#   Assignment.create!(
+#     final_volunteer_count: rand(9..15),
+#     status: "user_apply",
+#     user: user,
+#     camp: camps.sample,
+#     role: nil
+#   )
+# end
 
 puts "... created #{Camp.count} Camps"
 
