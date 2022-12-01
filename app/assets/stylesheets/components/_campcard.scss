@@ -7,7 +7,7 @@
   min-height: 15rem;
   margin: 10px;
   margin-right: 20px;
-  margin-left: 32px;
+  margin-left: 3vw;
   width: 200vh;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .preview {
-  background-color: #b3e8e5;
+  background-color: $main;
   color: #fff;
   text-shadow: 1px 1px 0px #000000;
   padding: 100px;
@@ -98,7 +98,7 @@
 }
 
 .coursa-info .btn {
-  background-color: #b3e8e5;
+  background-color: $main;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
   border-radius: 50px;
