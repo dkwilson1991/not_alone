@@ -24,6 +24,7 @@ User.create!(
   language: "English",
   certifications: "Psychologist",
   past_roles: "Camp Director",
+  applied_to: 'Station Leader: Crafts',
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
 )
@@ -53,6 +54,7 @@ User.create!(
   training: "3 Days",
   language: "English, Arabic",
   past_roles: "Crew Leader",
+  applied_to: 'Crew Leader',
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954040/heegtqhasvkercvbbzi4.jpg"
@@ -68,6 +70,7 @@ User.create!(
   training: "3 Days",
   language: "English, Ukranian, Polish",
   past_roles: "Station Leader: Songs, Crew Leader",
+  applied_to: 'Station Leader: Songs',
   certifications: "Psychologist",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
@@ -82,7 +85,8 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Teacher",
   language: "English",
-  past_roles: "Station Leader: Songs",
+  past_roles: "Station Leader: Story Telling",
+  applied_to: "Station Leader: Story Telling",
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
 )
@@ -97,6 +101,7 @@ User.create!(
   certifications: "Teacher",
   language: "English",
   past_roles: "Station Leader: Crafts",
+  applied_to: "Station Leader: Crafts, Station Leader: Games",
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664808689/oiwkwdtavfgvgwuczsgn.jpg"
 )
@@ -107,11 +112,12 @@ User.create!(
   password: "123456",
   first_name: "Christopher",
   last_name: "Bush",
-  location: "Sumy, Ukraine",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
-  past_roles: "Station Leader: Games",
+  past_roles: "Crew Leader",
+  applied_to: "Crew Leader",
   certifications: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
 )
@@ -127,6 +133,7 @@ User.create!(
   language: "English",
   certifications: "None",
   past_roles: "Station Leader: Songs",
+  past_roles: "Station Leader: Crafts",
   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
 )
 
@@ -141,15 +148,91 @@ User.create!(
   training: "3 Days",
   language: "English",
   past_roles: "Station Leader: Story Telling",
+  applied_to: "Station Leader: Crafts",
   avatar_pic: "https://avatars.githubusercontent.com/u/99332370?v=4"
 )
 
 User.create!(
-  email: "hafid@not-alone.online",
+  email: "mia@not-alone.online",
   password: "123456",
   first_name: "Hafid",
   last_name: "Qarchi",
-  location: "Sumy, Ukraine",
+  location: "Moscow, Russia",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mi@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Bangkok, Thailand",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mu@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Kandy, Sri Lanka",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "me@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Masovian Minsk, Poland",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mee@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Kathmandu, Nepal",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mal@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Manila, Phillippines",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
