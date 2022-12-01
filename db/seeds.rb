@@ -329,7 +329,7 @@ camp2 = Camp.create!(
   camp_name: "UNICEF tent in Nepal",
 user: admin.sample
 )
-file2 = URI.open("https://www.volunteersinitiativenepal.org/wp-content/uploads/2013/08/children.jpg")
+file2 = URI.open("https://upload.wikimedia.org/wikipedia/commons/e/e0/Kathmandu.children.JPG")
 camp2.photos.attach(io: file2, filename: "nepal.png", content_type: "image/png")
 camp2.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp2.save
