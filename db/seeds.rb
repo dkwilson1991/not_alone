@@ -166,14 +166,14 @@ puts "... created #{User.count} Users."
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp1 = Camp.create!(
-  address: "Japan, Tokyo",
+  address: "Japan, Akita",
   required_number_volunteers: 11,
   start_date: date,
   end_date: date + 7,
   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
   camp_name: "Camp for Disaster Prevension in Akita",
-  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
+  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers. Children at the shelter were happy to see the volunteers and they recieved much love from all of them. Many volunteers were touched by the children singing for them and how all of them were excited about the next camp. There were many children born after 2011, but having a disaster prevention camp we were able to prepare them from the worst. Also we were able to refer them to help that they could get in times of need. That they have adults to help them in times of trouble. That the children are Not Alone.",
   user: admin.sample
 )
 
@@ -244,12 +244,11 @@ camp3.save
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Feb 1, 2023')
 
 camp4 = Camp.create!(
-  address:  "Philippines, Manila",
+  address: "Philippines, Manila",
   required_number_volunteers: 10,
   start_date: date,
   end_date: date + 7,
   description: "It was a fire in Quezon City, Philippines literally just down the street from our partners the Philippine Children's Ministry Network.  The fire affected 100 families with 140 children and OpSAFE trained volunteers are already responding to bring hugs, help and hope to the children.  Please pray for these volunteers and the children they are serving. " ,
-  comments: "You should have excperions of working with kids",
   camp_name: "Camp in Philippine",
   newsfeed_post: "An Opsafe camp reaches  to 51 children affected by the fire in Pajo St., Project 2, QC. Church of Praise lead the team of station leaders from  PCMN staff. The crew leaders and volunteers' food were supplied by Pajo Outreach Church. The venue was lent by Community Bible Church. It took the unity of 3 churches and PCMN to respond to the psycho-social trauma debriefing camp for these children. Praise God for the unity of believers!",
   user: admin.sample
