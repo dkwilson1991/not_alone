@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1>Upcoming Camps</h1>
+<h2 class="mt-3">Upcoming Camps</h2>
 <% if @upcoming_assignments.any? %>
   <% @upcoming_assignments.each do |assignment| %>
     <div class="courses-container">
@@ -11,13 +11,13 @@
         <div class="course-info">
           <div class="progress-container" >
             <div class="progress">
-              <div class="progress-bar <%= assignment.camp.required_number_volunteers <= assignment.camp.assignments.count - 1 ? 'bg-info': 'progress-bar-striped progress-bar-animated' %>" role="progressbar" aria-label="Animated striped example" aria-valuenow="<%= assignment.camp.assignments.count - 1 %>" aria-valuemin="0" aria-valuemax="<%= assignment.camp.required_number_volunteers %>" style="width: <%= ((assignment.camp.assignments.count - 1) * 10) %>%;"></div>
+              <div class="progress-bar <%= assignment.camp.required_number_volunteers <= assignment.camp.assignments.where(status: 'admin_confirm').count - 1 ? 'bg-info': 'progress-bar-striped progress-bar-animated' %>" role="progressbar" aria-label="Animated striped example" aria-valuenow="<%= assignment.camp.assignments.where(status: 'admin_confirm').count - 1 %>" aria-valuemin="0" aria-valuemax="<%= assignment.camp.required_number_volunteers %>" style="width: <%= ((assignment.camp.assignments.where(status: 'admin_confirm').count - 1) * 10) %>%;"></div>
             </div>
             <span class="progress-text">
               <% if assignment.camp.assignments.count <= 0 %>
                 <p>0</p>
               <% else %>
-                <%= assignment.camp.assignments.count - 1 %>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
+                <%= assignment.camp.assignments.where(status: 'admin_confirm').count - 1 %>/<%= assignment.camp.required_number_volunteers %> <i class="fa-solid fa-user"></i> volunteers
               <% end %>
             </span>
           </div>
@@ -45,7 +45,7 @@
 <% else %>
   <li>No upcoming camps...</li>
 <% end %>
-<h1>Previous Camps</h1>
+<h2>Previous Camps</h2>
 <% if @previous_assignments.any? %>
   <% @previous_assignments.each do |assignment| %>
     <div class="courses-container">

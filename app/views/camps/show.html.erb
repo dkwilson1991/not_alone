@@ -33,13 +33,13 @@
                 <div class="d-flex justify-content-end" style="width: 100%">
                   <div class="progress-container-show pt-2">
                     <div class="progress">
-                      <div class="progress-bar <%= @camp.required_number_volunteers <= @camp.assignments.count - 1 ? 'bg-info': 'progress-bar-striped progress-bar-animated' %>" role="progressbar" aria-label="Animated striped example" aria-valuenow="<%= @camp.assignments.count - 1 %>" aria-valuemin="0" aria-valuemax="100%" style="width: <%= (@camp.assignments.count - 1).fdiv(@camp.required_number_volunteers) * 100 %>%;"></div>
+                      <div class="progress-bar <%= @camp.required_number_volunteers <= @camp.assignments.where(status: 'admin_confirm').count - 1 ? 'bg-info': 'progress-bar-striped progress-bar-animated' %>" role="progressbar" aria-label="Animated striped example" aria-valuenow="<%= @camp.assignments.where(status: 'admin_confirm').count - 1 %>" aria-valuemin="0" aria-valuemax="100%" style="width: <%= (@camp.assignments.where(status: 'admin_confirm').count - 1).fdiv(@camp.required_number_volunteers) * 100 %>%;"></div>
                     </div>
                     <span class="progress-text">
                       <% if @camp.assignments.count <= 0 %>
                         <p>0</p>
                       <% else %>
-                        <%= @camp.assignments.count - 1 %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user"></i>
+                        <%= @camp.assignments.where(status: 'admin_confirm').count - 1 %>/<%= @camp.required_number_volunteers %> <i class="fa-solid fa-user"></i>
                       <% end %>
                     </span>
                   </div>

@@ -27,7 +27,7 @@ padding: 1rem;
 
 .camp-card-completed {
   margin-bottom: 0;
-  color: #B3E8E5;
+  color: $main;
   text-shadow: 1rem;
 }
 
@@ -69,7 +69,7 @@ padding: 1rem;
 }
 
 .cta-button {
-  background-color: #3bacb6;
+  background-color: $main;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
 	border: 0;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
@@ -81,7 +81,7 @@ padding: 1rem;
 }
 
 .applied-btn {
-  background-color: #B3E8E5;
+  background-color: $main;
   opacity: 80%;
 }
 

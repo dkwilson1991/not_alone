@@ -24,6 +24,8 @@ User.create!(
   language: "English",
   certifications: "Psychologist",
   past_roles: "Camp Director",
+  applied_to: 'Station Leader: Crafts',
+  user_number: 20,
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg"
 )
@@ -38,6 +40,7 @@ User.create!(
   training: "3 Days",
   language: "English, Japanese",
   past_roles: "Camp Director",
+  user_number: 45,
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg"
@@ -53,6 +56,8 @@ User.create!(
   training: "3 Days",
   language: "English, Arabic",
   past_roles: "Crew Leader",
+  applied_to: 'Crew Leader',
+  user_number: 20,
   certifications: "Programmer",
   admin_status: true,
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1667954040/heegtqhasvkercvbbzi4.jpg"
@@ -68,6 +73,8 @@ User.create!(
   training: "3 Days",
   language: "English, Ukranian, Polish",
   past_roles: "Station Leader: Songs, Crew Leader",
+  applied_to: 'Station Leader: Songs',
+  user_number: 25,
   certifications: "Psychologist",
   admin_status: true,
   avatar_pic: "https://avatars.githubusercontent.com/u/114731843?v=4"
@@ -82,7 +89,9 @@ User.create!(
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   certifications: "Teacher",
   language: "English",
-  past_roles: "Station Leader: Songs",
+  past_roles: "Station Leader: Story Telling",
+  applied_to: "Station Leader: Story Telling",
+  user_number: 20,
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664760791/juaab3x4dpcoqyd7tte9.jpg"
 )
@@ -97,6 +106,8 @@ User.create!(
   certifications: "Teacher",
   language: "English",
   past_roles: "Station Leader: Crafts",
+  applied_to: "Station Leader: Crafts, Station Leader: Games",
+  user_number: 20,
   training: "3 Days",
   avatar_pic: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664808689/oiwkwdtavfgvgwuczsgn.jpg"
 )
@@ -107,11 +118,13 @@ User.create!(
   password: "123456",
   first_name: "Christopher",
   last_name: "Bush",
-  location: "Sumy, Ukraine",
+  location: "Tokyo, Japan",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
-  past_roles: "Station Leader: Games",
+  past_roles: "Crew Leader",
+  applied_to: "Crew Leader",
+  user_number: 45,
   certifications: "None",
   avatar_pic: "https://avatars.githubusercontent.com/u/22954474?v=4"
 )
@@ -127,6 +140,8 @@ User.create!(
   language: "English",
   certifications: "None",
   past_roles: "Station Leader: Songs",
+  applied_to: "Station Leader: Crafts",
+  user_number: 20,
   avatar_pic: "https://avatars.githubusercontent.com/u/113871255?v=4"
 )
 
@@ -141,22 +156,120 @@ User.create!(
   training: "3 Days",
   language: "English",
   past_roles: "Station Leader: Story Telling",
+  applied_to: "Station Leader: Crafts",
+  user_number: 20,
   avatar_pic: "https://avatars.githubusercontent.com/u/99332370?v=4"
 )
 
 User.create!(
-  email: "hafid@not-alone.online",
+  email: "mia@not-alone.online",
   password: "123456",
   first_name: "Hafid",
   last_name: "Qarchi",
-  location: "Sumy, Ukraine",
+  location: "Tehran, Iran",
   birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
   training: "3 Days",
   language: "English",
   certifications: "None",
+  user_number: 10,
   past_roles: "Station Leader: Story Telling",
   avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
 )
+
+
+User.create!(
+  email: "mi@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Bangkok, Thailand",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  user_number: 15,
+  certifications: "None",
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mu@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Kandy, Sri Lanka",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  user_number: 15,
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "me@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Masovian Minsk, Poland",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  user_number: 25,
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+
+User.create!(
+  email: "mee@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Kathmandu, Nepal",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  user_number: 9,
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+User.create!(
+  email: "mal@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Manila, Phillippines",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  user_number: 22,
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
+User.create!(
+  email: "mall@not-alone.online",
+  password: "123456",
+  first_name: "Hafid",
+  last_name: "Qarchi",
+  location: "Tunis, Tunisia",
+  birthday: Faker::Date.birthday(min_age: 18, max_age: 40),
+  training: "3 Days",
+  language: "English",
+  certifications: "None",
+  user_number: 15,
+  past_roles: "Station Leader: Story Telling",
+  avatar_pic: "https://avatars.githubusercontent.com/u/113567278?v=4"
+)
+
 # admin_user = User.all.where do |user|
 #   user if user.admin_status == true
 # end
@@ -518,8 +631,8 @@ camp9 = Camp.create!(
   required_number_volunteers: 10,
   start_date: date,
   end_date: date + 7,
-  description: "Волонтери для проведення заходів для дітей. Зараз нам потрібна допомога активних волонтерів для проведення майстер-класів для діток.
-  # Тож якщо Вам від 16 i Ви хочете долучитись до нас i робити ще більше дітей щасливими.",
+   description: "Волонтери для проведення заходів для дітей. Зараз нам потрібна допомога активних волонтерів для проведення майстер-класів для діток.
+  Тож якщо Вам від 16 i Ви хочете долучитись до нас i робити ще більше дітей щасливими.",
   # newsfeed_post: "Ще одна завзята команда, з відкритими серцями до дітей, провела заняття #OpSAFE ❤️
   # Дякуємо кожному волонтеру за посвяту та роботу, яку робите. Дякуємо за кожну дитячу посмішку 🥰",
   user: admin.sample
@@ -529,6 +642,37 @@ file9 = URI.open("https://www.mercyprojects.org/wp-content/uploads/2022/08/untit
 camp9.photos.attach(io: file9, filename: "poland.png", content_type: "image/png")
 camp9.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
 camp9.save
+
+date = Faker::Date.between(from: 'Jan 1, 2022', to: 'Dec 23, 2023')
+
+camp16 = Camp.create!(
+  address: "Israel, Palestine",
+  required_number_volunteers: 15,
+  start_date: date,
+  end_date: date + 7,
+  description: "In June 1967, the West Bank, Gaza, East Jerusalem, and the Golan Heights were occupied by Israel as a result of the Six-Day War. The territories have been under Israeli control since then despite numerous UN resolutions proclaiming the illegality of the occupation. In 2002, Israel began the construction of a security barrier in the West Bank. Opponents of the project argued that it is an attempt to effectively annex land from Palestinians and limit their social and economic freedoms. Despite a 2004 ruling by the International Court of Justice declaring the wall illegal, it still stands to this day.
+  Undoubtedly, the political situation in the region is extremely complicated. Volunteers in the Palestinian territories will quickly begin to realize just how deep this historical conflict runs.",
+  camp_name: "Camp in Palestine",
+  newsfeed_post: "In June 1967, the West Bank, Gaza, East Jerusalem, and the Golan Heights were occupied by Israel as a result of the Six-Day War. The territories have been under Israeli control since then despite numerous UN resolutions proclaiming the illegality of the occupation. In 2002, Israel began the construction of a security barrier in the West Bank. Opponents of the project argued that it is an attempt to effectively annex land from Palestinians and limit their social and economic freedoms. Despite a 2004 ruling by the International Court of Justice declaring the wall illegal, it still stands to this day.
+  Undoubtedly, the political situation in the region is extremely complicated. Volunteers in the Palestinian territories will quickly begin to realize just how deep this historical conflict runs.",
+  user: admin.sample
+)
+file16 = URI.open("https://www.unicef.org/sop/sites/unicef.org.sop/files/2019-01/050118-WN-GAZ18.jpg")
+camp16.photos.attach(io: file16, filename: "palestine.png", content_type: "image/png")
+
+file_20 = URI.open("https://www.unicef.org/sop/sites/unicef.org.sop/files/styles/media_banner/public/2019-01/IMG_9462.JPG?itok=kaUDnGDG")
+camp16.photos.attach(io: file_20, filename: "palestine.png", content_type: "image/png")
+
+file_21 = URI.open("https://assets.nationbuilder.com/dcipalestine/pages/5669/attachments/original/1660073121/16_children_Gaza.png?1660073121")
+camp16.photos.attach(io: file_21, filename: "palestine.png", content_type: "image/png")
+
+file_22 = URI.open("https://cdnuploads.aa.com.tr/uploads/Contents/2021/08/16/thumbs_b_c_9264a5ee26676c389f991a6a66d67ea2.jpg?v=130025")
+camp16.photos.attach(io: file_22, filename: "palestine.png", content_type: "image/png")
+
+camp16.tag_list.add("Crew Leader", "Station Leader: Story Telling", "Station Leader: Songs", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games")
+camp16.save
+
+
 
 # camps = [camp1, camp2, camp3, camp4, camp5, camp6]
 
@@ -569,7 +713,7 @@ camp9.save
 #   )
 # end
 
-camps = [camp1, camp2, camp3, camp4, camp5, camp6, camp7, camp8, camp9, camp10, camp11, camp12, camp13, camp14, camp15]
+camps = [camp1, camp2, camp3, camp4, camp5, camp6, camp7, camp8, camp9, camp10, camp11, camp12, camp13, camp14, camp15, camp16]
 
 User.all.each do |user|
   Assignment.create!(
