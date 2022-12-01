@@ -109,10 +109,10 @@
         </div>
         <div class="collapse collapse-horizontal owner-box rounded" id="collapseWidth-<%= @camp.user.id %>">
           <div class="card card-body d-flex justify-content-center" style="width: 300px;">
-            <p><%= @camp.user.first_name %> <%= @camp.user.last_name %></p>
-            <p><i class="fa-solid fa-envelope"></i> : <%= @camp.user.email %></p>
-            <p><i class="fa-solid fa-earth-americas"></i> : <%= @camp.user.location %></p>
-            <p><i class="fa-regular fa-flag"></i> : <%= @camp.user.language %></p>
+            <p><%= @camp.user.first_name %>  <%= @camp.user.last_name %></p>
+            <p><i class="fa-solid fa-envelope" style="color: #3bacb6;"></i>  <%= @camp.user.email %></p>
+            <p><i class="fa-solid fa-earth-americas" style="color: #3bacb6;"></i>  <%= @camp.user.location %></p>
+            <p><i class="fa-regular fa-flag" style="color: #3bacb6;"></i>  <%= @camp.user.language %></p>
           </div>
         </div>
       </div>
@@ -128,10 +128,10 @@
         </div>
         <div class="collapse collapse-horizontal owner-box rounded" id="collapseWidth-<%= @camp.user.id %>">
           <div class="card card-body d-flex justify-content-center" style="width: 300px;">
-            <p><%= @camp.user.first_name %> <%= @camp.user.last_name %></p>
-            <p><i class="fa-solid fa-envelope"></i> : <%= @camp.user.email %></p>
-            <p><i class="fa-solid fa-earth-americas"></i> : <%= @camp.user.location %></p>
-            <p><i class="fa-regular fa-flag"></i> : <%= @camp.user.language %></p>
+            <p class="m-1 volunteer_name"><%= @camp.user.first_name %>  <%= @camp.user.last_name %></p>
+            <p class="m-1"><i class="fa-solid fa-envelope" style="color: #3bacb6;"></i>  <%= @camp.user.email %></p>
+            <p class="m-1"><i class="fa-solid fa-earth-americas" style="color: #3bacb6;"></i>  <%= @camp.user.location %></p>
+            <p class="m-1"><i class="fa-solid fa-comment-dots" style="color: #3bacb6;"></i>  <%= @camp.user.language %></p>
           </div>
         </div>
       </div>
