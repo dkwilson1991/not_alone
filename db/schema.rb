@@ -135,7 +135,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_052449) do
     t.string "language"
     t.string "past_roles"
     t.boolean "admin_status", default: false
-    t.boolean "admin", default: false, null: false
     t.float "latitude"
     t.float "longitude"
     t.string "applied_to"
