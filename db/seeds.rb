@@ -173,8 +173,6 @@ camp1 = Camp.create!(
   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
   camp_name: "Camp for Disaster Prevension in Akita",
-
-  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers. Children at the shelter were happy to see the volunteers and they recieved much love from all of them. Many volunteers were touched by the children singing for them and how all of them were excited about the next camp. There were many children born after 2011, but having a disaster prevention camp we were able to prepare them from the worst. Also we were able to refer them to help that they could get in times of need. That they have adults to help them in times of trouble. That the children are Not Alone.",
   user: admin.sample
 )
 file1 = URI.open("https://jobsinjapan.com/wpdata/wp-content/uploads/2021/07/teaching_children-768x513.jpg")
@@ -185,14 +183,14 @@ camp1.save
 date = Faker::Date.between(from: 'July 1, 2022', to: 'Nov 20, 2022')
 
 camp10 = Camp.create!(
-  address: "Japan, Tokyo",
+  address: "Japan, Akita",
   required_number_volunteers: 11,
   start_date: date,
   end_date: date + 7,
   description: "You'll be volunteers at shelters when a disaster happens. Let's think about how we can make life easier for evacuees! Lets make children to play together in nature and to cultivate their sensitivity through living together. We hope they'll realize that, while nature can be terrifying, it can also be gentle and warm.",
   images: "https://www.jrc.or.jp/eq-japan2011/news-stories/assets_c/2015/11/%E2%98%85IMG_0762-cropped-proto-custom_317.jpg",
   camp_name: "Camp for Disaster Prevension in Akita",
-  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers.",
+  newsfeed_post: "This year's camp, the 5th time it has been held, was co-hosted by many organizations such as universities, companies, and NPOs. One hundred and fifty volunteers, including university students, participated as instructors and organizers. Children at the shelter were happy to see the volunteers and they recieved much love from all of them. Many volunteers were touched by the children singing for them and how all of them were excited about the next camp. There were many children born after 2011, but having a disaster prevention camp we were able to prepare them from the worst. Also we were able to refer them to help that they could get in times of need. That they have adults to help them in times of trouble. That the children are Not Alone.",
   user: admin.sample
 )
 
