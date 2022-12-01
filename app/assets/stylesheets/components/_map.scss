@@ -1,10 +1,18 @@
 #map {
   border-radius: 16px;
   width: 100%;
-  height: 550px;
+  height: 600px;
   margin-top: 2.5%;
   position: sticky;
   top: 20%;
+}
+#map.volunteer-map {
+  height: 400px;
+  position: relative;
+  top: 0;
+  margin-top: -8px;
+  margin-bottom: 36px;
+  border-radius: 0;
 }
 
 .mapboxgl-popup {
@@ -25,7 +33,7 @@
 
 .searching-form .form-control {
   width: 100%;
-  background-color: rgba(#b3e8e5, 0.5);
+  background-color: rgba($main, 0.5);
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
   border-radius: 50px;
@@ -48,7 +56,7 @@
 }
 
 .search {
-  background-color: #b3e8e5;
+  background-color: $main;
   text-shadow: 0.5px 0.5px 0px #3bacb6;
   border: 0;
   border-radius: 50px;
@@ -65,7 +73,7 @@
   width: 100% !important;
   border: 1px solid lightgrey !important;
   box-shadow: none !important;
-  background-color: rgba(#e8e8e8, 0.6) !important;
+  background-color: rgba(#ffffff, 0.8) !important;
   &h1 {
     font-size: 16px !important;
   }
@@ -83,4 +91,8 @@
   .search {
     margin-top: 42px;
   }
+}
+.mapboxgl-popup-content i {
+  text-shadow: 1px 1px 0px #178a88;
+  color: #FFD734;
 }
