@@ -1,16 +1,16 @@
-<p>Dear <%= @user.first_name %> <%= @user.last_name %>,</p>
-
-<p>OperationSAFE is hosting a new camp in your location and would love your participation.</p>
-<p>Please check the details below.</p>
-
-<p>Location: <%=@camp.address%></p>
-<p>Start Date: <%=@camp.start_date.strftime('%b %d, %Y')%></p>
-<p>End Date: <%=@camp.end_date.strftime('%b %d, %Y')%></p>
-
-To apply or learn more information, follow the link below:
+<p class="m-5">Dear <strong><%= @user.first_name %> <%= @user.last_name %></strong>,</p>
+<p class="m-5 flex">OperationSAFE 💚 is hosting a new camp in your location and would love your participation.</p>
+<p class="m-5">Please check the details below.</p>
+<p class="m-5">🏕 Location: <%=@camp.address%></p>
+<p class="m-5">🗓 Start Date: <%=@camp.start_date.strftime('%b %d, %Y')%></p>
+<p class="m-5">🗓 End Date: <%=@camp.end_date.strftime('%b %d, %Y')%></p>
+<p class="m-5">✍️ To apply or learn more information, follow the link below: </p>
 <%= link_to "Apply to an OpSAFE camp through Not Alone", camp_url(@camp) %>
-
-<p>We hope to see you there!</p>
-
-<p>Kind regards,</p>
-<p>Not Alone Team</p>
+<p class="m-5">We hope to see you there! ❤️</p>
+<img src="https://i.ibb.co/3pcc9KR/logo.png" alt="Nature" width="136" height="44" class="m-3 rounded">
+<strong>
+  <p class="ms-5 my-0 p-0">Kind regards,</p>
+</strong>
+<strong>
+  <p class="ms-5 my-0 p-0 ">Not Alone Team</p>
+</strong>
