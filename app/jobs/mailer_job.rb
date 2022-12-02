@@ -9,7 +9,7 @@ class MailerJob < ApplicationJob
       @assignment.camp = camp
       @assignment.user = user
       @assignment.role = roles[index]
-      @assignment.status = 'admin_confirm'
+      @assignment.status = 'pending'
       @assignment.save
     end
   end
