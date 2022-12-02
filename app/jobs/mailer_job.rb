@@ -3,13 +3,13 @@ class MailerJob < ApplicationJob
 
   def perform(camp)
     @users = User.all.where('location = ?', 'Sumy, Ukraine')
-    roles = [["Crew Leader", "Crew Leader"], ["Story Telling", "Station Leader: Story Telling"], ["Snacks", "Station Leader: Snacks"], ["Crafts", "Station Leader: Crafts"], ["Games", "Station Leader: Games"]]
+    roles = ["Crew Leader", "Station Leader: Story Telling", "Station Leader: Snacks", "Station Leader: Crafts", "Station Leader: Games"]
     @users.each_with_index do |user, index|
       @assignment = Assignment.new
       @assignment.camp = camp
       @assignment.user = user
       @assignment.role = roles[index]
-      @assignment.status = 'pending'
+      @assignment.status = 'admin_confirm'
       @assignment.save
     end
   end
